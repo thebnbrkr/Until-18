@@ -429,6 +429,9 @@ while status == 1:
                                 print("SOMEONE CALLED YOU BREAKING INTO THE HOUSE AND CALLED THE POLICE ON YOU !!!")
                                 print("You were arrested by the police and your parents have hired a lawyer to defend you in court")
                                 rand = random.randint(1, 10)
+                                jailtime = 1
+                                status =3
+
 
                                 if rand < 6 and crime == 4:
                                     print("You're arrested for burlary and have to spent 1 year in jail !!!")
@@ -468,10 +471,13 @@ while status == 1:
                                     money = money + rand
                                     print("Money :", money)
 
+
                                 else:
                                     print("SOMEONE CALLED YOU BREAKING INTO THE HOUSE AND CALLED THE POLICE ON YOU !!!")
                                     print("You were arrested by the police and your parents have hired a lawyer to defend you in court")
                                     rand = random.randint(1, 10)
+                                    jailtime = 1
+                                    status = 3
 
                                     if rand < 6 and crime == 0:
                                         print("You're arrested for larceny and have to spent 1 year in jail !!!")
@@ -499,6 +505,8 @@ while status == 1:
                                 print("SOMEONE CALLED YOU BREAKING INTO THE HOUSE AND CALLED THE POLICE ON YOU !!!")
                                 print("You were arrested by the police and your parents have hired a lawyer to defend you in court")
                                 rand = random.randint(1, 10)
+                                jailtime = 1
+                                status = 3
 
                                 if rand < 6 and crime == 4:
                                     print("You're arrested for larceny and have to spent 1 year in jail !!!")
@@ -691,6 +699,7 @@ while status == 1:
                                 skill = skill + 1
                                 print("")
 
+                    
 
             if reg == 4:
                 print("Press 1 to spent time with all your relatives")
@@ -964,7 +973,7 @@ while (age >= 5 and age < 18) and status == 3:  # This process is needed when th
                         status = 4
                         crime = crime + 1
                         print("")
-                        break
+
                     else:
                         print("You tried to escape from prison")
                         print("But a guard caught you !!!!")
@@ -998,7 +1007,7 @@ while (age >= 5 and age < 18) and status == 3:  # This process is needed when th
                         happiness = happiness-20
                         crime = crime +1
                         print("")
-                        break
+
 
                 if rand == 5:
                     print("2+6 = ")
