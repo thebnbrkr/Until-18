@@ -831,15 +831,158 @@ while status == 1:
                                 else:
                                     print("")
                                     print("You stole the expensive car")
-                                    rand = random.randint(10)
-                                    if rand == 9:
-                                        time.delay(0.5)
-                                        a = random.randint(50000, 100000)
-                                        print("You sold the exepensive car for : $", a, " !!!!!")
-                                        money = money + a
-                                        happiness = happiness +10
-                                        skill = skil + 5
-                                        print("")
+                                    time.delay(0.5)
+                                    a = random.randint(50000, 100000)
+                                    print("You sold the exepensive car for : $", a, " !!!!!")
+                                    money = money + a
+                                    happiness = happiness + 10
+                                    skill = skil + 5
+                                    print("")
+
+                        if click == 2:
+                            if rand>10:
+                                print("SOMEONE CALLED THE POLICE ON YOU")
+                                print("Your parents have hired a lawyer to defend you in court")
+                                time.delay(0.5)
+                                print("...")
+                                time.delay(1)
+                                rand = random.randint(0, 99)
+                                if rand > 40 and crime<3:
+                                    print("Your lawyers weren't able to convince the judge")
+                                    print("You have been awarded with 3 years in juvie !!!!!")
+                                    crime = crime + 1
+                                    jailtime = 3
+                                    happiness = happiness - 10
+                                    status = 3
+                                    print("")
+
+                                elif rand>40 and crime>=3:
+                                    print("Your lawyers weren't able to convince the judge")
+                                    print("You have been awarded with 5 years in juvie !!!!!")
+                                    crime = crime + 1
+                                    jailtime = 5
+                                    happiness = happiness - 10
+                                    status = 3
+                                    print("")
+
+                            else:
+                                print("")
+                                print("You stole a moderately expensive car")
+                                rand = random.randint(10)
+                                if rand == 9:
+                                    time.delay(0.5)
+                                    a = random.randint(15000,49999)
+                                    print("You sold the exepensive car for : $",a," !!!!!")
+                                    money = money + a
+                                    print("")
+
+                                else:
+                                    print("")
+                                    print("You stole the expensive car")
+                                    time.delay(0.5)
+                                    a = random.randint(50000, 100000)
+                                    print("You sold the exepensive car for : $", a, " !!!!!")
+                                    money = money + a
+                                    happiness = happiness + 10
+                                    skill = skil + 5
+                                    print("")
+
+                        if click ==3:
+
+                            if rand > 10:
+                                print("SOMEONE CALLED THE POLICE ON YOU")
+                                print("Your parents have hired a lawyer to defend you in court")
+                                time.delay(0.5)
+                                print("...")
+                                time.delay(1)
+                                rand = random.randint(0, 99)
+                                if rand > 40 and crime < 3:
+                                    print("Your lawyers weren't able to convince the judge")
+                                    print("You have been awarded with 3 years in juvie !!!!!")
+                                    crime = crime + 1
+                                    jailtime = 3
+                                    happiness = happiness - 10
+                                    status = 3
+                                    print("")
+
+                                elif rand > 40 and crime >= 3:
+                                    print("Your lawyers weren't able to convince the judge")
+                                    print("You have been awarded with 5 years in juvie !!!!!")
+                                    crime = crime + 1
+                                    jailtime = 5
+                                    happiness = happiness - 10
+                                    status = 3
+                                    print("")
+
+                            else:
+                                print("")
+                                print("You stole an inexpensive car")
+                                rand = random.randint(10)
+                                if rand == 9:
+                                    time.delay(0.5)
+                                    a = random.randint(3000, 14999)
+                                    print("You sold the exepensive car for : $", a, " !!!!!")
+                                    money = money + a
+                                    print("")
+
+                                else:
+                                    print("")
+                                    print("You stole the moderately inexpensive car")
+                                    time.delay(0.5)
+                                    a = random.randint(15000, 25000)
+                                    print("You sold the exepensive car for : $", a, " !!!!!")
+                                    money = money + a
+                                    happiness = happiness + 10
+                                    skill = skil + 5
+                                    print("")
+
+                        if click ==4:
+                            if rand > 10:
+                                print("SOMEONE CALLED THE POLICE ON YOU")
+                                print("Your parents have hired a lawyer to defend you in court")
+                                time.delay(0.5)
+                                print("...")
+                                time.delay(1)
+                                rand = random.randint(0, 99)
+                                if rand > 40 and crime < 3:
+                                    print("Your lawyers weren't able to convince the judge")
+                                    print("You have been awarded with 3 years in juvie !!!!!")
+                                    crime = crime + 1
+                                    jailtime = 3
+                                    happiness = happiness - 10
+                                    status = 3
+                                    print("")
+
+                                elif rand > 40 and crime >= 3:
+                                    print("Your lawyers weren't able to convince the judge")
+                                    print("You have been awarded with 5 years in juvie !!!!!")
+                                    crime = crime + 1
+                                    jailtime = 5
+                                    happiness = happiness - 10
+                                    status = 3
+                                    print("")
+
+                            else:
+                                print("")
+                                print("You stole a skateboard")
+                                rand = random.randint(10)
+                                if rand == 9:
+                                    time.delay(0.5)
+                                    a = random.randint(1000, 2999)
+                                    print("You sold the skateboard for : $", a, " !!!!!")
+                                    money = money + a
+                                    print("")
+
+                                else:
+                                    print("")
+                                    print("You stole the moderately inexpensive car")
+                                    time.delay(0.5)
+                                    a = random.randint(20, 999)
+                                    print("You sold the exepensive car for : $", a, " !!!!!")
+                                    money = money + a
+                                    happiness = happiness + 10
+                                    skill = skil + 5
+                                    print("")
 
             if reg == 4:
                 print("Press 1 to spent time with all your relatives")
