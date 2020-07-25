@@ -398,6 +398,10 @@ while status == 1:
                             rand = 0
                             if rand == 0:
                                 rob = int(input("Press 2 to rob the house"))
+                                print("")
+                                if rob!=2:
+                                    print("You changed your mind")
+                                    print("")
                                 if rob == 2:
                                     print("You have successfully robbed the house")
                                     rand = random.randint(1,9000)
@@ -406,7 +410,7 @@ while status == 1:
                                     print("Money :", money)
 
                                 else:
-                                    print("SOMEONE CALLED YOU BREAKING INTO THE HOUSE AND CALLED THE POLICE ON YOU !!!")
+                                    print("SOMEONE CALLED THE POLICE ON YOU !!!")
                                     print("You were arrested by the police and your parents have hired a lawyer to defend you in court")
                                     rand = random.randint(1,10)
                                     if rand<6 and crime == 0:
@@ -426,7 +430,7 @@ while status == 1:
                         else:
                             rand = random.radint(0,20)
                             if crime==4 and rand<=3:
-                                print("SOMEONE CALLED YOU BREAKING INTO THE HOUSE AND CALLED THE POLICE ON YOU !!!")
+                                print("SOMEONE CALLED THE POLICE ON YOU !!!")
                                 print("You were arrested by the police and your parents have hired a lawyer to defend you in court")
                                 rand = random.randint(1, 10)
                                 jailtime = 1
@@ -464,6 +468,10 @@ while status == 1:
                             rand = 0
                             if rand == 0:
                                 rob = int(input("Press 2 to pickpocket"))
+                                print("")
+                                if rob!=2:
+                                    print("You changed your mind")
+                                    print("")
                                 if rob == 2:
                                     print("You have successfully pickpocketed")
                                     rand = random.randint(1, 10000)
@@ -473,7 +481,7 @@ while status == 1:
 
 
                                 else:
-                                    print("SOMEONE CALLED YOU BREAKING INTO THE HOUSE AND CALLED THE POLICE ON YOU !!!")
+                                    print("SOMEONE CALLED THE POLICE ON YOU !!!")
                                     print("You were arrested by the police and your parents have hired a lawyer to defend you in court")
                                     rand = random.randint(1, 10)
                                     jailtime = 1
@@ -502,7 +510,7 @@ while status == 1:
                         else:
                             rand = random.radint(0, 20)
                             if crime == 4 and rand <= 3:
-                                print("SOMEONE CALLED YOU BREAKING INTO THE HOUSE AND CALLED THE POLICE ON YOU !!!")
+                                print("SOMEONE CALLED THE POLICE ON YOU !!!")
                                 print("You were arrested by the police and your parents have hired a lawyer to defend you in court")
                                 rand = random.randint(1, 10)
                                 jailtime = 1
@@ -546,6 +554,7 @@ while status == 1:
                         print("Press 5 to puncture tyres of random vehicles")
                         print("")
                         click= int(input("Enter your choice : "))
+                        print("")
                         if click == 1:
                             rand = random.random.randint(0,100)
                             if rand<=10:
@@ -699,7 +708,83 @@ while status == 1:
                                 skill = skill + 1
                                 print("")
 
-                    
+                    if choice == 4:
+
+                        print("You were walking down the streets and have found your target store")
+                        print("")
+                        if crime <3:
+                            rand = 0
+                            if rand == 0:
+                                rob = int(input("Press 2 to rob the house"))
+                                print("")
+                                if rob !=2:
+                                    print("You changed your mind")
+                                    print("")
+                                if rob == 2:
+                                    print("You have successfully robbed the house")
+                                    rand = random.randint(1,10000)
+                                    print("You sold all the stolen items to a pawn shop and recieved $",rand)
+                                    money = money+rand
+                                    print("Money :", money)
+
+                                else:
+                                    print("SOMEONE CALLED THE POLICE ON YOU !!!")
+                                    print("")
+                                    print("You were arrested by the police and your parents have hired a lawyer to defend you in court")
+                                    rand = random.randint(1,10)
+                                    if rand<6 and crime == 0:
+                                        print("You're arrested for burlary and have to spent 10 months in jail !!!")
+                                        crime = crime+1
+                                        jailtime = 1
+                                        status = 3
+                                        break
+                                    elif rand<6 and crime <= 3:
+                                        print("You're arrested for burlary and have to spent 1 year in jail !!!")
+                                        crime = crime+1
+                                        jailtime = jailtime +1
+                                        status = 3
+                                    else:
+                                        print("The lawyers have helped you to stay out of jail")
+                                        print("You're free")
+                        else:
+                            rand = random.radint(0,20)
+                            if crime==4 and rand<=3:
+                                print("SOMEONE CALLED THE POLICE ON YOU !!!")
+                                print("You were arrested by the police and your parents have hired a lawyer to defend you in court")
+                                rand = random.randint(1, 10)
+                                jailtime = 1
+                                status =3
+
+
+                                if rand < 6 and crime == 4:
+                                    print("You're arrested for burlary and have to spent 1 year in jail !!!")
+                                    crime = crime + 1
+                                    jailtime = 1
+                                    status = 3
+
+                                elif rand<6 and crime > 4:
+                                    print("You're arrested for burlary and have to spent 1 year in jail !!!")
+                                    crime = crime+1
+                                    jailtime = jailtime*2
+                                    status = 3
+
+                                else:
+                                    print("The lawyers have helped you to stay out of jail")
+                                    print("You're free")
+
+                            else:
+                                print("You have robbed the house")
+                                rand = random.randint(1, 9000)
+                                print("You sold all the stolen items to a pawn shop and recieved $", rand)
+                                money = money + rand
+                                print("Money :", money)
+
+                
+
+
+
+
+
 
             if reg == 4:
                 print("Press 1 to spent time with all your relatives")
