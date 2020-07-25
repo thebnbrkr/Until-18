@@ -39,6 +39,7 @@ if num == 1:
     crime = 0                               #counting the total number of crimes
     jailtime = 0                            #total nnumber of years spend in prison
     dead = 0                                #binary value; becomes 1 when you die
+    relationship = 0                        #binary value; becomes one when you're in a relationship/married
     if skill>= 100:
         skill =100
 
@@ -779,12 +780,66 @@ while status == 1:
                                 money = money + rand
                                 print("Money :", money)
 
-                
+                    if choice == 5:
+                        print("You were walking down the streets......")
+                        time.sleep(2)
+                        print("Press 1 to steal a very exppensive car")
+                        print("Press 2 to steal a moderately expensive car")
+                        print("Press 3 to steal a cheap car")
+                        print("Press 4 to a skateboard")
+                        print("")
+                        click = int(input("Enter your choice : "))
+                        print("")
+                        time.delay(0.5)
+                        rand = random.randint(0,99)
+                        if click == 1:
+                            if rand>10:
+                                print("SOMEONE CALLED THE POLICE ON YOU")
+                                print("Your parents have hired a lawyer to defend you in court")
+                                time.delay(0.5)
+                                print("...")
+                                time.delay(1)
+                                rand = random.randint(0, 99)
+                                if rand > 40 and crime<3:
+                                    print("Your lawyers weren't able to convince the judge")
+                                    print("You have been awarded with 3 years in juvie !!!!!")
+                                    crime = crime + 1
+                                    jailtime = 3
+                                    happiness = happiness - 10
+                                    status = 3
+                                    print("")
 
+                                elif rand>40 and crime>=3:
+                                    print("Your lawyers weren't able to convince the judge")
+                                    print("You have been awarded with 5 years in juvie !!!!!")
+                                    crime = crime + 1
+                                    jailtime = 5
+                                    happiness = happiness - 10
+                                    status = 3
+                                    print("")
 
-
-
-
+                            else:
+                                print("")
+                                print("You stole the expensive car")
+                                rand = random.randint(10)
+                                if rand == 9:
+                                    time.delay(0.5)
+                                    a = random.randint(500000,1000000)
+                                    print("You sold the exepensive car for : $",a," !!!!!")
+                                    money = money + a
+                                    print("")
+                                else:
+                                    print("")
+                                    print("You stole the expensive car")
+                                    rand = random.randint(10)
+                                    if rand == 9:
+                                        time.delay(0.5)
+                                        a = random.randint(50000, 100000)
+                                        print("You sold the exepensive car for : $", a, " !!!!!")
+                                        money = money + a
+                                        happiness = happiness +10
+                                        skill = skil + 5
+                                        print("")
 
             if reg == 4:
                 print("Press 1 to spent time with all your relatives")
