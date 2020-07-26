@@ -40,6 +40,7 @@ if num == 1:
     jailtime = 0                            #total nnumber of years spend in prison
     dead = 0                                #binary value; becomes 1 when you die
     relationship = 0                        #binary value; becomes one when you're in a relationship/married
+    hacker = 0                              #binary value; becomes 1 when you learn hacking
     if skill>= 100:
         skill =100
 
@@ -392,7 +393,7 @@ while status == 1:
                     print("Press 8 to launch a cyber attack")
                     print("")
                     choice=int(input("Enter your choice : "))
-                    if choice ==1:
+                    if choice == 1:
                         print("You were walking down the streets and have found your target house")
                         print("")
                         if crime <3:
@@ -486,6 +487,7 @@ while status == 1:
                                     rand = random.randint(1, 10)
                                     jailtime = 1
                                     status = 3
+                                    happiness = happiness - 20
 
                                     if rand < 6 and crime == 0:
                                         print("You're arrested for larceny and have to spent 1 year in jail !!!")
@@ -1695,6 +1697,141 @@ while status == 1:
                             print("You don't have enough money")
                             print("You need atleast $5000")
                             print("")
+
+                    if choice == 8:
+                        if hacker == 0:
+                            print("You have to learn hacking ")
+                            time.delay(1)
+                            print("For that you need $200")
+                            print("")
+                            if money <= 200:
+                                print("You need $200 to enroll in a hacking course")
+                                hacker = 1
+                                print("")
+                            else:
+                                print("Press 1 to hack wifi's")
+                                print("Press 2 to hack a bank account")
+                                print("Press 3 to hack data and sell it")
+                                print("Press 4 to hack into the server of a billion dollar company and sell their data")
+                                print("")
+                                click = int(input("Enter your choice : "))
+                                if click == 1:
+                                    rand = random.randint(0,99)
+                                    if rand>30:
+                                        print("You hacked into someone's wifi")
+                                        print("You had fun")
+                                        skill = skill + 10
+                                        happiness = happiness + 10
+                                        print("")
+                                    elif rand<5:
+                                        print("You weren't able to access into the wifi")
+                                        print("SOMEHOW THE POLICE UNDERSTOOD THAT YOU WERE COMMITTING CYBER CRIME !!!")
+                                        happiness = happiness -10
+                                        skill = skill + 3
+                                        jailtime = 2
+                                        status = 3
+                                        print("You have to serve in jail for 2 years")
+                                        print("")
+
+                                    elif rand<=5 and rand<=30:
+                                        print("You weren't able to access into the wifi")
+                                        happiness = happiness -10
+                                        skill = skill + 3
+                                        print("")
+
+                                if click == 2:
+                                    rand = random.randint(0,99)
+                                    if rand>70:
+                                        print("You hacked into someone's bank account")
+                                        print("You had fun")
+                                        rand = random.randint(0,9)
+                                        if rand ==9:
+                                            a = random.randint(50000,125000)
+                                            money = money + a
+                                            print(" You made $",a," extra money")
+                                            skill = skill + 10
+                                            happiness = happiness + 30
+                                            print("")
+                                        else:
+                                            a = random.randint(100,45000)
+                                            money = money + a
+                                            print(" You made $",a," extra money")
+                                            skill = skill + 10
+                                            happiness = happiness + 20
+                                            print("")
+
+                                    elif rand<70:
+                                        print("You weren't able to access into the wifi")
+                                        print("SOMEHOW THE POLICE UNDERSTOOD THAT YOU WERE COMMITTING CYBER CRIME !!!")
+                                        happiness = happiness -10
+                                        skill = skill + 3
+                                        jailtime = 4
+                                        print("You have to serve in jail for 4 years")
+                                        status = 3
+                                        print("")
+
+                                if click == 3:
+                                    rand = random.randint(0, 99)
+                                    if rand > 80:
+                                        print("You hacked into some server and sold their data in the black market")
+                                        print("You had fun")
+                                        rand = random.randint(0, 9)
+                                        if rand == 9:
+                                            a = random.randint(500000, 12500000)
+                                            money = money + a
+                                            print(" You made $", a, " extra money")
+                                            skill = skill + 10
+                                            happiness = happiness + 30
+                                            print("")
+                                        else:
+                                            a = random.randint(10000, 300000)
+                                            money = money + a
+                                            print(" You made $", a, " extra money")
+                                            skill = skill + 10
+                                            happiness = happiness + 20
+                                            print("")
+
+                                    elif rand < 80:
+                                        print("You weren't able to access into the wifi")
+                                        print("SOMEHOW THE POLICE UNDERSTOOD THAT YOU WERE COMMITTING CYBER CRIME !!!")
+                                        happiness = happiness - 10
+                                        skill = skill + 3
+                                        jailtime = 4
+                                        print("You have to serve in jail for 4 years")
+                                        status = 3
+                                        print("")
+
+                                if click == 4:
+                                    rand = random.randint(0, 99)
+                                    if rand > 90:
+                                        print("You hacked into some server and sold their data in the black market")
+                                        print("You had fun")
+                                        rand = random.randint(0, 9)
+                                        if rand == 9:
+                                            a = random.randint(5000000, 1250000000)
+                                            money = money + a
+                                            print(" You made $", a, " extra money")
+                                            skill = skill + 10
+                                            happiness = happiness + 30
+                                            print("")
+                                        else:
+                                            a = random.randint(1000000, 80000000)
+                                            money = money + a
+                                            print(" You made $", a, " extra money")
+                                            skill = skill + 10
+                                            happiness = happiness + 20
+                                            print("")
+
+                                    elif rand < 90:
+                                        print("You weren't able to access into the wifi")
+                                        print("SOMEHOW THE POLICE UNDERSTOOD THAT YOU WERE COMMITTING CYBER CRIME !!!")
+                                        happiness = happiness - 10
+                                        skill = skill + 3
+                                        jailtime = 4
+                                        print("You have to serve in jail for 4 years")
+                                        status = 3
+                                        print("")
+
 
             if reg == 4:
                 print("Press 1 to spent time with all your relatives")
