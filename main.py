@@ -8,11 +8,9 @@ num = int(input("Press 1 to continue : "))          #a condition to begin the ga
 if num == 1:
     age = 0;
     status = 1;                                     '''Status = 1 - Free person 
-                                                       Status = 2 - Is currently in prison
                                                        Status = 3 - Is currently in juvie
                                                        Status = 4 - Is on the run
-                                                       Status = 5 - Had been to juvie
-                                                       Status = 6 - Had been to prison'''
+                                                       Status = 5 - Had been to juvie'''
     name =  input("Enter your name : ")
     print("Choose your gender : ")
     print("Press 1 for male")
@@ -41,6 +39,19 @@ if num == 1:
     dead = 0                                #binary value; becomes 1 when you die
     relationship = 0                        #binary value; becomes one when you're in a relationship/married
     hacker = 0                              #binary value; becomes 1 when you learn hacking
+
+    Boys = ["Liam", "Noah", "William", "James", "Oliver", "Benjamin", "Elijah", "Lucas", "Mason", "Logan", "Anderson",
+            "Blakely", "Bo", "Bodie", "Boden", "Brit", "Lotte", "Gioto", "Xander", "Loius", "Paolo", "Marcelo","Ben",
+            "Joe", "Hasan","Elon","Errol","Kimbal","Bernie","Azim","Ram","Gopal"]
+
+    Girls = ["Emma", "Olivia", "Ava", "Isabella", "Sophia", "Charlotte", "Mia", "Amelia", "Harper", "Evelyn", "Alice",
+             "Maja", "Elsa", "Ella", "Ebba", "Alica", "Olivia", "Abella", "Mia", "Isla", "Maya", "Michelle", "Adriana",
+             "Lola", "Clare","Susan","Tulsi","Priya","Sita"]
+
+    LastNames = ["Kim", "lee", "park", "mae", "choi", "chen", "wang", "yang", "Smith", "Johnson", "William", "Brown",
+                 "Rodriguez", "Martinez", "Davis", "Garzia", "Jones", "Hall", "Kapoor", "Sharma", "Reddy", "Nair",
+                 "Khan","Shapiro", "Aarons","Wolowitz","Cummins"]
+
     if skill>= 100:
         skill =100
 
@@ -1832,17 +1843,19 @@ while status == 1:
                                         status = 3
                                         print("")
 
-
             if reg == 4:
                 print("Press 1 to spent time with all your relatives")
                 print("Press 2 to look for a partner")
+                print("Press 3 to spent time with your partner")
                 click = int(input("Enter your choice : "))
                 print("")
                 if click == 1:
                     print("You spent time with all your relatives")
                     happiness = happiness +10
                 if click == 2:
-                    print("-----UNDER DEVELOPMENT--------")
+                    print("Press 1 to look for a girlfriend")
+                    print("Press 2 to look for a boyfriend")
+
 
             if reg == 5:
                 age = age + 1
