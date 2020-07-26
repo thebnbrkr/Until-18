@@ -1853,8 +1853,15 @@ while status == 1:
                     print("You spent time with all your relatives")
                     happiness = happiness +10
                 if click == 2:
-                    print("Press 1 to look for a girlfriend")
-                    print("Press 2 to look for a boyfriend")
+                    if relationship == 0:
+                        print("Press 1 to look for a girlfriend")
+                        print("Press 2 to look for a boyfriend")
+                        print("")
+                        a = int(input("Enter your choice : "))
+                        if a == 1:
+                            
+                    elif relationship!=0:
+                        print("You already have a girlfriend")
 
 
             if reg == 5:
