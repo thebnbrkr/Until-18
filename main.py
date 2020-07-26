@@ -1216,7 +1216,7 @@ while status == 1:
                                 print("Press 4 for your parter")
                                 print("Press 5 for a random person")
                                 print("")
-                                choice = int(input("Enter your choice : "))
+                                click = int(input("Enter your choice : "))
                                 print("")
 
                                 if click == 1:
@@ -1303,6 +1303,7 @@ while status == 1:
                                         print("You don't have a partner")
                                         money = money + 250000
                                         print("The hitman returned the money to you")
+                                        print("")
 
                                     else:
                                         cl = 1
@@ -1363,6 +1364,337 @@ while status == 1:
                         elif a==1 and money< 250000:
                             print("You don't have enough money")
                             print("You need atleast $250000")
+                            print("")
+
+                        if a== 2 and money>= 50000:
+                            money = money-50000
+                            k ==1
+                            if k == 1:
+                                print("")
+                                print("who do you wanrt to kill")
+                                time.delay(0.5)
+                                print("Who don you want to kill ?")
+                                print("")
+                                print("Press 1 for Mom")
+                                print("Press 2 for Dad")
+                                print("Press 3 for a relative")
+                                print("Press 4 for your parter")
+                                print("Press 5 for a random person")
+                                print("")
+                                click = int(input("Enter your choice : "))
+                                print("")
+
+                                if click == 1:
+                                    time.delay(0.5)
+                                    print("")
+                                    rand = random.randint(0, 99)
+                                    if rand < 40:
+                                        print("...")
+                                        time.delay(1)
+                                        print("The hitman killed your mother")
+                                        print("The hitman confessed that you were responsible for the murder !!!")
+                                        print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
+                                        jailtime = jailtime + 25
+                                        time.delay(1)
+                                        print("Yor parents refused to arrange a lawyer for you")
+                                        print("Your sentenced to ", jailtime, "years in prison")
+                                        happiness = happiness - 50
+                                        crime = crime + 1
+                                        status = 3
+
+                                    elif rand>=40  and rand <100:
+                                        print("...")
+                                        time.delay(1)
+                                        print("You got away with murder !!!")
+                                        happiness = happiness + 10
+                                        crime = crime + 1
+
+                                if click == 2:
+                                    cl = 1
+                                    if cl == 1:
+                                        time.delay(0.5)
+                                        print("")
+                                        rand = random.randint(0, 99)
+                                        if rand < 40:
+                                            print("...")
+                                            time.delay(1)
+                                            print("The hitman killed your mother")
+                                            print("The hitman confessed that you were responsible for the murder !!!")
+                                            print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
+                                            jailtime = jailtime + 25
+                                            time.delay(1)
+                                            print("Yor parents refused to arrange a lawyer for you")
+                                            print("Your sentenced to ", jailtime, "years in prison")
+                                            happiness = happiness - 50
+                                            crime = crime + 1
+                                            status = 3
+
+                                        elif rand >= 40 and rand <= 99:
+                                            print("...")
+                                            time.delay(1)
+                                            print("You got away with murder !!!")
+                                            happiness = happiness + 10
+                                            crime = crime + 1
+
+                                if click == 3:
+                                    cl = 1
+                                    if cl == 1:
+                                        time.delay(0.5)
+                                        print("")
+                                        rand = random.randint(0, 99)
+                                        if rand < 40:
+                                            print("...")
+                                            time.delay(1)
+                                            print("The hitman killed a relative")
+                                            print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
+                                            print("The hitman confessed that you were responsible for the murder !!!")
+                                            jailtime = jailtime + 25
+                                            time.delay(1)
+                                            print("Yor parents refused to arrange a lawyer for you")
+                                            print("Your sentenced to ", jailtime, "years in prison")
+                                            happiness = happiness - 50
+                                            crime = crime + 1
+                                            status = 3
+
+                                        elif rand >= 40 and rand <= 99:
+                                            print("...")
+                                            time.delay(1)
+                                            print("You got away with murder !!!")
+                                            happiness = happiness + 10
+                                            crime = crime + 1
+
+                                if click == 4:
+                                    if relationship == 0:
+                                        print("You don't have a partner")
+                                        money = money + 50000
+                                        print("The hitman returned the money to you")
+                                        print("")
+
+                                    else:
+                                        cl = 1
+                                        if cl == 1:
+                                            time.delay(0.5)
+                                            print("")
+                                            rand = random.randint(0, 99)
+                                            if rand < 40:
+                                                print("...")
+                                                time.delay(1)
+                                                print("You killed your partner")
+                                                print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
+                                                print("The hitman confessed that you were responsible for the murder !!!")
+                                                jailtime = jailtime + 25
+                                                time.delay(1)
+                                                print("Yor parents refused to arrange a lawyer for you")
+                                                print("Your sentenced to ", jailtime, "years in prison")
+                                                happiness = happiness - 50
+                                                crime = crime + 1
+                                                relationship = 0
+                                                status = 3
+
+                                            elif rand >= 40 and rand <= 99:
+                                                print("...")
+                                                time.delay(1)
+                                                print("You got away with murder !!!")
+                                                happiness = happiness + 10
+                                                crime = crime + 1
+                                                relationship = 0
+
+                                if click == 5:
+                                    cl = 1
+                                    if cl == 1:
+                                        time.delay(0.5)
+                                        print("")
+                                        rand = random.randint(0, 99)
+                                        if rand < 40:
+                                            print("...")
+                                            time.delay(1)
+                                            print("You killed a random person")
+                                            print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
+                                            print("The hitman confessed that you were responsible for the murder !!!")
+                                            jailtime = jailtime + 25
+                                            time.delay(1)
+                                            print("Yor parents refused to arrange a lawyer for you")
+                                            print("Your sentenced to ", jailtime, "years in prison")
+                                            happiness = happiness - 50
+                                            crime = crime + 1
+                                            status = 3
+
+                                        elif rand >= 40 and rand <= 99:
+                                            print("...")
+                                            time.delay(1)
+                                            print("You got away with murder !!!")
+                                            happiness = happiness + 10
+                                            crime = crime + 1
+
+                        elif a==2 and money< 50000:
+                            print("You don't have enough money")
+                            print("You need atleast $50000")
+                            print("")
+
+                        if a== 3 and money>= 5000:
+                            money = money-5000
+                            k ==1
+                            if k == 1:
+                                print("")
+                                print("who do you wanrt to kill")
+                                time.delay(0.5)
+                                print("Who don you want to kill ?")
+                                print("")
+                                print("Press 1 for Mom")
+                                print("Press 2 for Dad")
+                                print("Press 3 for a relative")
+                                print("Press 4 for your parter")
+                                print("Press 5 for a random person")
+                                print("")
+                                click = int(input("Enter your choice : "))
+                                print("")
+
+                                if click == 1:
+                                    time.delay(0.5)
+                                    print("")
+                                    rand = random.randint(0, 99)
+                                    if rand < 85:
+                                        print("...")
+                                        time.delay(1)
+                                        print("The hitman killed your mother")
+                                        print("The hitman confessed that you were responsible for the murder !!!")
+                                        print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
+                                        jailtime = jailtime + 25
+                                        time.delay(1)
+                                        print("Yor parents refused to arrange a lawyer for you")
+                                        print("Your sentenced to ", jailtime, "years in prison")
+                                        happiness = happiness - 50
+                                        crime = crime + 1
+                                        status = 3
+
+                                    elif rand>=85 and rand <100:
+                                        print("...")
+                                        time.delay(1)
+                                        print("You got away with murder !!!")
+                                        happiness = happiness + 10
+                                        crime = crime + 1
+
+                                if click == 2:
+                                    cl = 1
+                                    if cl == 1:
+                                        time.delay(0.5)
+                                        print("")
+                                        rand = random.randint(0, 99)
+                                        if rand < 85:
+                                            print("...")
+                                            time.delay(1)
+                                            print("The hitman killed your mother")
+                                            print("The hitman confessed that you were responsible for the murder !!!")
+                                            print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
+                                            jailtime = jailtime + 25
+                                            time.delay(1)
+                                            print("Yor parents refused to arrange a lawyer for you")
+                                            print("Your sentenced to ", jailtime, "years in prison")
+                                            happiness = happiness - 50
+                                            crime = crime + 1
+                                            status = 3
+
+                                        elif rand >= 85 and rand <= 99:
+                                            print("...")
+                                            time.delay(1)
+                                            print("You got away with murder !!!")
+                                            happiness = happiness + 10
+                                            crime = crime + 1
+
+                                if click == 3:
+                                    cl = 1
+                                    if cl == 1:
+                                        time.delay(0.5)
+                                        print("")
+                                        rand = random.randint(0, 99)
+                                        if rand < 85:
+                                            print("...")
+                                            time.delay(1)
+                                            print("The hitman killed a relative")
+                                            print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
+                                            print("The hitman confessed that you were responsible for the murder !!!")
+                                            jailtime = jailtime + 25
+                                            time.delay(1)
+                                            print("Yor parents refused to arrange a lawyer for you")
+                                            print("Your sentenced to ", jailtime, "years in prison")
+                                            happiness = happiness - 50
+                                            crime = crime + 1
+                                            status = 3
+
+                                        elif rand >= 85 and rand <= 99:
+                                            print("...")
+                                            time.delay(1)
+                                            print("You got away with murder !!!")
+                                            happiness = happiness + 10
+                                            crime = crime + 1
+
+                                if click == 4:
+                                    if relationship == 0:
+                                        print("You don't have a partner")
+                                        money = money + 5000
+                                        print("The hitman returned the money to you")
+                                        print("")
+
+                                    else:
+                                        cl = 1
+                                        if cl == 1:
+                                            time.delay(0.5)
+                                            print("")
+                                            rand = random.randint(0, 99)
+                                            if rand < 85:
+                                                print("...")
+                                                time.delay(1)
+                                                print("You killed your partner")
+                                                print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
+                                                print("The hitman confessed that you were responsible for the murder !!!")
+                                                jailtime = jailtime + 25
+                                                time.delay(1)
+                                                print("Yor parents refused to arrange a lawyer for you")
+                                                print("Your sentenced to ", jailtime, "years in prison")
+                                                happiness = happiness - 50
+                                                crime = crime + 1
+                                                relationship = 0
+                                                status = 3
+
+                                            elif rand >= 85 and rand <= 99:
+                                                print("...")
+                                                time.delay(1)
+                                                print("You got away with murder !!!")
+                                                happiness = happiness + 10
+                                                crime = crime + 1
+                                                relationship = 0
+
+                                if click == 5:
+                                    cl = 1
+                                    if cl == 1:
+                                        time.delay(0.5)
+                                        print("")
+                                        rand = random.randint(0, 99)
+                                        if rand < 85:
+                                            print("...")
+                                            time.delay(1)
+                                            print("You killed a random person")
+                                            print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
+                                            print("The hitman confessed that you were responsible for the murder !!!")
+                                            jailtime = jailtime + 25
+                                            time.delay(1)
+                                            print("Yor parents refused to arrange a lawyer for you")
+                                            print("Your sentenced to ", jailtime, "years in prison")
+                                            happiness = happiness - 50
+                                            crime = crime + 1
+                                            status = 3
+
+                                        elif rand >= 85 and rand <= 99:
+                                            print("...")
+                                            time.delay(1)
+                                            print("You got away with murder !!!")
+                                            happiness = happiness + 10
+                                            crime = crime + 1
+
+                        elif a==3 and money< 5000:
+                            print("You don't have enough money")
+                            print("You need atleast $5000")
+                            print("")
 
             if reg == 4:
                 print("Press 1 to spent time with all your relatives")
