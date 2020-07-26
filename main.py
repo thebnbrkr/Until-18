@@ -995,7 +995,7 @@ while status == 1:
                         choice = int(input("Enter your choice : "))
                         print("")
 
-                        if click ==1:
+                        if click == 1:
                             time.delay(0.5)
                             a = int(input("Press 2 to commit murder : "))
                             print("")
@@ -1032,8 +1032,9 @@ while status == 1:
                                 crime = crime +1
                                 status = 3
 
-                        if click ==2:
-                            if click == 1:
+                        if click == 2:
+                            cl=1
+                            if cl == 1:
                                 time.delay(0.5)
                                 a = int(input("Press 2 to commit murder : "))
                                 print("")
@@ -1041,7 +1042,7 @@ while status == 1:
                                 if rand < 15:
                                     print("...")
                                     time.delay(1)
-                                    print("You killed your father")
+                                    print("You killed your mother")
                                     print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
                                     jailtime = jailtime + 25
                                     time.delay(1)
@@ -1061,7 +1062,7 @@ while status == 1:
                                 elif rand >= 20:
                                     print("...")
                                     time.delay(1)
-                                    print("Your father understood your motives and called the police on you")
+                                    print("Your mother understood your motives and called the police on you")
                                     print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
                                     jailtime = jailtime + 25
                                     time.delay(1)
@@ -1070,8 +1071,9 @@ while status == 1:
                                     crime = crime + 1
                                     status = 3
 
-                        if click ==3:
-                            if click == 1:
+                        if click == 3:
+                            cl = 1
+                            if cl == 1:
                                 time.delay(0.5)
                                 a = int(input("Press 2 to commit murder : "))
                                 print("")
@@ -1108,11 +1110,12 @@ while status == 1:
                                     crime = crime + 1
                                     status = 3
 
-                        if click ==5:
+                        if click == 4:
                             if relationship == 0:
                                 print("You don't have a partner")
                             else:
-                                if click == 1:
+                                cl = 1
+                                if cl == 1:
                                     time.delay(0.5)
                                     a = int(input("Press 2 to commit murder : "))
                                     print("")
@@ -1152,8 +1155,9 @@ while status == 1:
                                         relationship = 0
                                         status = 3
 
-                        if click ==6:
-                            if click == 1:
+                        if click == 5:
+                            cl =1
+                            if cl == 1:
                                 time.delay(0.5)
                                 a = int(input("Press 2 to commit murder : "))
                                 print("")
@@ -1190,6 +1194,7 @@ while status == 1:
                                     crime = crime + 1
                                     status = 3
 
+                    if ch
             if reg == 4:
                 print("Press 1 to spent time with all your relatives")
                 print("Press 2 to look for a partner")
