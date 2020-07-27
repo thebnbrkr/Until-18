@@ -3,9 +3,9 @@ import time
 
 print("-----------------------------------REDWOOD CITY-------------------------------------")
 print("")
-num = int(input("Press 1 to continue : "))          #a condition to begin the game
-
-if num == 1:
+num = input("Press any key to continue : ")          #a condition to begin the game
+start = num
+if start ==num:
     age = 0;
     status = 1;                                     '''Status = 1 - Free person 
                                                        Status = 3 - Is currently in juvie
@@ -17,14 +17,23 @@ if num == 1:
     print("Press 2 for female")
     print("Press 3 for other")
     print("")
-    gender = int(input("Enter your choice : ")) #accepting an integer for a condition
+    gender = input("Enter your choice : ")  #accepting an integer for a condition
 
-    if gender == 1:
+    if gender == "1":
         sex = "Male"
-    elif gender == 2:
+        print("")
+
+    elif gender == "2":
         sex = "Female"
-    elif gender == 3:
+        print("")
+
+    elif gender == "3":
         sex = "Other"
+        print("")
+
+    else:
+        print("Please press 1, 2, or 3")
+        print("")
 
     skill = random.randint(0,99)            #The random.randint() function generates a random number
     happiness = random.randint(0,99)
@@ -39,6 +48,7 @@ if num == 1:
     dead = 0                                #binary value; becomes 1 when you die
     relationship = 0                        #binary value; becomes one when you're in a relationship/married
     hacker = 0                              #binary value; becomes 1 when you learn hacking
+
 
     Boys = ["Liam", "Noah", "William", "James", "Oliver", "Benjamin", "Elijah", "Lucas", "Mason", "Logan", "Anderson",
             "Blakely", "Bo", "Bodie", "Boden", "Brit", "Lotte", "Gioto", "Xander", "Loius", "Paolo", "Marcelo","Ben",
@@ -85,31 +95,30 @@ if age<5:                                       #main process when the age is le
             print("Press 1 to cry")
             print("Press 2 to play")
             print("Press 3 to do both")
-            print("Press 4 to grow older")
-            reg = int(input("Enter your choice : "))
+            print("Press any other key to grow older")
+            reg = input("Enter your choice : ")
             print("")
-
-            if reg == 1:
+            if reg == "1":
                 print("You cried")
                 skill = skill + 1.5
                 happiness =  happiness -2
                 print("")
 
-            if reg == 2:
+            if reg == "2":
                 print("You played")
                 skill = skill + 2
                 happiness = happiness +5
                 intelligence = intelligence +2
                 print("")
 
-            if reg == 3:
+            if reg == "3":
                 print("You cried and played.")
                 skill = skill + 1
                 happiness = happiness +0
                 intelligence = intelligence +1
                 print ("")
 
-            if reg == 4:
+            else:
                 age=age+1
             if(age>4):
                 break
@@ -147,11 +156,12 @@ while status == 1:
             print("Press 2 for part-time jobs")
             print("Press 3 for crimes ")
             print("Press 4 for relationships")
-            print("Press 5 to grow older")
-            reg = int(input("Enter your choice : "))
+            print("Press 5 for activities")
+            print("Press any other key to grow older")
+            reg = input("Enter your choice : ")
             print("")
 
-            if reg == 1:                                        #school
+            if reg == "1":                                        #school
                 print("")
                 print("Press 1 for doing homework")
                 print("Press 2 for spendinng time with friends")
@@ -325,7 +335,7 @@ while status == 1:
                     intelligence = intelligence+5
                     happiness = happiness+4
 
-            if reg == 2:
+            if reg == "2":
                 if age>=14:
                     print("The available part time jobs are : ")
                     print("Press 1 for hotdog maker")
@@ -391,7 +401,7 @@ while status == 1:
                         else:
                             print("You need atleast 70 skill units and 70 intelligence units for this job")
 
-            if reg == 3:
+            if reg == "3":
                 t = 0
                 if t==0:
                     print("Press 1 to burgle a home")
@@ -1843,7 +1853,7 @@ while status == 1:
                                         status = 3
                                         print("")
 
-            if reg == 4:
+            if reg == "4":
                 print("Press 1 to spent time with all your relatives")
                 print("Press 2 to look for a partner")
                 print("Press 3 to spent time with your partner")
@@ -1935,8 +1945,15 @@ while status == 1:
                 elif relationship!=0:
                     print("You already have a partner")
 
+            if reg == "5":
+                print("Press 1 to work out in the gym")
+                print("Press 2 to read a book")
+                print("Press 3 to read meditate")
+                print("Press 4 to start a social media account")
 
-            if reg == 5:
+
+
+            else:
                 age = age + 1
         if (age > 18):
             break
