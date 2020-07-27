@@ -1852,6 +1852,7 @@ while status == 1:
                 if click == 1:
                     print("You spent time with all your relatives")
                     happiness = happiness +10
+
                 if click == 2:
                     if relationship == 0:
                         print("Press 1 to look for a girlfriend")
@@ -1861,38 +1862,78 @@ while status == 1:
                         if a == 1:
                             print("")
                             x = 0
-                    x = 0
-                    while x < 4:
-                        skill = random.randint(0, 99)  # The random.randint() function generates a random number
-                        happiness = random.randint(0, 99)
-                        intelligence = random.randint(0, 99)
-                        names = random.choice(Girls) + random.choice(LastNames)
-                        rand = random.randint(0, 10)
-                        print("Name : ", names)
-                        print("Happiness : ", happiness)
-                        print("Intelligence : ", intelligence)
-                        print("Skill : ", skill)
-                        print("")
-                        print("Press 1 to ask her out")
-                        print("Press any key to look for a different person")
-                        q = input("Enter your choice :")
-                        if q == "1":
-                            rand = random.randint(0, 9)
-                            if rand <= 4:
-                                print(names, " rejected you.")
-                            else:
-                                print("You're now going out with ", names, " !!!")
-                                relationship = 1
-                                happiness = happiness + 25
-                                x = 4
-                        else:
-                            x = x + 1
-                        if x == 4 or x > 4:
-                            print("You have either found a partner")
-                            print("If not, then sorry")
+                            while x < 4:
+                                skill = random.randint(0, 99)  # The random.randint() function generates a random number
+                                happiness = random.randint(0, 99)
+                                intelligence = random.randint(0, 99)
+                                names = random.choice(Girls) + random.choice(LastNames)
+                                rand = random.randint(0, 10)
+                                print("Name : ", names)
+                                print("Happiness : ", happiness)
+                                print("Intelligence : ", intelligence)
+                                print("Skill : ", skill)
+                                print("")
+                                print("Press 1 to ask her out")
+                                print("Press any key to look for a different person")
+                                q = input("Enter your choice :")
+                                if q == "1":
+                                    rand = random.randint(0, 9)
+                                    if rand <= 4:
+                                        print(names, " rejected you.")
+                                    else:
+                                        print("You're now going out with ", names, " !!!")
+                                        relationship = 1
+                                        happiness = happiness + 25
+                                        x = 4
+                                else:
+                                    x = x + 1
+                                if x == 4 or x > 4:
+                                    print("You have either found a partner")
+                                    print("If not, then sorry")
+                                    break
+
+                        if a == 2:
+                            print("")
+                            x = 0
+                            while x < 4:
+                                skill = random.randint(0, 99)  # The random.randint() function generates a random number
+                                happiness = random.randint(0, 99)
+                                intelligence = random.randint(0, 99)
+                                names = random.choice(Boys) + random.choice(LastNames)
+                                rand = random.randint(0, 10)
+                                print("Name : ", names)
+                                print("Happiness : ", happiness)
+                                print("Intelligence : ", intelligence)
+                                print("Skill : ", skill)
+                                print("")
+                                print("Press 1 to ask him out")
+                                print("Press any key to look for a different person")
+                                q = input("Enter your choice :")
+                                if q == "1":
+                                    rand = random.randint(0, 9)
+                                    if rand <= 4:
+                                        print(names, " rejected you.")
+                                    else:
+                                        print("You're now going out with ", names, " !!!")
+                                        relationship = 1
+                                        happiness = happiness + 25
+                                        x = 16
+                                else:
+                                    x = x + 1
+                                if x == 4 and x < 16:
+                                    print("You can't find anyone to date")
+                                    print("")
+                                    break
+                                if x==16:
+                                    print("Congratulations !!!!")
+                                    print("")
+
+                if click == 3:
+                    print("You spent time with your partner")
+                    happiness = happiness +10
 
                 elif relationship!=0:
-                    print("You already have a girlfriend")
+                    print("You already have a partner")
 
 
             if reg == 5:
