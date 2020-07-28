@@ -50,6 +50,13 @@ if start ==num:
     relationship = 0                        #binary value; becomes one when you're in a relationship/married
     hacker = 0                              #binary value; becomes 1 when you learn hacking
     sick = 0                                #binary value; becomes 1 when your sick
+    social_media =0                         #no of followers on social media
+    streamer = 0                            #no of followers on the streaming site
+    vlog = 0                                #no of followers on thr vloging site
+    post_pics = 0                           #no of pictures posted
+    post_vids = 0                           #no of videos posted
+    fame = 0                                #your fame
+
 
     Boys = ["Liam", "Noah", "William", "James", "Oliver", "Benjamin", "Elijah", "Lucas", "Mason", "Logan", "Anderson",
             "Blakely", "Bo", "Bodie", "Boden", "Brit", "Lotte", "Gioto", "Xander", "Loius", "Paolo", "Marcelo","Ben",
@@ -137,6 +144,14 @@ while status == 1:
     if (age >= 5 and age < 18) and status == 1:  # This process is needed when the age is between 4 and 19
         while True:
 
+            life = life - 2
+            if life >= 100:
+                life = 100
+            if life < 20:
+                sick = 1
+            elif life < 0:
+                life = 0
+
             skill = skill-2
             if skill>=100:
                 skill=100
@@ -161,7 +176,7 @@ while status == 1:
             print("Your happiness : ", happiness)
             print("Your intelligence : ", intelligence)
             print("Your life : ", life)
-            print("Your age :", age)
+            print("Your age : ", age)
             print("Money : ", money)
             print("")
             print("Press 1 for school")
@@ -2118,11 +2133,11 @@ while status == 1:
                 print("Become a straemer")
                 print("")
                 click = input("Enter your choice : ")
-
                 if click == "1":
                     print("")
                     print("You worked out in the gym")
                     skill = skill + 2
+                    life = life + 4
                     happiness = happiness + 3
                     print("")
 
@@ -2138,15 +2153,20 @@ while status == 1:
                     print("")
                     print("You meditated")
                     happiness = happiness + 4
+                    life = life + 2
                     print("")
 
                 if click == "4":
                     print("")
-                    print("Post a picture")
-                    print("Post a status")
-                    print("Post a video")
-                    happiness = happiness + 3
+                    print("Press 1 to post a picture")
+                    print("Press 2 to post a video")
                     print("")
+                    a = input("Enter your choice : ")
+                    if a== 1:
+                        print("You posted a picture")
+                        post_pics = post_pics+1
+                        print("Total number of pictures posted", post_pics)
+                        happiness = happiness + 2
 
 
             else:
@@ -2156,7 +2176,7 @@ while status == 1:
 
 while (age >= 5 and age < 18) and status == 3:  # This process is needed when the age is between 4 and 19
 
-    life = life - 1
+    life = life - 2
     if life >= 100:
         life = 100
     if life < 20:
