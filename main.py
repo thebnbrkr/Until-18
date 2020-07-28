@@ -38,6 +38,7 @@ if start ==num:
     skill = random.randint(0,99)            #The random.randint() function generates a random number
     happiness = random.randint(0,99)
     intelligence = random.randint(0,99)
+    life = random.randint(30,99)
 
     naughty = 0                             #for measuring naughtiness
     club = 0                                #by default 0 , when you join some club = some number
@@ -48,6 +49,7 @@ if start ==num:
     dead = 0                                #binary value; becomes 1 when you die
     relationship = 0                        #binary value; becomes one when you're in a relationship/married
     hacker = 0                              #binary value; becomes 1 when you learn hacking
+    sick = 0
 
 
     Boys = ["Liam", "Noah", "William", "James", "Oliver", "Benjamin", "Elijah", "Lucas", "Mason", "Logan", "Anderson",
@@ -85,12 +87,20 @@ if age<5:                                       #main process when the age is le
             elif intelligence<0:
                 intelligence = 0
 
+            life = life-1
+            if life>=100:
+                life=100
+            elif life <20:
+                sick = 1
+            elif life<0:
+                life = 0
 
             print("Name : ", name)
             print("Sex : ", sex)
             print("You're skill(s) : ",skill)
             print("You're happiness : ",happiness)
             print("You're intelligence : ",intelligence)
+
             print("Your age :", age)
             print("Press 1 to cry")
             print("Press 2 to play")
@@ -2102,6 +2112,40 @@ while status == 1:
                 print("Press 2 to read a book")
                 print("Press 3 to read meditate")
                 print("Press 4 to start a social media account")
+                print("Become a vlogger")
+                print("Become a straemer")
+                print("")
+                click = input("Enter your choice : ")
+
+                if click == "1":
+                    print("")
+                    print("You worked out in the gym")
+                    skill = skill + 2
+                    happiness = happiness + 3
+                    print("")
+
+                if click == "2":
+                    print("")
+                    print("You read a book")
+                    skill = skill + 4
+                    happiness = happiness + 3
+                    intelligence = intelligence + 5
+                    print("")
+
+                if click == "3":
+                    print("")
+                    print("You meditated")
+                    happiness = happiness + 4
+                    print("")
+
+                if click == "4":
+                    print("")
+                    print("Post a picture")
+                    print("Post a status")
+                    print("Post a video")
+                    happiness = happiness + 3
+                    print("")
+
 
             else:
                 age = age + 1
