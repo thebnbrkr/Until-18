@@ -2142,36 +2142,37 @@ while (age >= 5 and age < 18) and status == 3:  # This process is needed when th
     print("press 4 to read books")
     print("Press 5 to grow older")
     print("")
-    choice = int(input("Enter your choice : "))
-    if choice == 1:
+    choice = input("Enter your choice : ")
+    if choice == "1":
         print("You worked out in prison")
         happiness = happiness + 5
         skill = skill +  5
         print("")
 
-    if choice == 2:
+    if choice == "2":
         rand = random.randint(0,6)
         if rand<2:
             print("Another prisoner has challenged you for a fight")
             print("Press 1 to fight with the person")
             print("Press 2 to ignore the proposal")
-            click = int(input("Enter your choice : "))
+            click = input("Enter your choice : ")
+            print("")
             rand = random.randint(0,99)
-            if click ==1 and rand<15:
+            if click =="1" and rand<15:
                 print("The guards have saw you fighting in prison")
                 print("Your sentence has been extended by 2 yeas !!!!")
                 jailtime= jailtime+2
                 happiness = happiness-20
                 print("")
 
-            if click == 1 and (rand>=15 and rand<=20):
+            if click =="1" and (rand>=15 and rand<=20):
                 print("You accidently killed the other prisoner while fighting !!!!")
                 print("Your sentence has been extended by 50 yeas !!!!")
                 jailtime = jailtime + 50
                 happiness = happiness - 50
                 print("")
 
-            if click == 1 and (rand>=20 and rand<=25):
+            if click =="1" and (rand>=20 and rand<=25):
                 print("You accidently killed you while fighting !!!!")
                 dead = 1
                 break
@@ -2293,11 +2294,11 @@ while (age >= 5 and age < 18) and status == 3:  # This process is needed when th
                     jailtime = jailtime + 2
                     print("")
 
-    if choice == 3:
+    if choice == "3":
         print("")
         print("Do you want to escape ?")
-        click = int(input("Press 1 to continue"))
-        if click !=1:
+        click = input("Press 1 to continue")
+        if click !="1":
             print("You changed your mind and went back to your cell")
 
         else:
@@ -2311,8 +2312,8 @@ while (age >= 5 and age < 18) and status == 3:  # This process is needed when th
                     print("press 3 for 7")
                     print("press 4 for 8")
                     print("")
-                    a = int(input("Enter your choice"))
-                    if a==1:
+                    a = input("Enter your choice")
+                    if a=="1":
                         print("You broke out of prison")
                         status = 4
                         crime = crime + 1
@@ -2335,8 +2336,8 @@ while (age >= 5 and age < 18) and status == 3:  # This process is needed when th
                     print("press 3 for 25")
                     print("press 4 for 26")
                     print("")
-                    a = int(input("Enter your choice"))
-                    if a==1:
+                    a = input("Enter your choice")
+                    if a=="1":
                         print("You broke out of prison")
                         status = 4
                         crime = crime + 1
@@ -3249,12 +3250,12 @@ while (age >= 5 and age < 18) and status == 3:  # This process is needed when th
                         crime = crime + 1
                         print("")
 
-    if choice == 4:
+    if choice == "4":
         print("You read books")
         skill = skill + 1
         intelligence = intelligence + 5
 
-    if choice == 5:
+    if choice == "5":
         age = age +1
         i = i+1
         if (i<jailtime):
