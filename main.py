@@ -190,6 +190,7 @@ while status == 1:
             print("Press 3 for crimes ")
             print("Press 4 for relationships")
             print("Press 5 for activities")
+            print("Press 6 for ")
             print("Press any other key to grow older")
             reg = input("Enter your choice : ")
             print("")
@@ -398,7 +399,7 @@ while status == 1:
                         if skill>=20:
                             print("You're hired !!!")
                             print("Salary $8 per hour")
-                            money = (8*4)*5*50+money
+                            money = ((8*4)*20)+money
                             print("")
 
                         else :
@@ -409,7 +410,7 @@ while status == 1:
                         if skill>=30:
                             print("You're hired !!!")
                             print("Salary $9 per hour")
-                            money = (9*4)*5*50+money
+                            money = ((9*4)*20)+money
                             print("")
 
                         else:
@@ -420,7 +421,7 @@ while status == 1:
                         if skill>=20:
                             print("You're hired !!!")
                             print("Salary $10 per hour")
-                            money = (10*4)*5*50 + money
+                            money = ((10*4)*20) + money
                             print("")
                         else:
                             print("You need atleast 20 skill units for this job")
@@ -430,7 +431,7 @@ while status == 1:
                         if skill>=30 and intelligence>=20:
                             print("You're hired !!!")
                             print("Salary $13 per hour")
-                            money = (13 * 4) * 5 * 50 + money
+                            money = ((13 * 4) * 20) + money
                             print("")
                         else:
                             print("You need atleast 30 skill units and 20 intelligence units for this job")
@@ -439,14 +440,14 @@ while status == 1:
                     if choice == "5":
                         print("You're hired !!!")
                         print("Salary $10 per hour")
-                        money = (10 * 4) * 5 * 50 + money
+                        money = ((10 * 4) * 20) + money
                         print ("")
 
                     if choice == "6":
                         if skill>=90 and intelligence>=70:
                             print("You're hired !!!")
                             print("Salary $50 per hour")
-                            money = (50* 4) * 5 * 50 + money
+                            money = ((50* 4) * 20)+ money
                             print("")
                         else:
                             print("You need atleast 80 skill units and 70 intelligence units for this job")
@@ -456,7 +457,7 @@ while status == 1:
                         if skill>=70 and intelligence>=70:
                             print("You're hired !!!")
                             print("Salary $25 per hour")
-                            money = (25 * 4) * 5 * 50 + money
+                            money = ((25 * 4) * 20) + money
                             print("")
                         else:
                             print("You need atleast 70 skill units and 70 intelligence units for this job")
@@ -2382,6 +2383,9 @@ while status == 1:
                         print("You made $500,000 in this stream")
                         money = money + 500000
                         print("")
+
+            if reg == "6":
+                print("Press ports item")
 
             else:
                 age = age + 1
