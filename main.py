@@ -56,7 +56,12 @@ if start ==num:
     post_pics = 0                           #no of pictures posted
     post_vids = 0                           #no of videos posted
     fame = 1                                #your fame
-
+    vlog = 0                                #vlog counter
+    stream = 0                              #no of streams
+    follow = 1                              #followers count
+    vlogf = 1                               #vlog follower count
+    streamf = 1                             #stream follower count
+    abs = 1                                 #a variable that will be rounded as the number of followers
 
     Boys = ["Liam", "Noah", "William", "James", "Oliver", "Benjamin", "Elijah", "Lucas", "Mason", "Logan", "Anderson",
             "Blakely", "Bo", "Bodie", "Boden", "Brit", "Lotte", "Gioto", "Xander", "Loius", "Paolo", "Marcelo","Ben",
@@ -179,7 +184,6 @@ while status == 1:
             print("Your life : ", life)
             print("Your age : ", age)
             print("Money : ", money)
-            print("Fame : ", fame)
             print("")
             print("Press 1 for school")
             print("Press 2 for part-time jobs")
@@ -2164,29 +2168,133 @@ while status == 1:
                     print("Press 2 to post a video")
                     print("")
                     a = input("Enter your choice : ")
-                    if a== 1:
+                    if a== "1":
                         print("You posted a picture")
                         post_pics = post_pics+1
                         print("Total number of pictures posted", post_pics)
                         happiness = happiness + 2
-                        fame = fame*1.75
-                        print ("Yor fame increased")
-                        print("Fame : ",fame)
+                        abs = abs*1.75
+                        follow = round(a)
+                        print("Followers : ",follow)
                         print("")
 
-                    if a== 2:
+                    if a== "2":
                         print("You posted a videos")
                         post_vids = post_vids+1
                         print("Total number of pictures posted", post_vids)
                         happiness = happiness + 2
-                        fame = fame*1.75
-                        print ("Yor fame increased")
-                        print("Fame : ",fame)
+                        abs = abs*1.75
+                        follow = round(a)
+                        print("Followers : ",follow)
                         print("")
 
                     else:
                         print("lease any one of the given choices")
                         print("")
+
+                if click == "5":
+                    print("You uploaded a video")
+                    vlog = vlog + 1
+                    print("Total number of pictures posted", vlog)
+                    happiness = happiness + 2
+                    abs = abs * 1.75
+                    vlogf = round(a)
+                    print("Followers : ", vlogf)
+                    print("Need atleast 5000 followers for monetization")
+                    print("")
+                    if vlogf>=5000 and vlogf<=10000:
+                        money = money + 1
+                        print("You made $1 in this stream")
+                        print("")
+
+                    elif vlogf>= 10000 and vlogf<= 50000:
+                        money = money + 5
+                        print("You made $5 in this stream")
+                        print("")
+
+                    elif vlogf>= 50000 and vlogf<= 100000:
+                        money = money + 10
+                        print("You made $10 in this stream")
+                        print("")
+
+                    elif vlogf>= 100000 and vlogf<= 200000:
+                        money = money + 20
+                        print("You made $20 in this stream")
+                        print("")
+
+                    elif vlogf>= 200000 and vlogf<= 300000:
+                        money = money + 30
+                        print("You made $30 in this stream")
+                        print("")
+
+                    elif vlogf>= 300000 and vlogf<= 400000:
+                        money = money + 40
+                        print("You made $40 in this stream")
+                        print("")
+
+                    elif vlogf>= 400000 and vlogf<= 500000:
+                        money = money + 50
+                        print("You made $50 in this stream")
+                        print("")
+
+                    elif vlogf >= 500000 and vlogf <= 600000:
+                        money = money + 60
+                        print("You made $60 in this stream")
+                        print("")
+
+                    elif vlogf >= 600000 and vlogf <= 700000:
+                        money = money + 70
+                        print("You made $70 in this stream")
+                        print("")
+
+                    elif vlogf >= 700000 and vlogf <= 800000:
+                        money = money + 80
+                        print("You made $80 in this stream")
+                        print("")
+
+                    elif vlogf >= 800000 and vlogf <= 900000:
+                        money = money + 90
+                        print("You made $60 in this stream")
+                        print("")
+
+                    elif vlogf >= 900000 and vlogf <= 1000000:
+                        money = money + 100
+                        print("You made $60 in this stream")
+                        print("")
+
+                    elif vlogf >= 1000000 and vlogf <= 5000000:
+                        money = money + 500
+                        print("You made $500 in this stream")
+                        print("")
+
+                    elif vlogf >= 5000000 and vlogf <= 10000000:
+                        money = money + 2000
+                        print("You made $500 in this stream")
+                        print("")
+
+                    elif vlogf >= 10000000 and vlogf <= 50000000:
+                        money = money + 20000
+                        print("You made $20,000 in this stream")
+                        print("")
+
+                    elif vlogf >= 50000000 and vlogf <= 100000000:
+                        money = money + 50000
+                        print("You made $50,000 in this stream")
+                        print("")
+
+                if click == "6":
+                    print("You streamed a video")
+                    stream = stream + 1
+                    print("Total number of pictures posted", stream)
+                    happiness = happiness + 2
+                    abs = abs * 1.75
+                    streamf = round(a)
+                    print("Followers : ", streamf)
+                    print("")
+
+
+
+
             else:
                 age = age + 1
         if (age > 18):
