@@ -39,6 +39,7 @@ if start ==num:
     happiness = random.randint(0,99)
     intelligence = random.randint(0,99)
     life = random.randint(30,99)
+    partner = random.randint(50,99)
 
     naughty = 0                             #for measuring naughtiness
     club = 0                                #by default 0 , when you join some club = some number
@@ -61,7 +62,7 @@ if start ==num:
     follow = 1                              #followers count
     vlogf = 1                               #vlog follower count
     streamf = 1                             #stream follower count
-    abs = 1                                 #a variable that will be rounded as the number of followers
+    abs = 1                                 #a variable that will be rounded as the number of follower
 
     Boys = ["Liam", "Noah", "William", "James", "Oliver", "Benjamin", "Elijah", "Lucas", "Mason", "Logan", "Anderson",
             "Blakely", "Bo", "Bodie", "Boden", "Brit", "Lotte", "Gioto", "Xander", "Loius", "Paolo", "Marcelo","Ben",
@@ -105,6 +106,17 @@ if age<5:                                       #main process when the age is le
                 sick = 1
             elif life<0:
                 life = 0
+            if sick == 1:
+                print("You're really sick")
+                print("You've been taken to the doctor")
+                rand = random.randint(0,5)
+                if rand>3:
+                    print("You died")
+                    dead =1
+                else:
+                    print("You're cured")
+                    happiness = happiness+10
+                    life = life+20
 
             print("")
             print("Name : ", name)
@@ -176,6 +188,15 @@ while status == 1:
             elif intelligence<0:
                 intelligence = 0
 
+            partner = partner - 2
+            if partner >= 100:
+                partner = 100
+            if partner < 20:
+                print("Your partner dumped you")
+                happiness = happiness - 40
+            elif partner <= 0:
+                partner = 0
+
             print("Name : ", name)
             print("Sex : ", sex)
             print("You're skill(s) : ", skill)
@@ -184,13 +205,13 @@ while status == 1:
             print("Your life : ", life)
             print("Your age : ", age)
             print("Money : ", money)
+            print("Your relationship meter (the higher the better) : ", partner)
             print("")
             print("Press 1 for school")
             print("Press 2 for part-time jobs")
             print("Press 3 for crimes ")
             print("Press 4 for relationships")
             print("Press 5 for activities")
-            print("Press 6 for ")
             print("Press any other key to grow older")
             reg = input("Enter your choice : ")
             print("")
@@ -2035,6 +2056,7 @@ while status == 1:
                 print("Press 1 to spent time with all your relatives")
                 print("Press 2 to look for a partner")
                 print("Press 3 to spent time with your partner")
+                print("Press 4 to break up")
                 click = input("Enter your choice : ")
                 print("")
                 if click == "1":
@@ -2123,6 +2145,12 @@ while status == 1:
                 if click == "3":
                     print("You spent time with your partner")
                     happiness = happiness +10
+                    partner = partner + 10
+
+                if click == "4":
+                    print("You broke up")
+                    print("")
+                    relationship = 0
 
                 elif relationship!=0:
                     print("You already have a partner")
@@ -2384,9 +2412,6 @@ while status == 1:
                         money = money + 500000
                         print("")
 
-            if reg == "6":
-                print("Press ports item")
-
             else:
                 age = age + 1
         if (age > 18):
@@ -2419,6 +2444,18 @@ while (age >= 5 and age < 18) and status == 3:  # This process is needed when th
         intelligence = 100
     elif intelligence < 0:
         intelligence = 0
+
+    partner = partner - 2
+    if partner >= 100:
+        partner = 100
+    elif partner <= 0:
+        partner = 0
+
+broke = random.randint(0,9)
+if broke>1:
+    print("Your partner broke up with you ")
+    happiness = happiness - 40
+    relationship = 0
 
     print("######### JUVIENILE PRISON #########")
     i = 0
@@ -2467,7 +2504,7 @@ while (age >= 5 and age < 18) and status == 3:  # This process is needed when th
             if click =="1" and (rand>=20 and rand<=25):
                 print("You accidently killed you while fighting !!!!")
                 dead = 1
-                break
+
 
             if click == "2" and rand<15:
                 print("")
@@ -2523,7 +2560,7 @@ while (age >= 5 and age < 18) and status == 3:  # This process is needed when th
                             print("The other prisoner killed you")
                             dead == 1
                             print("")
-                            break
+
 
                         elif rand==1:
                             print("You killed the other prisoner")
@@ -2532,7 +2569,7 @@ while (age >= 5 and age < 18) and status == 3:  # This process is needed when th
                             skill = skill+10
                             happiness = happiness -50
                             print("")
-                            break
+
 
                         elif rand==2:
                             print("A guard saw you fighting")
@@ -2540,7 +2577,7 @@ while (age >= 5 and age < 18) and status == 3:  # This process is needed when th
                             jailtime = jailtime+2
                             happiness = hapiness -10
                             print("")
-                            break
+
 
                         else:
                             print("You fought in prison")
@@ -2682,7 +2719,7 @@ while (age >= 5 and age < 18) and status == 3:  # This process is needed when th
                         happiness = happiness-20
                         crime = crime +1
                         print("")
-                        break
+
 
                 if rand == 4:
                     print("2+5 = ")
@@ -3562,14 +3599,19 @@ while (age >= 5 and age < 18) and status == 3:  # This process is needed when th
         skill = skill + 1
         intelligence = intelligence + 5
 
-    if choice == "5":
+    else:
         age = age +1
         i = i+1
         if (i<jailtime):
-            status = 5
+            status = 1
+        elif age == 18:
+            status == 0
 
-    else:
-        print("Press one of the above")
-        print("")
+if status == 0 or age>=18:
+    print("GAME OVER")
+    print("Thanks for playing")
 
-    break
+if dead ==1:
+    print("You died")
+    print("GAME OVER")
+    print("Thanks for playing")
