@@ -55,7 +55,7 @@ if start ==num:
     vlog = 0                                #no of followers on thr vloging site
     post_pics = 0                           #no of pictures posted
     post_vids = 0                           #no of videos posted
-    fame = 0                                #your fame
+    fame = 1                                #your fame
 
 
     Boys = ["Liam", "Noah", "William", "James", "Oliver", "Benjamin", "Elijah", "Lucas", "Mason", "Logan", "Anderson",
@@ -93,7 +93,7 @@ if age<5:                                       #main process when the age is le
             elif intelligence<0:
                 intelligence = 0
 
-            life = life-1
+            life = life+2
             if life>=100:
                 life=100
             if life < 20:
@@ -107,6 +107,7 @@ if age<5:                                       #main process when the age is le
             print("You're skill(s) : ",skill)
             print("You're happiness : ",happiness)
             print("You're intelligence : ",intelligence)
+            print("You're life : ",life)
             print("Your age :", age)
             print("")
             print("Press 1 to cry")
@@ -178,6 +179,7 @@ while status == 1:
             print("Your life : ", life)
             print("Your age : ", age)
             print("Money : ", money)
+            print("Fame : ", fame)
             print("")
             print("Press 1 for school")
             print("Press 2 for part-time jobs")
@@ -2129,8 +2131,8 @@ while status == 1:
                 print("Press 2 to read a book")
                 print("Press 3 to read meditate")
                 print("Press 4 to start a social media account")
-                print("Become a vlogger")
-                print("Become a straemer")
+                print("Press 5 to become a vlogger")
+                print("Press 6 to become a straemer")
                 print("")
                 click = input("Enter your choice : ")
                 if click == "1":
@@ -2167,8 +2169,24 @@ while status == 1:
                         post_pics = post_pics+1
                         print("Total number of pictures posted", post_pics)
                         happiness = happiness + 2
+                        fame = fame*1.75
+                        print ("Yor fame increased")
+                        print("Fame : ",fame)
+                        print("")
 
+                    if a== 2:
+                        print("You posted a videos")
+                        post_vids = post_vids+1
+                        print("Total number of pictures posted", post_vids)
+                        happiness = happiness + 2
+                        fame = fame*1.75
+                        print ("Yor fame increased")
+                        print("Fame : ",fame)
+                        print("")
 
+                    else:
+                        print("lease any one of the given choices")
+                        print("")
             else:
                 age = age + 1
         if (age > 18):
