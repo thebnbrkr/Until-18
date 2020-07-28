@@ -360,59 +360,81 @@ while status == 1:
                     print("Press 7 for babysitter at babysitterinc corp")
                     print("")
                     choice = input("Enter your choice : ")
+
                     if choice == "1":
                         if skill>=20:
                             print("You're hired !!!")
                             print("Salary $8 per hour")
                             money = (8*4)*5*50+money
+                            print("")
+
                         else :
                             print("You need atleast 20 skill units for this job")
+                            print("")
 
-                    if choice == 2:
+                    if choice == "2":
                         if skill>=30:
                             print("You're hired !!!")
                             print("Salary $9 per hour")
                             money = (9*4)*5*50+money
+                            print("")
+
                         else:
                             print("You need atleast 30 skill units for this job")
+                            print("")
 
-
-                    if choice == 3:
+                    if choice == "3":
                         if skill>=20:
                             print("You're hired !!!")
                             print("Salary $10 per hour")
                             money = (10*4)*5*50 + money
+                            print("")
                         else:
                             print("You need atleast 20 skill units for this job")
+                            print("")
 
-                    if choice == 4:
+                    if choice == "4":
                         if skill>=30 and intelligence>=20:
                             print("You're hired !!!")
                             print("Salary $13 per hour")
                             money = (13 * 4) * 5 * 50 + money
+                            print("")
                         else:
                             print("You need atleast 30 skill units and 20 intelligence units for this job")
+                            print("")
 
-                    if choice == 5:
+                    if choice == "5":
                         print("You're hired !!!")
                         print("Salary $10 per hour")
                         money = (10 * 4) * 5 * 50 + money
+                        print ("")
 
-                    if choice == 6:
+                    if choice == "6":
                         if skill>=90 and intelligence>=70:
                             print("You're hired !!!")
                             print("Salary $50 per hour")
                             money = (50* 4) * 5 * 50 + money
+                            print("")
                         else:
                             print("You need atleast 80 skill units and 70 intelligence units for this job")
+                            print("")
 
-                    if choice == 7:
+                    if choice == "7":
                         if skill>=70 and intelligence>=70:
                             print("You're hired !!!")
                             print("Salary $25 per hour")
                             money = (25 * 4) * 5 * 50 + money
+                            print("")
                         else:
                             print("You need atleast 70 skill units and 70 intelligence units for this job")
+                            print("")
+
+                    else:
+                        print("Press one of the above")
+                        print("")
+
+                if age<14:
+                    print("You're not old enough join clubs")
 
             if reg == "3":
                 t = 0
@@ -426,24 +448,25 @@ while status == 1:
                     print("Press 7 to hire a hitman")
                     print("Press 8 to launch a cyber attack")
                     print("")
-                    choice=int(input("Enter your choice : "))
-                    if choice == 1:
+                    choice=input("Enter your choice : ")
+                    if choice == "1":
                         print("You were walking down the streets and have found your target house")
                         print("")
                         if crime <3:
                             rand = 0
                             if rand == 0:
-                                rob = int(input("Press 2 to rob the house"))
+                                rob = input("Press 2 to rob the house")
                                 print("")
-                                if rob!=2:
+                                if rob!="2":
                                     print("You changed your mind")
                                     print("")
-                                if rob == 2:
+                                if rob == "2":
                                     print("You have successfully robbed the house")
                                     rand = random.randint(1,9000)
                                     print("You sold all the stolen items to a pawn shop and recieved $",rand)
                                     money = money+rand
                                     print("Money :", money)
+                                    print("")
 
                                 else:
                                     print("SOMEONE CALLED THE POLICE ON YOU !!!")
@@ -454,15 +477,20 @@ while status == 1:
                                         crime = crime+1
                                         jailtime = 1
                                         status = 3
-                                        break
+                                        print("")
+
                                     elif rand<6 and crime <= 3:
                                         print("You're arrested for burlary and have to spent 1 year in jail !!!")
                                         crime = crime+1
                                         jailtime = jailtime +1
                                         status = 3
+                                        print("")
+
                                     else:
                                         print("The lawyers have helped you to stay out of jail")
                                         print("You're free")
+                                        print("")
+
                         else:
                             rand = random.radint(0,20)
                             if crime==4 and rand<=3:
@@ -471,7 +499,7 @@ while status == 1:
                                 rand = random.randint(1, 10)
                                 jailtime = 1
                                 status =3
-
+                                print("")
 
                                 if rand < 6 and crime == 4:
                                     print("You're arrested for burlary and have to spent 1 year in jail !!!")
@@ -495,25 +523,26 @@ while status == 1:
                                 print("You sold all the stolen items to a pawn shop and recieved $", rand)
                                 money = money + rand
                                 print("Money :", money)
+                                print("")
 
-                    if choice == 2:
+                    if choice == "2":
                         print("You were walking down the streets and have found your target")
                         print("")
                         if crime < 3:
                             rand = 0
                             if rand == 0:
-                                rob = int(input("Press 2 to pickpocket"))
+                                rob = input("Press 2 to pickpocket")
                                 print("")
-                                if rob!=2:
+                                if rob!="2":
                                     print("You changed your mind")
                                     print("")
-                                if rob == 2:
+                                if rob == "2":
                                     print("You have successfully pickpocketed")
                                     rand = random.randint(1, 10000)
                                     print("You sold all the stolen items to a pawn shop and recieved $", rand)
                                     money = money + rand
                                     print("Money :", money)
-
+                                    print("")
 
                                 else:
                                     print("SOMEONE CALLED THE POLICE ON YOU !!!")
@@ -522,6 +551,7 @@ while status == 1:
                                     jailtime = 1
                                     status = 3
                                     happiness = happiness - 20
+                                    print("")
 
                                     if rand < 6 and crime == 0:
                                         print("You're arrested for larceny and have to spent 1 year in jail !!!")
@@ -529,7 +559,7 @@ while status == 1:
                                         jailtime = 1
                                         status = 3
                                         happiness = happiness - 20
-
+                                        print("")
 
                                     elif rand < 6 and crime <= 3:
                                         print("You're arrested for larceny and have to spent 1 year in jail !!!")
@@ -537,6 +567,7 @@ while status == 1:
                                         jailtime = jailtime + 1
                                         status == 3
                                         happiness = happiness -20
+                                        print("")
 
                                     else:
                                         print("The lawyers have helped you to stay out of jail")
@@ -581,16 +612,16 @@ while status == 1:
                                 print("Money :", money)
                                 happiness = happiness + 5
 
-                    if choice == 3:
+                    if choice == "3":
                         print("Press 1 to prank an old person")
                         print("Press 2 to propagate fake news")
                         print("Press 3 to challenge random people to a fist fight")
                         print("Press 4 to throw rocks at buildings")
                         print("Press 5 to puncture tyres of random vehicles")
                         print("")
-                        click= int(input("Enter your choice : "))
+                        click= input("Enter your choice : ")
                         print("")
-                        if click == 1:
+                        if click == "1":
                             rand = random.random.randint(0,100)
                             if rand<=10:
                                 print("The old person called the police on you !!!!")
@@ -603,9 +634,7 @@ while status == 1:
                                     jailtime = 1
                                     happiness = happiness -10
                                     status =3
-
                                     print("")
-                                    break
 
                                 elif rand<=10:
                                     print("The lawyers have failed to prove your innocence")
@@ -614,16 +643,16 @@ while status == 1:
                                     print("You have to spent ",jailtime," years in prison")
                                     happiness = happiness -10
                                     status =3
-
                                     print("")
-                                    break
+
 
                             else:
                                 print("You had fun")
                                 happiness = happiness + 1
                                 skill = skill + 1
+                                print("")
 
-                        if click == 2:
+                        if click == "2":
                             rand = random.random.randint(0, 100)
                             if rand <= 10:
                                 print("The police have found  out that you've propagated fake news !!!!")
@@ -651,13 +680,16 @@ while status == 1:
                                 print("You had fun")
                                 happiness = happiness + 1
                                 skill = skill + 1
+                                print("")
 
-                        if click == 3:
+                        if click == "3":
                             rand = random.random.randint(0, 100)
                             if rand <= 10:
                                 print("Your opponent called the police on you !!!!")
                                 print("You've been arrested by the police and your parents have highered a lawyer")
                                 rand = random.randint(0, 100)
+                                print("")
+
                                 if rand <= 10 and crime < 3:
                                     print("The lawyers have failed to prove your innocence")
                                     print("You have to spent 1 year in prison")
@@ -682,12 +714,16 @@ while status == 1:
                                 skill = skill + 1
                                 print("")
 
-                        if click == 4:
+                        if click == "4":
                             rand = random.random.randint(0, 100)
+                            print("")
+
                             if rand <= 10:
                                 print("Some random person called the police on you !!!!")
                                 print("You've been arrested by the police and your parents have highered a lawyer")
                                 rand = random.randint(0, 100)
+                                print("")
+
                                 if rand <= 10 and crime < 3:
                                     print("The lawyers have failed to prove your innocence")
                                     print("You have to spent 1 year in prison")
@@ -713,12 +749,16 @@ while status == 1:
                                 skill = skill + 1
                                 print("")
 
-                        if click == 5:
+                        if click == "5":
                             rand = random.random.randint(0, 100)
+                            print("")
+
                             if rand <= 10:
                                 print("Some random person called the police on you !!!!")
                                 print("You've been arrested by the police and your parents have highered a lawyer")
                                 rand = random.randint(0, 100)
+                                print("")
+
                                 if rand <= 10 and crime < 3:
                                     print("The lawyers have failed to prove your innocence")
                                     print("You have to spent 1 year in prison")
@@ -743,44 +783,57 @@ while status == 1:
                                 skill = skill + 1
                                 print("")
 
-                    if choice == 4:
+                        else:
+                            print("Press anyone of the given keys")
+                            print("")
+
+
+                    if choice == "4":
 
                         print("You were walking down the streets and have found your target store")
                         print("")
                         if crime <3:
                             rand = 0
                             if rand == 0:
-                                rob = int(input("Press 2 to rob the house"))
+                                rob = input("Press 2 to rob the house")
                                 print("")
-                                if rob !=2:
+                                if rob !="2":
                                     print("You changed your mind")
                                     print("")
-                                if rob == 2:
+                                if rob ==  "2":
                                     print("You have successfully robbed the house")
                                     rand = random.randint(1,10000)
                                     print("You sold all the stolen items to a pawn shop and recieved $",rand)
                                     money = money+rand
                                     print("Money :", money)
+                                    print("")
 
                                 else:
                                     print("SOMEONE CALLED THE POLICE ON YOU !!!")
                                     print("")
                                     print("You were arrested by the police and your parents have hired a lawyer to defend you in court")
                                     rand = random.randint(1,10)
+                                    print("")
+
                                     if rand<6 and crime == 0:
                                         print("You're arrested for burlary and have to spent 10 months in jail !!!")
                                         crime = crime+1
                                         jailtime = 1
                                         status = 3
-                                        break
+                                        print("")
+
                                     elif rand<6 and crime <= 3:
                                         print("You're arrested for burlary and have to spent 1 year in jail !!!")
                                         crime = crime+1
                                         jailtime = jailtime +1
                                         status = 3
+                                        print("")
+
                                     else:
                                         print("The lawyers have helped you to stay out of jail")
                                         print("You're free")
+                                        print("")
+
                         else:
                             rand = random.radint(0,20)
                             if crime==4 and rand<=3:
@@ -789,23 +842,27 @@ while status == 1:
                                 rand = random.randint(1, 10)
                                 jailtime = 1
                                 status =3
-
+                                print("")
 
                                 if rand < 6 and crime == 4:
                                     print("You're arrested for burlary and have to spent 1 year in jail !!!")
                                     crime = crime + 1
                                     jailtime = 1
                                     status = 3
+                                    print("")
 
                                 elif rand<6 and crime > 4:
                                     print("You're arrested for burlary and have to spent 1 year in jail !!!")
                                     crime = crime+1
                                     jailtime = jailtime*2
                                     status = 3
+                                    print("")
 
                                 else:
                                     print("The lawyers have helped you to stay out of jail")
                                     print("You're free")
+                                    print("")
+
 
                             else:
                                 print("You have robbed the house")
@@ -813,8 +870,9 @@ while status == 1:
                                 print("You sold all the stolen items to a pawn shop and recieved $", rand)
                                 money = money + rand
                                 print("Money :", money)
+                                print("")
 
-                    if choice == 5:
+                    if choice == "5":
                         print("You were walking down the streets......")
                         time.sleep(2)
                         print("Press 1 to steal a very exppensive car")
@@ -822,15 +880,16 @@ while status == 1:
                         print("Press 3 to steal a cheap car")
                         print("Press 4 to a skateboard")
                         print("")
-                        click = int(input("Enter your choice : "))
+                        click = input("Enter your choice : ")
                         print("")
                         time.delay(0.5)
                         rand = random.randint(0,99)
-                        if click == 1:
+                        if click == "1":
                             if rand>10:
                                 print("SOMEONE CALLED THE POLICE ON YOU")
                                 print("Your parents have hired a lawyer to defend you in court")
                                 time.delay(0.5)
+                                print("")
                                 print("...")
                                 time.delay(1)
                                 rand = random.randint(0, 99)
@@ -873,11 +932,12 @@ while status == 1:
                                     skill = skil + 5
                                     print("")
 
-                        if click == 2:
+                        if click == "2":
                             if rand>10:
                                 print("SOMEONE CALLED THE POLICE ON YOU")
                                 print("Your parents have hired a lawyer to defend you in court")
                                 time.delay(0.5)
+                                print("")
                                 print("...")
                                 time.delay(1)
                                 rand = random.randint(0, 99)
@@ -921,12 +981,13 @@ while status == 1:
                                     skill = skil + 5
                                     print("")
 
-                        if click ==3:
+                        if click == "3":
 
                             if rand > 10:
                                 print("SOMEONE CALLED THE POLICE ON YOU")
                                 print("Your parents have hired a lawyer to defend you in court")
                                 time.delay(0.5)
+                                print("")
                                 print("...")
                                 time.delay(1)
                                 rand = random.randint(0, 99)
@@ -970,11 +1031,12 @@ while status == 1:
                                     skill = skil + 5
                                     print("")
 
-                        if click ==4:
+                        if click == "4":
                             if rand > 10:
                                 print("SOMEONE CALLED THE POLICE ON YOU")
                                 print("Your parents have hired a lawyer to defend you in court")
                                 time.delay(0.5)
+                                print("")
                                 print("...")
                                 time.delay(1)
                                 rand = random.randint(0, 99)
@@ -1018,7 +1080,11 @@ while status == 1:
                                     skill = skil + 5
                                     print("")
 
-                    if choice == 6:
+                        else:
+                            print("Press anyone of the given keys")
+                            print("")
+
+                    if choice == "6":
                         time.delay(0.5)
                         print("Who don you want to kill ?")
                         print("")
@@ -1028,10 +1094,10 @@ while status == 1:
                         print("Press 4 for your parter")
                         print("Press 5 for a random person")
                         print("")
-                        choice = int(input("Enter your choice : "))
+                        choice = input("Enter your choice : ")
                         print("")
 
-                        if click == 1:
+                        if click == "1":
                             time.delay(0.5)
                             a = int(input("Press 2 to commit murder : "))
                             print("")
@@ -1068,7 +1134,7 @@ while status == 1:
                                 crime = crime +1
                                 status = 3
 
-                        if click == 2:
+                        if click == "2":
                             cl=1
                             if cl == 1:
                                 time.delay(0.5)
@@ -1107,12 +1173,11 @@ while status == 1:
                                     crime = crime + 1
                                     status = 3
 
-                        if click == 3:
+                        if click == "3":
                             cl = 1
                             if cl == 1:
                                 time.delay(0.5)
-                                a = int(input("Press 2 to commit murder : "))
-                                print("")
+
                                 rand = random.randint(0, 99)
                                 if rand < 15:
                                     print("...")
@@ -1126,6 +1191,7 @@ while status == 1:
                                     happiness = happiness - 50
                                     crime = crime + 1
                                     status = 3
+                                    print("")
 
                                 elif rand >= 15 and rand <= 20:
                                     print("...")
@@ -1133,6 +1199,7 @@ while status == 1:
                                     print("You got away with murder !!!")
                                     happiness = happiness + 10
                                     crime = crime + 1
+                                    print("")
 
                                 elif rand >= 20:
                                     print("...")
@@ -1145,16 +1212,17 @@ while status == 1:
                                     happiness = happiness - 50
                                     crime = crime + 1
                                     status = 3
+                                    print("")
 
-                        if click == 4:
+                        if click == "4":
                             if relationship == 0:
                                 print("You don't have a partner")
+                                print("")
+
                             else:
                                 cl = 1
                                 if cl == 1:
                                     time.delay(0.5)
-                                    a = int(input("Press 2 to commit murder : "))
-                                    print("")
                                     rand = random.randint(0, 99)
                                     if rand < 15:
                                         print("...")
@@ -1191,12 +1259,10 @@ while status == 1:
                                         relationship = 0
                                         status = 3
 
-                        if click == 5:
+                        if click == "5":
                             cl =1
                             if cl == 1:
                                 time.delay(0.5)
-                                a = int(input("Press 2 to commit murder : "))
-                                print("")
                                 rand = random.randint(0, 99)
                                 if rand < 15:
                                     print("...")
@@ -1210,6 +1276,7 @@ while status == 1:
                                     happiness = happiness - 50
                                     crime = crime + 1
                                     status = 3
+                                    print("")
 
                                 elif rand >= 15 and rand <= 20:
                                     print("...")
@@ -1217,6 +1284,7 @@ while status == 1:
                                     print("You got away with murder !!!")
                                     happiness = happiness + 10
                                     crime = crime + 1
+                                    print("")
 
                                 elif rand >= 20:
                                     print("...")
@@ -1229,15 +1297,20 @@ while status == 1:
                                     happiness = happiness - 50
                                     crime = crime + 1
                                     status = 3
+                                    print("")
 
-                    if choice == 7:
+                        else:
+                            print("Press anyone of the given keys")
+                            print("")
+
+                    if choice == "7":
                         print("")
                         print("Press 1 to hire a cheap hitman")
                         print("Press 2 to hire a moderately expensive hitman")
                         print("Press 3 to hire an expensive hitman")
                         peint("")
-                        a = int(input("Enter your choice : "))
-                        if a== 1 and money>= 250000:
+                        a = input("Enter your choice : ")
+                        if a== "1" and money>= 250000:
                             money = money-250000
                             k ==1
                             if k == 1:
@@ -1252,10 +1325,10 @@ while status == 1:
                                 print("Press 4 for your parter")
                                 print("Press 5 for a random person")
                                 print("")
-                                click = int(input("Enter your choice : "))
+                                click = input("Enter your choice : ")
                                 print("")
 
-                                if click == 1:
+                                if click == "1":
                                     time.delay(0.5)
                                     print("")
                                     rand = random.randint(0, 99)
@@ -1266,12 +1339,14 @@ while status == 1:
                                         print("The hitman confessed that you were responsible for the murder !!!")
                                         print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
                                         jailtime = jailtime + 25
+                                        print("")
                                         time.delay(1)
                                         print("Yor parents refused to arrange a lawyer for you")
                                         print("Your sentenced to ", jailtime, "years in prison")
                                         happiness = happiness - 50
                                         crime = crime + 1
                                         status = 3
+                                        print("")
 
                                     elif rand>=5 and rand <100:
                                         print("...")
@@ -1279,8 +1354,9 @@ while status == 1:
                                         print("You got away with murder !!!")
                                         happiness = happiness + 10
                                         crime = crime + 1
+                                        print("")
 
-                                if click == 2:
+                                if click == "2":
                                     cl = 1
                                     if cl == 1:
                                         time.delay(0.5)
@@ -1294,11 +1370,13 @@ while status == 1:
                                             print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
                                             jailtime = jailtime + 25
                                             time.delay(1)
+                                            print("")
                                             print("Yor parents refused to arrange a lawyer for you")
                                             print("Your sentenced to ", jailtime, "years in prison")
                                             happiness = happiness - 50
                                             crime = crime + 1
                                             status = 3
+                                            print("")
 
                                         elif rand >= 5 and rand <= 99:
                                             print("...")
@@ -1306,8 +1384,9 @@ while status == 1:
                                             print("You got away with murder !!!")
                                             happiness = happiness + 10
                                             crime = crime + 1
+                                            print("")
 
-                                if click == 3:
+                                if click == "3":
                                     cl = 1
                                     if cl == 1:
                                         time.delay(0.5)
@@ -1320,12 +1399,14 @@ while status == 1:
                                             print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
                                             print("The hitman confessed that you were responsible for the murder !!!")
                                             jailtime = jailtime + 25
+                                            print("")
                                             time.delay(1)
                                             print("Yor parents refused to arrange a lawyer for you")
                                             print("Your sentenced to ", jailtime, "years in prison")
                                             happiness = happiness - 50
                                             crime = crime + 1
                                             status = 3
+                                            print("")
 
                                         elif rand >= 5 and rand <= 99:
                                             print("...")
@@ -1333,8 +1414,9 @@ while status == 1:
                                             print("You got away with murder !!!")
                                             happiness = happiness + 10
                                             crime = crime + 1
+                                            prinnt("")
 
-                                if click == 4:
+                                if click == "4":
                                     if relationship == 0:
                                         print("You don't have a partner")
                                         money = money + 250000
@@ -1370,7 +1452,7 @@ while status == 1:
                                                 crime = crime + 1
                                                 relationship = 0
 
-                                if click == 5:
+                                if click == "5":
                                     cl = 1
                                     if cl == 1:
                                         time.delay(0.5)
@@ -1383,12 +1465,14 @@ while status == 1:
                                             print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
                                             print("The hitman confessed that you were responsible for the murder !!!")
                                             jailtime = jailtime + 25
+                                            print("")
                                             time.delay(1)
                                             print("Yor parents refused to arrange a lawyer for you")
                                             print("Your sentenced to ", jailtime, "years in prison")
                                             happiness = happiness - 50
                                             crime = crime + 1
                                             status = 3
+                                            print("")
 
                                         elif rand >= 5 and rand <= 99:
                                             print("...")
@@ -1396,13 +1480,18 @@ while status == 1:
                                             print("You got away with murder !!!")
                                             happiness = happiness + 10
                                             crime = crime + 1
+                                            print("")
 
-                        elif a==1 and money< 250000:
+                                else:
+                                    print("Press anyone of the given keys")
+                                    print("")
+
+                        elif a=="1" and money< 250000:
                             print("You don't have enough money")
                             print("You need atleast $250000")
                             print("")
 
-                        if a== 2 and money>= 50000:
+                        if a=="2" and money>= 50000:
                             money = money-50000
                             k ==1
                             if k == 1:
@@ -1417,10 +1506,10 @@ while status == 1:
                                 print("Press 4 for your parter")
                                 print("Press 5 for a random person")
                                 print("")
-                                click = int(input("Enter your choice : "))
+                                click = input("Enter your choice : ")
                                 print("")
 
-                                if click == 1:
+                                if click == "1":
                                     time.delay(0.5)
                                     print("")
                                     rand = random.randint(0, 99)
@@ -1431,12 +1520,14 @@ while status == 1:
                                         print("The hitman confessed that you were responsible for the murder !!!")
                                         print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
                                         jailtime = jailtime + 25
+                                        print("")
                                         time.delay(1)
                                         print("Yor parents refused to arrange a lawyer for you")
                                         print("Your sentenced to ", jailtime, "years in prison")
                                         happiness = happiness - 50
                                         crime = crime + 1
                                         status = 3
+                                        print("")
 
                                     elif rand>=40  and rand <100:
                                         print("...")
@@ -1444,8 +1535,9 @@ while status == 1:
                                         print("You got away with murder !!!")
                                         happiness = happiness + 10
                                         crime = crime + 1
+                                        print("")
 
-                                if click == 2:
+                                if click == "2":
                                     cl = 1
                                     if cl == 1:
                                         time.delay(0.5)
@@ -1458,12 +1550,14 @@ while status == 1:
                                             print("The hitman confessed that you were responsible for the murder !!!")
                                             print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
                                             jailtime = jailtime + 25
+                                            print("")
                                             time.delay(1)
                                             print("Yor parents refused to arrange a lawyer for you")
                                             print("Your sentenced to ", jailtime, "years in prison")
                                             happiness = happiness - 50
                                             crime = crime + 1
                                             status = 3
+                                            print("")
 
                                         elif rand >= 40 and rand <= 99:
                                             print("...")
@@ -1471,8 +1565,9 @@ while status == 1:
                                             print("You got away with murder !!!")
                                             happiness = happiness + 10
                                             crime = crime + 1
+                                            print("")
 
-                                if click == 3:
+                                if click == "3":
                                     cl = 1
                                     if cl == 1:
                                         time.delay(0.5)
@@ -1485,12 +1580,14 @@ while status == 1:
                                             print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
                                             print("The hitman confessed that you were responsible for the murder !!!")
                                             jailtime = jailtime + 25
+                                            print("")
                                             time.delay(1)
                                             print("Yor parents refused to arrange a lawyer for you")
                                             print("Your sentenced to ", jailtime, "years in prison")
                                             happiness = happiness - 50
                                             crime = crime + 1
                                             status = 3
+                                            print("")
 
                                         elif rand >= 40 and rand <= 99:
                                             print("...")
@@ -1498,8 +1595,9 @@ while status == 1:
                                             print("You got away with murder !!!")
                                             happiness = happiness + 10
                                             crime = crime + 1
+                                            print("")
 
-                                if click == 4:
+                                if click == "4":
                                     if relationship == 0:
                                         print("You don't have a partner")
                                         money = money + 50000
@@ -1519,6 +1617,7 @@ while status == 1:
                                                 print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
                                                 print("The hitman confessed that you were responsible for the murder !!!")
                                                 jailtime = jailtime + 25
+                                                print("")
                                                 time.delay(1)
                                                 print("Yor parents refused to arrange a lawyer for you")
                                                 print("Your sentenced to ", jailtime, "years in prison")
@@ -1526,6 +1625,7 @@ while status == 1:
                                                 crime = crime + 1
                                                 relationship = 0
                                                 status = 3
+                                                print("")
 
                                             elif rand >= 40 and rand <= 99:
                                                 print("...")
@@ -1534,8 +1634,9 @@ while status == 1:
                                                 happiness = happiness + 10
                                                 crime = crime + 1
                                                 relationship = 0
+                                                print("")
 
-                                if click == 5:
+                                if click == "5":
                                     cl = 1
                                     if cl == 1:
                                         time.delay(0.5)
@@ -1548,12 +1649,14 @@ while status == 1:
                                             print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
                                             print("The hitman confessed that you were responsible for the murder !!!")
                                             jailtime = jailtime + 25
+                                            print("")
                                             time.delay(1)
                                             print("Yor parents refused to arrange a lawyer for you")
                                             print("Your sentenced to ", jailtime, "years in prison")
                                             happiness = happiness - 50
                                             crime = crime + 1
                                             status = 3
+                                            print("")
 
                                         elif rand >= 40 and rand <= 99:
                                             print("...")
@@ -1561,13 +1664,18 @@ while status == 1:
                                             print("You got away with murder !!!")
                                             happiness = happiness + 10
                                             crime = crime + 1
+                                            print("")
 
-                        elif a==2 and money< 50000:
+                                else:
+                                    print("Press anyone of the given keys")
+                                    print("")
+
+                        elif a=="2" and money< 50000:
                             print("You don't have enough money")
                             print("You need atleast $50000")
                             print("")
 
-                        if a== 3 and money>= 5000:
+                        if a== "3" and money>= 5000:
                             money = money-5000
                             k ==1
                             if k == 1:
@@ -1582,10 +1690,10 @@ while status == 1:
                                 print("Press 4 for your parter")
                                 print("Press 5 for a random person")
                                 print("")
-                                click = int(input("Enter your choice : "))
+                                click = input("Enter your choice : ")
                                 print("")
 
-                                if click == 1:
+                                if click == "1":
                                     time.delay(0.5)
                                     print("")
                                     rand = random.randint(0, 99)
@@ -1596,12 +1704,14 @@ while status == 1:
                                         print("The hitman confessed that you were responsible for the murder !!!")
                                         print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
                                         jailtime = jailtime + 25
+                                        print("")
                                         time.delay(1)
                                         print("Yor parents refused to arrange a lawyer for you")
                                         print("Your sentenced to ", jailtime, "years in prison")
                                         happiness = happiness - 50
                                         crime = crime + 1
                                         status = 3
+                                        print("")
 
                                     elif rand>=85 and rand <100:
                                         print("...")
@@ -1609,8 +1719,9 @@ while status == 1:
                                         print("You got away with murder !!!")
                                         happiness = happiness + 10
                                         crime = crime + 1
+                                        print("")
 
-                                if click == 2:
+                                if click == "2":
                                     cl = 1
                                     if cl == 1:
                                         time.delay(0.5)
@@ -1623,12 +1734,14 @@ while status == 1:
                                             print("The hitman confessed that you were responsible for the murder !!!")
                                             print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
                                             jailtime = jailtime + 25
+                                            print("")
                                             time.delay(1)
                                             print("Yor parents refused to arrange a lawyer for you")
                                             print("Your sentenced to ", jailtime, "years in prison")
                                             happiness = happiness - 50
                                             crime = crime + 1
                                             status = 3
+                                            print("")
 
                                         elif rand >= 85 and rand <= 99:
                                             print("...")
@@ -1636,8 +1749,9 @@ while status == 1:
                                             print("You got away with murder !!!")
                                             happiness = happiness + 10
                                             crime = crime + 1
+                                            print("")
 
-                                if click == 3:
+                                if click == "3":
                                     cl = 1
                                     if cl == 1:
                                         time.delay(0.5)
@@ -1650,12 +1764,14 @@ while status == 1:
                                             print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
                                             print("The hitman confessed that you were responsible for the murder !!!")
                                             jailtime = jailtime + 25
+                                            print("")
                                             time.delay(1)
                                             print("Yor parents refused to arrange a lawyer for you")
                                             print("Your sentenced to ", jailtime, "years in prison")
                                             happiness = happiness - 50
                                             crime = crime + 1
                                             status = 3
+                                            print("")
 
                                         elif rand >= 85 and rand <= 99:
                                             print("...")
@@ -1663,8 +1779,9 @@ while status == 1:
                                             print("You got away with murder !!!")
                                             happiness = happiness + 10
                                             crime = crime + 1
+                                            print("")
 
-                                if click == 4:
+                                if click == "4":
                                     if relationship == 0:
                                         print("You don't have a partner")
                                         money = money + 5000
@@ -1684,6 +1801,7 @@ while status == 1:
                                                 print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
                                                 print("The hitman confessed that you were responsible for the murder !!!")
                                                 jailtime = jailtime + 25
+                                                print("")
                                                 time.delay(1)
                                                 print("Yor parents refused to arrange a lawyer for you")
                                                 print("Your sentenced to ", jailtime, "years in prison")
@@ -1691,6 +1809,7 @@ while status == 1:
                                                 crime = crime + 1
                                                 relationship = 0
                                                 status = 3
+                                                print("")
 
                                             elif rand >= 85 and rand <= 99:
                                                 print("...")
@@ -1699,8 +1818,9 @@ while status == 1:
                                                 happiness = happiness + 10
                                                 crime = crime + 1
                                                 relationship = 0
+                                                print("")
 
-                                if click == 5:
+                                if click == "5":
                                     cl = 1
                                     if cl == 1:
                                         time.delay(0.5)
@@ -1713,12 +1833,14 @@ while status == 1:
                                             print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
                                             print("The hitman confessed that you were responsible for the murder !!!")
                                             jailtime = jailtime + 25
+                                            print("")
                                             time.delay(1)
                                             print("Yor parents refused to arrange a lawyer for you")
                                             print("Your sentenced to ", jailtime, "years in prison")
                                             happiness = happiness - 50
                                             crime = crime + 1
                                             status = 3
+                                            print("")
 
                                         elif rand >= 85 and rand <= 99:
                                             print("...")
@@ -1726,13 +1848,18 @@ while status == 1:
                                             print("You got away with murder !!!")
                                             happiness = happiness + 10
                                             crime = crime + 1
+                                            print("")
 
-                        elif a==3 and money< 5000:
+                                else:
+                                    print("Press anyone of the given keys")
+                                    print("")
+
+                        elif a=="3" and money< 5000:
                             print("You don't have enough money")
                             print("You need atleast $5000")
                             print("")
 
-                    if choice == 8:
+                    if choice == "8":
                         if hacker == 0:
                             print("You have to learn hacking ")
                             time.delay(1)
@@ -1748,8 +1875,8 @@ while status == 1:
                                 print("Press 3 to hack data and sell it")
                                 print("Press 4 to hack into the server of a billion dollar company and sell their data")
                                 print("")
-                                click = int(input("Enter your choice : "))
-                                if click == 1:
+                                click = input("Enter your choice : ")
+                                if click == "1":
                                     rand = random.randint(0,99)
                                     if rand>30:
                                         print("You hacked into someone's wifi")
@@ -1773,7 +1900,7 @@ while status == 1:
                                         skill = skill + 3
                                         print("")
 
-                                if click == 2:
+                                if click == "2":
                                     rand = random.randint(0,99)
                                     if rand>70:
                                         print("You hacked into someone's bank account")
@@ -1804,7 +1931,7 @@ while status == 1:
                                         status = 3
                                         print("")
 
-                                if click == 3:
+                                if click == "3":
                                     rand = random.randint(0, 99)
                                     if rand > 80:
                                         print("You hacked into some server and sold their data in the black market")
@@ -1835,7 +1962,7 @@ while status == 1:
                                         status = 3
                                         print("")
 
-                                if click == 4:
+                                if click == "4":
                                     rand = random.randint(0, 99)
                                     if rand > 90:
                                         print("You hacked into some server and sold their data in the black market")
@@ -1866,23 +1993,27 @@ while status == 1:
                                         status = 3
                                         print("")
 
+                                else:
+                                    print("Press anyone of the given keys")
+                                    print("")
+
             if reg == "4":
                 print("Press 1 to spent time with all your relatives")
                 print("Press 2 to look for a partner")
                 print("Press 3 to spent time with your partner")
-                click = int(input("Enter your choice : "))
+                click = input("Enter your choice : ")
                 print("")
-                if click == 1:
+                if click == "1":
                     print("You spent time with all your relatives")
                     happiness = happiness +10
 
-                if click == 2:
+                if click == "2":
                     if relationship == 0:
                         print("Press 1 to look for a girlfriend")
                         print("Press 2 to look for a boyfriend")
                         print("")
                         a = int(input("Enter your choice : "))
-                        if a == 1:
+                        if a == "1":
                             print("")
                             x = 0
                             while x < 4:
@@ -1915,7 +2046,7 @@ while status == 1:
                                     print("If not, then sorry")
                                     break
 
-                        if a == 2:
+                        if a == "2":
                             print("")
                             x = 0
                             while x < 4:
@@ -1951,12 +2082,20 @@ while status == 1:
                                     print("Congratulations !!!!")
                                     print("")
 
-                if click == 3:
+                        else:
+                            print("Press anyone of the given keys")
+                            print("")
+
+                if click == "3":
                     print("You spent time with your partner")
                     happiness = happiness +10
 
                 elif relationship!=0:
                     print("You already have a partner")
+
+                else:
+                    print("Press anyone of the given keys")
+                    print("")
 
             if reg == "5":
                 print("Press 1 to work out in the gym")
