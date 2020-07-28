@@ -2177,6 +2177,17 @@ while (age >= 5 and age < 18) and status == 3:  # This process is needed when th
                 dead = 1
                 break
 
+            if click == "2" and rand<15:
+                print("")
+                print("The prisoner bet you uo anyway")
+                happiness = happiness -10
+
+            if click == "2" and (rand>= 15 and rand<=20) :
+                print("")
+                print("The prisoner bet you uo anyway")
+                print("The other person killed you")
+                print("")
+
             else:
                 rand = random.randint(0,2)
                 if rand ==0:
@@ -2202,9 +2213,9 @@ while (age >= 5 and age < 18) and status == 3:  # This process is needed when th
             print("")
             print("press 1 to talk with other inmates")
             print("press 2 to challenge an inmate for a fight")
-            click = int(input("Enter your choice : "))
+            click = input("Enter your choice : ")
             print("")
-            if click == 1:
+            if click == "1":
                 rand = random.randint(0,99)
                 if rand<15:
                     print("You and the other inmate have a conflict of opinion")
@@ -2270,7 +2281,7 @@ while (age >= 5 and age < 18) and status == 3:  # This process is needed when th
                             print("You apologized to the other inmate")
                             print("")
 
-            if click == 2:
+            if click == "2":
                 print("You challenged an inmate for a fight")
                 rand = random.randinit(0,10)
                 print("")
@@ -2293,6 +2304,10 @@ while (age >= 5 and age < 18) and status == 3:  # This process is needed when th
                     print(" Ypur sentence has been extended for 2 years for fighting in prison")
                     jailtime = jailtime + 2
                     print("")
+
+            else:
+                print("Please choose one among the mentioned options")
+                print("")
 
     if choice == "3":
         print("")
