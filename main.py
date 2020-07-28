@@ -2282,6 +2282,12 @@ while status == 1:
                         print("You made $50,000 in this stream")
                         print("")
 
+                    if vlogf>100000000:
+                        print("You made $500,000 in this video")
+                        money = money + 500000
+                        print("")
+
+
                 if click == "6":
                     print("You streamed a video")
                     stream = stream + 1
@@ -2292,8 +2298,90 @@ while status == 1:
                     print("Followers : ", streamf)
                     print("")
 
+                    if streamf>=5000 and streamf<=10000:
+                        money = money + 1
+                        print("You made $1 in this stream")
+                        print("")
 
+                    elif streamf>= 10000 and streamf<= 50000:
+                        money = money + 5
+                        print("You made $5 in this stream")
+                        print("")
 
+                    elif streamf>= 50000 and streamf<= 100000:
+                        money = money + 10
+                        print("You made $10 in this stream")
+                        print("")
+
+                    elif streamf>= 100000 and streamf<= 200000:
+                        money = money + 20
+                        print("You made $20 in this stream")
+                        print("")
+
+                    elif streamf>= 200000 and streamf<= 300000:
+                        money = money + 30
+                        print("You made $30 in this stream")
+                        print("")
+
+                    elif streamf>= 300000 and streamf<= 400000:
+                        money = money + 40
+                        print("You made $40 in this stream")
+                        print("")
+
+                    elif streamf>= 400000 and streamf<= 500000:
+                        money = money + 50
+                        print("You made $50 in this stream")
+                        print("")
+
+                    elif streamf>= 500000 and streamf<= 600000:
+                        money = money + 60
+                        print("You made $60 in this stream")
+                        print("")
+
+                    elif steamf>= 600000 and streamf<= 700000:
+                        money = money + 70
+                        print("You made $70 in this stream")
+                        print("")
+
+                    elif streamf>= 700000 and streamf<= 800000:
+                        money = money + 80
+                        print("You made $80 in this stream")
+                        print("")
+
+                    elif streamf>= 800000 and streamf<= 900000:
+                        money = money + 90
+                        print("You made $60 in this stream")
+                        print("")
+
+                    elif streamf>= 900000 and streamf<= 1000000:
+                        money = money + 100
+                        print("You made $60 in this stream")
+                        print("")
+
+                    elif streamf>= 1000000 and streamf<= 5000000:
+                        money = money + 500
+                        print("You made $500 in this stream")
+                        print("")
+
+                    elif streamf>= 5000000 and streamf<= 10000000:
+                        money = money + 2000
+                        print("You made $500 in this stream")
+                        print("")
+
+                    elif streamf>= 10000000 and streamf<= 50000000:
+                        money = money + 20000
+                        print("You made $20,000 in this stream")
+                        print("")
+
+                    elif streamf>= 50000000 and streamf<= 100000000:
+                        money = money + 50000
+                        print("You made $50,000 in this stream")
+                        print("")
+
+                    if streamf>100000000:
+                        print("You made $500,000 in this stream")
+                        money = money + 500000
+                        print("")
 
             else:
                 age = age + 1
