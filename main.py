@@ -169,15 +169,15 @@ while status == 1:
                 print("Press 4 for interacting with teachers")
                 print("Press 5 for joining clubs")
                 print("Press 6 to study harder")
-                choice = int(input("Enter your choice : "))
+                choice = input("Enter your choice : ")
 
-                if choice == 1:
+                if choice == "1":
                     print("You did your homework")
                     skill = skill + 5
                     intelligence = intelligence + 3
                     print("")
 
-                if choice == 2:
+                if choice == "2":
                     rand = random.randint(0, 20)
                     if rand >= 0 and rand <= 2:
                         print("You have no friends")
@@ -203,19 +203,19 @@ while status == 1:
                         print("happiness has increased by 10 points")
                         print("")
 
-                if choice == 3:
+                if choice == "3":
                     rand = random.randint(0, 10)
                     if rand >= 0 and rand <= 4:
                         print("You tried to skip school but you were caught by a teacher")
                         print("The teacher decides to give you a detention")
                         print("")
 
-                if choice == 4:
+                if choice == "4":
                     print("Press 1 to make fun of the teacher")
                     print("Press 2 for asking doubts")
                     print("")
-                    a = int(input("Enter your choice : "))
-                    if a==1:
+                    a = input("Enter your choice : ")
+                    if a== "1":
                         rand = random.randint(0, 100)
                         if rand>=8 and rand<=16:
                             if naughty>=50:
@@ -255,7 +255,13 @@ while status == 1:
                             naughty = naughty + 5
                             print("You're hapinness has increased by 10 units ")
 
-                if choice == 5:
+                    if a == "2":
+                        print("You cleared your doubts with your techers")
+                        skill = skill + 3
+                        intelligence = intelligence + 3
+                        print("")
+
+                if choice == "5":
                     if age>=14:
                         print("")
                         print("Press 1 for joining the BasketBall Club")
@@ -266,10 +272,10 @@ while status == 1:
                         print("Press 6 for joining the Drama Club")
                         print("Press 7 for joining the Environmental Club")
                         print("Press 8 for joining the Cultural Club")
-                        reg = int(input("Enter your choice : "))
+                        click = input("Enter your choice : ")
                         print("")
 
-                        if click == 1:
+                        if click == "1":
                             if skill <= 20:
                                 print("Sorry You do not have the skill to join this club")
                             else:
@@ -278,12 +284,13 @@ while status == 1:
                                 clubskill = clubskill + 10
                                 club = click
 
-                        if click == 2:
+                        if click == "2":
                             print("You have joined the Chess Club")
                             club = 1
                             clubskill = clubskill + 10
                             club = click
-                        if click == 3:
+
+                        if click == "3":
                             if skill <= 40:
                                 print("Sorry you do not have the skill to join this club")
                             else:
@@ -292,13 +299,13 @@ while status == 1:
                                 clubskill = clubskill + 10
                                 club = click
 
-                        if click == 4:
+                        if click == "4":
                             print("You have joined the book club")
                             club = 1
                             clubskill = clubskill + 10
                             club = click
 
-                        if click == 5:
+                        if click == "5":
                             if skill <= 45:
                                 print("Sorry you do not have the skill to join this club")
                             else:
@@ -307,33 +314,39 @@ while status == 1:
                                 clubskill = clubskill + 10
                                 club=click
 
-                        if click == 6:
+                        if click == "6":
                             print("You have joined the Drama Club")
                             club = 1
                             clubskill = clubskill + 10
                             club = click
 
-                        if click == 7:
+                        if click == "7":
                             print("You have joined the Environmental Club")
                             club = 1
                             clubskill = clubskill + 10
                             club = click
 
-                        if click == 8:
+                        if click == "8":
                             print("You have joined the Environmental Club`")
                             club = 1
                             clubskill = clubskill + 10
                             club = click
 
+                        else:
+                            print("Please press any one of the before mentioned keys")
+                            print("")
 
                     else:
                         print("You're not old enough to join clubs")
 
-                if choice == 6:
+                if choice == "6":
                     print("You studied harder")
                     skill = skill+5
                     intelligence = intelligence+5
                     happiness = happiness+4
+
+                else:
+                    print("Press one of the above")
 
             if reg == "2":
                 if age>=14:
@@ -346,8 +359,8 @@ while status == 1:
                     print("Press 6 for internship at pow tech")
                     print("Press 7 for babysitter at babysitterinc corp")
                     print("")
-                    choice = int(input("Enter your choice : "))
-                    if choice == 1:
+                    choice = input("Enter your choice : ")
+                    if choice == "1":
                         if skill>=20:
                             print("You're hired !!!")
                             print("Salary $8 per hour")
@@ -1951,8 +1964,6 @@ while status == 1:
                 print("Press 3 to read meditate")
                 print("Press 4 to start a social media account")
 
-
-
             else:
                 age = age + 1
         if (age > 18):
@@ -2142,7 +2153,8 @@ while (age >= 5 and age < 18) and status == 3:  # This process is needed when th
                     print(" Ypur sentence has been extended for 2 years for fighting in prison")
                     jailtime = jailtime + 2
                     print("")
-    if choice ==3:
+
+    if choice == 3:
         print("")
         print("Do you want to escape ?")
         click = int(input("Press 1 to continue"))
@@ -3098,7 +3110,6 @@ while (age >= 5 and age < 18) and status == 3:  # This process is needed when th
                         crime = crime + 1
                         print("")
 
-
     if choice == 4:
         print("You read books")
         skill = skill + 1
@@ -3109,5 +3120,9 @@ while (age >= 5 and age < 18) and status == 3:  # This process is needed when th
         i = i+1
         if (i<jailtime):
             status = 5
+
+    else:
+        print("Press one of the above")
+        print("")
 
     break
