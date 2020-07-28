@@ -49,8 +49,7 @@ if start ==num:
     dead = 0                                #binary value; becomes 1 when you die
     relationship = 0                        #binary value; becomes one when you're in a relationship/married
     hacker = 0                              #binary value; becomes 1 when you learn hacking
-    sick = 0
-
+    sick = 0                                #binary value; becomes 1 when your sick
 
     Boys = ["Liam", "Noah", "William", "James", "Oliver", "Benjamin", "Elijah", "Lucas", "Mason", "Logan", "Anderson",
             "Blakely", "Bo", "Bodie", "Boden", "Brit", "Lotte", "Gioto", "Xander", "Loius", "Paolo", "Marcelo","Ben",
@@ -90,18 +89,19 @@ if age<5:                                       #main process when the age is le
             life = life-1
             if life>=100:
                 life=100
-            elif life <20:
+            if life < 20:
                 sick = 1
             elif life<0:
                 life = 0
 
+            print("")
             print("Name : ", name)
             print("Sex : ", sex)
             print("You're skill(s) : ",skill)
             print("You're happiness : ",happiness)
             print("You're intelligence : ",intelligence)
-
             print("Your age :", age)
+            print("")
             print("Press 1 to cry")
             print("Press 2 to play")
             print("Press 3 to do both")
@@ -160,8 +160,10 @@ while status == 1:
             print("You're skill(s) : ", skill)
             print("Your happiness : ", happiness)
             print("Your intelligence : ", intelligence)
+            print("Your life : ", life)
             print("Your age :", age)
             print("Money : ", money)
+            print("")
             print("Press 1 for school")
             print("Press 2 for part-time jobs")
             print("Press 3 for crimes ")
@@ -2153,6 +2155,14 @@ while status == 1:
             break
 
 while (age >= 5 and age < 18) and status == 3:  # This process is needed when the age is between 4 and 19
+
+    life = life - 1
+    if life >= 100:
+        life = 100
+    if life < 20:
+        sick = 1
+    elif life < 0:
+        life = 0
 
     skill = skill + 1
     if skill >= 100:
