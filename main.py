@@ -6,11 +6,11 @@ print("")
 num = input("Press any key to continue : ")          #a condition to begin the game
 start = num
 if start ==num:
-    age = 0;
-    status = 1;                                     '''Status = 1 - Free person 
-                                                       Status = 3 - Is currently in juvie
-                                                       Status = 4 - Is on the run
-                                                       Status = 5 - Had been to juvie'''
+    age = 0
+    status = 1                                          #Status = 1 - Free person
+                                                        #Status = 3 - Is currently in juvie
+                                                        #Status = 4 - Is on the run
+                                                        #Status = 5 - Had been to juvie'''
     name =  input("Enter your name : ")
     print("Choose your gender : ")
     print("Press 1 for male")
@@ -32,8 +32,8 @@ if start ==num:
         print("")
 
     else:
-        print("Please press 1, 2, or 3")
-        print("")
+        rand = random.randint(1,3)
+        gender = rand
 
     skill = random.randint(0,99)            #The random.randint() function generates a random number
     happiness = random.randint(0,99)
@@ -547,7 +547,7 @@ while status == 1:
                                         print("")
 
                         else:
-                            rand = random.radint(0,20)
+                            rand = random.randint(0,20)
                             if crime==4 and rand<=3:
                                 print("SOMEONE CALLED THE POLICE ON YOU !!!")
                                 print("You were arrested by the police and your parents have hired a lawyer to defend you in court")
@@ -630,7 +630,7 @@ while status == 1:
                                         happiness = happiness + 10
 
                         else:
-                            rand = random.radint(0, 20)
+                            rand = random.randint(0, 20)
                             if crime == 4 and rand <= 3:
                                 print("SOMEONE CALLED THE POLICE ON YOU !!!")
                                 print("You were arrested by the police and your parents have hired a lawyer to defend you in court")
@@ -657,7 +657,7 @@ while status == 1:
                                 else:
                                     print("The lawyers have helped you to stay out of jail")
                                     print("You're free")
-                                    happiness = happiess+ 5
+                                    happiness = happiness+ 5
 
                             else:
                                 print("You have successfully pickpocketted")
@@ -677,7 +677,7 @@ while status == 1:
                         click= input("Enter your choice : ")
                         print("")
                         if click == "1":
-                            rand = random.random.randint(0,100)
+                            rand = random.randint(0,100)
                             if rand<=10:
                                 print("The old person called the police on you !!!!")
                                 print("You've been arrested by the police and your parents have highered a lawyer")
@@ -708,7 +708,7 @@ while status == 1:
                                 print("")
 
                         if click == "2":
-                            rand = random.random.randint(0, 100)
+                            rand = random.randint(0, 100)
                             if rand <= 10:
                                 print("The police have found  out that you've propagated fake news !!!!")
                                 print("You've been arrested by the police and your parents have highered a lawyer")
@@ -738,7 +738,7 @@ while status == 1:
                                 print("")
 
                         if click == "3":
-                            rand = random.random.randint(0, 100)
+                            rand = random.randint(0, 100)
                             if rand <= 10:
                                 print("Your opponent called the police on you !!!!")
                                 print("You've been arrested by the police and your parents have highered a lawyer")
@@ -770,7 +770,7 @@ while status == 1:
                                 print("")
 
                         if click == "4":
-                            rand = random.random.randint(0, 100)
+                            rand = random.randint(0, 100)
                             print("")
 
                             if rand <= 10:
@@ -805,7 +805,7 @@ while status == 1:
                                 print("")
 
                         if click == "5":
-                            rand = random.random.randint(0, 100)
+                            rand = random.randint(0, 100)
                             print("")
 
                             if rand <= 10:
@@ -890,7 +890,7 @@ while status == 1:
                                         print("")
 
                         else:
-                            rand = random.radint(0,20)
+                            rand = random.randint(0,20)
                             if crime==4 and rand<=3:
                                 print("SOMEONE CALLED THE POLICE ON YOU !!!")
                                 print("You were arrested by the police and your parents have hired a lawyer to defend you in court")
@@ -984,7 +984,7 @@ while status == 1:
                                     print("You sold the exepensive car for : $", a, " !!!!!")
                                     money = money + a
                                     happiness = happiness + 10
-                                    skill = skil + 5
+                                    skill = skill + 5
                                     print("")
 
                         if click == "2":
@@ -1033,7 +1033,7 @@ while status == 1:
                                     print("You sold the exepensive car for : $", a, " !!!!!")
                                     money = money + a
                                     happiness = happiness + 10
-                                    skill = skil + 5
+                                    skill = skill + 5
                                     print("")
 
                         if click == "3":
@@ -1083,7 +1083,7 @@ while status == 1:
                                     print("You sold the exepensive car for : $", a, " !!!!!")
                                     money = money + a
                                     happiness = happiness + 10
-                                    skill = skil + 5
+                                    skill = skill + 5
                                     print("")
 
                         if click == "4":
@@ -1132,7 +1132,7 @@ while status == 1:
                                     print("You sold the exepensive car for : $", a, " !!!!!")
                                     money = money + a
                                     happiness = happiness + 10
-                                    skill = skil + 5
+                                    skill = skill + 5
                                     print("")
 
                         else:
@@ -1363,7 +1363,7 @@ while status == 1:
                         print("Press 1 to hire a cheap hitman")
                         print("Press 2 to hire a moderately expensive hitman")
                         print("Press 3 to hire an expensive hitman")
-                        peint("")
+                        print("")
                         a = input("Enter your choice : ")
                         if a== "1" and money>= 250000:
                             money = money-250000
@@ -1371,7 +1371,6 @@ while status == 1:
                             if k == 1:
                                 print("")
                                 print("who do you wanrt to kill")
-                                time.delay(0.5)
                                 print("Who don you want to kill ?")
                                 print("")
                                 print("Press 1 for Mom")
@@ -1469,7 +1468,7 @@ while status == 1:
                                             print("You got away with murder !!!")
                                             happiness = happiness + 10
                                             crime = crime + 1
-                                            prinnt("")
+                                            print("")
 
                                 if click == "4":
                                     if relationship == 0:
@@ -1548,10 +1547,10 @@ while status == 1:
 
                         if a=="2" and money>= 50000:
                             money = money-50000
-                            k ==1
+                            k =1
                             if k == 1:
                                 print("")
-                                print("who do you wanrt to kill")
+                                print("who do you want to kill")
                                 time.delay(0.5)
                                 print("Who don you want to kill ?")
                                 print("")
@@ -2323,7 +2322,7 @@ while status == 1:
                     print("Total number of pictures posted", stream)
                     happiness = happiness + 2
                     abs = abs * 1.75
-                    streamf = round(a)
+                    streamf = round(abs)
                     print("Followers : ", streamf)
                     print("")
 
@@ -2367,7 +2366,7 @@ while status == 1:
                         print("You made $60 in this stream")
                         print("")
 
-                    elif steamf>= 600000 and streamf<= 700000:
+                    elif streamf>= 600000 and streamf<= 700000:
                         money = money + 70
                         print("You made $70 in this stream")
                         print("")
@@ -2414,8 +2413,12 @@ while status == 1:
 
             else:
                 age = age + 1
-        if (age > 18):
-            break
+                if (age > 18):
+                     break
+
+    if age >= 18:
+        print("GAME OVER")
+        print("Thanks for playing")
 
 while (age >= 5 and age < 18) and status == 3:  # This process is needed when the age is between 4 and 19
 
@@ -2575,7 +2578,7 @@ if broke>1:
                             print("A guard saw you fighting")
                             print("You're charged for fighting in prison and have to spend 2 years in prisn additionally !!!!")
                             jailtime = jailtime+2
-                            happiness = hapiness -10
+                            happiness = happiness -10
                             print("")
 
 
@@ -2612,7 +2615,7 @@ if broke>1:
 
             if click == "2":
                 print("You challenged an inmate for a fight")
-                rand = random.randinit(0,10)
+                rand = random.randint(0,10)
                 print("")
                 if rand == 8:
                     print("You accidently killed the other prisoner in the fight")
@@ -3607,11 +3610,14 @@ if broke>1:
         elif age == 18:
             status == 0
 
-if status == 0 or age>=18:
+if age>=18:
+    break
     print("GAME OVER")
     print("Thanks for playing")
+
 
 if dead ==1:
     print("You died")
     print("GAME OVER")
     print("Thanks for playing")
+    break
