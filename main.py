@@ -166,8 +166,10 @@ if age<5:                                       #main process when the age is le
 
 while status == 1:
     if (age >= 5 and age < 18) and status == 1:  # This process is needed when the age is between 4 and 19
-        while True:
-
+        age = age+1
+        month = 0
+        while month<11:
+            month = month +1
             life = life - 2
             if life >= 100:
                 life = 100
@@ -218,7 +220,7 @@ while status == 1:
             print("Press 3 for crimes ")
             print("Press 4 for relationships")
             print("Press 5 for activities")
-            print("Press any other key to grow older")
+            print("Press 6 to pass to the next month")
             reg = input("Enter your choice : ")
             print("")
 
@@ -2148,14 +2150,22 @@ while status == 1:
                             print("")
 
                 if click == "3":
-                    print("You spent time with your partner")
-                    happiness = happiness +10
-                    partner = partner + 10
+                    if relationship == 0:
+                        print("You don't have a partner")
+                        print("")
+                    else:
+                        print("You spent time with your partner")
+                        happiness = happiness +10
+                        partner = partner + 10
 
                 if click == "4":
-                    print("You broke up")
-                    print("")
-                    relationship = 0
+                    if relationship == 0 :
+                        print("You don't have a partner")
+                        print("")
+                    else:
+                        print("You broke up")
+                        print("")
+                        relationship = 0
 
                 elif relationship!=0:
                     print("You already have a partner")
@@ -2208,7 +2218,7 @@ while status == 1:
                         print("Total number of pictures posted", post_pics)
                         happiness = happiness + 2
                         abs = abs*1.75
-                        follow = round(a)
+                        follow = round(abs)
                         print("Followers : ",follow)
                         print("")
 
@@ -2218,7 +2228,7 @@ while status == 1:
                         print("Total number of pictures posted", post_vids)
                         happiness = happiness + 2
                         abs = abs*1.75
-                        follow = round(a)
+                        follow = round(abs)
                         print("Followers : ",follow)
                         print("")
 
@@ -2232,7 +2242,7 @@ while status == 1:
                     print("Total number of pictures posted", vlog)
                     happiness = happiness + 2
                     abs = abs * 1.75
-                    vlogf = round(a)
+                    vlogf = round(abs)
                     print("Followers : ", vlogf)
                     print("Need atleast 5000 followers for monetization")
                     print("")
@@ -2320,7 +2330,6 @@ while status == 1:
                         print("You made $500,000 in this video")
                         money = money + 500000
                         print("")
-
 
                 if click == "6":
                     print("You streamed a video")
@@ -2417,7 +2426,7 @@ while status == 1:
                         money = money + 500000
                         print("")
 
-            else:
+            if reg == "6":
                 age = age + 1
                 if (age > 18):
                      break
