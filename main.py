@@ -33,7 +33,12 @@ if start ==num:
 
     else:
         rand = random.randint(1,3)
-        gender = rand
+        if rand == 1:
+            sex = "Male"
+        elif rand == 2:
+            sex = "Female"
+        elif rand == 3:
+            sex = "Other"
 
     skill = random.randint(0,99)            #The random.randint() function generates a random number
     happiness = random.randint(0,99)
@@ -41,6 +46,7 @@ if start ==num:
     life = random.randint(30,99)
     partner = random.randint(50,99)
 
+    eighteen = 0                            #to end the game
     naughty = 0                             #for measuring naughtiness
     club = 0                                #by default 0 , when you join some club = some number
     clubskill=0                             #increases the talent, could potentially impact the future
@@ -3610,13 +3616,19 @@ if broke>1:
         elif age == 18:
             status == 0
 
-while age == 18:
-    print("Thanks for playing")
-    print("Game over")
-    break
+if age == 18:
+    while eighteen == 0:
+        print("Thanks for playing")
+        print("Game over")
+        eighteen = 1
+        break
 
 while dead ==1:
-    print("You died")
-    print("GAME OVER")
-    print("Thanks for playing")
-    break
+    while eighteen == 0:
+        print("You died")
+        print("Thanks for playing")
+        print("Game over")
+        eighteen = 1
+        break
+
+
