@@ -567,6 +567,7 @@ while status == 1:
                                         jailtime = 1
                                         status =3
                                         print("")
+                                        break
 
                                         if rand < 6 and crime == 4:
                                             print("You're arrested for burlary and have to spent 1 year in jail !!!")
@@ -619,6 +620,7 @@ while status == 1:
                                             status = 3
                                             happiness = happiness - 20
                                             print("")
+                                            break
 
                                             if rand < 6 and crime == 0:
                                                 print("You're arrested for larceny and have to spent 1 year in jail !!!")
@@ -627,6 +629,7 @@ while status == 1:
                                                 status = 3
                                                 happiness = happiness - 20
                                                 print("")
+                                                break
 
                                             elif rand < 6 and crime <= 3:
                                                 print("You're arrested for larceny and have to spent 1 year in jail !!!")
@@ -635,6 +638,7 @@ while status == 1:
                                                 status == 3
                                                 happiness = happiness -20
                                                 print("")
+                                                break
 
                                             else:
                                                 print("The lawyers have helped you to stay out of jail")
@@ -649,6 +653,7 @@ while status == 1:
                                         rand = random.randint(1, 10)
                                         jailtime = 1
                                         status = 3
+                                        break
 
                                         if rand < 6 and crime == 4:
                                             print("You're arrested for larceny and have to spent 1 year in jail !!!")
@@ -656,6 +661,7 @@ while status == 1:
                                             jailtime = 1
                                             status = 3
                                             happiness = happiness -20
+                                            break
 
 
                                         elif rand < 6 and crime > 4:
@@ -664,6 +670,7 @@ while status == 1:
                                             status = 3
                                             print("You're arrested for larceny and have to spent ",jailtime," years in jail !!!")
                                             happiness = happiness -20
+                                            break
 
 
                                         else:
@@ -702,6 +709,7 @@ while status == 1:
                                             happiness = happiness -10
                                             status =3
                                             print("")
+                                            break
 
                                         elif rand<=10:
                                             print("The lawyers have failed to prove your innocence")
@@ -711,6 +719,7 @@ while status == 1:
                                             happiness = happiness -10
                                             status =3
                                             print("")
+                                            break
 
 
                                     else:
@@ -733,6 +742,7 @@ while status == 1:
                                             happiness = happiness - 10
                                             status = 3
                                             print("")
+                                            break
 
                                         elif rand <= 10:
                                             print("The lawyers have failed to prove your innocence")
@@ -742,6 +752,7 @@ while status == 1:
                                             happiness = happiness - 10
                                             status = 3
                                             print("")
+                                            break
 
                                     else:
                                         print("You had fun")
@@ -765,6 +776,7 @@ while status == 1:
                                             happiness = happiness - 10
                                             status = 3
                                             print("")
+                                            break
 
                                         elif rand <= 10:
                                             print("The lawyers have failed to prove your innocence")
@@ -774,6 +786,7 @@ while status == 1:
                                             happiness = happiness - 10
                                             status = 3
                                             print("")
+                                            break
 
                                     else:
                                         print("You had fun")
@@ -790,6 +803,7 @@ while status == 1:
                                         print("You've been arrested by the police and your parents have highered a lawyer")
                                         rand = random.randint(0, 100)
                                         print("")
+                                        break
 
                                         if rand <= 10 and crime < 3:
                                             print("The lawyers have failed to prove your innocence")
@@ -799,6 +813,7 @@ while status == 1:
                                             happiness = happiness - 10
                                             status = 3
                                             print("")
+                                            break
 
                                         elif rand <= 10:
                                             print("The lawyers have failed to prove your innocence")
@@ -808,6 +823,7 @@ while status == 1:
                                             happiness = happiness - 10
                                             status = 3
                                             print("")
+                                            break
 
 
                                     else:
@@ -834,6 +850,7 @@ while status == 1:
                                             happiness = happiness - 10
                                             status = 3
                                             print("")
+                                            break
 
                                         elif rand <= 10:
                                             print("The lawyers have failed to prove your innocence")
@@ -843,6 +860,7 @@ while status == 1:
                                             happiness = happiness - 10
                                             status = 3
                                             print("")
+                                            break
 
                                     else:
                                         print("You had fun")
@@ -881,6 +899,7 @@ while status == 1:
                                             print("You were arrested by the police and your parents have hired a lawyer to defend you in court")
                                             rand = random.randint(1,10)
                                             print("")
+                                            break
 
                                             if rand<6 and crime == 0:
                                                 print("You're arrested for burlary and have to spent 10 months in jail !!!")
@@ -888,6 +907,7 @@ while status == 1:
                                                 jailtime = 1
                                                 status = 3
                                                 print("")
+                                                break
 
                                             elif rand<6 and crime <= 3:
                                                 print("You're arrested for burlary and have to spent 1 year in jail !!!")
@@ -895,11 +915,13 @@ while status == 1:
                                                 jailtime = jailtime +1
                                                 status = 3
                                                 print("")
+                                                break
 
                                             else:
                                                 print("The lawyers have helped you to stay out of jail")
                                                 print("You're free")
                                                 print("")
+                                                break
 
                                 else:
                                     rand = random.randint(0,20)
@@ -910,6 +932,7 @@ while status == 1:
                                         jailtime = 1
                                         status =3
                                         print("")
+                                        break
 
                                         if rand < 6 and crime == 4:
                                             print("You're arrested for burlary and have to spent 1 year in jail !!!")
@@ -917,6 +940,7 @@ while status == 1:
                                             jailtime = 1
                                             status = 3
                                             print("")
+                                            break
 
                                         elif rand<6 and crime > 4:
                                             print("You're arrested for burlary and have to spent 1 year in jail !!!")
@@ -924,11 +948,13 @@ while status == 1:
                                             jailtime = jailtime*2
                                             status = 3
                                             print("")
+                                            break
 
                                         else:
                                             print("The lawyers have helped you to stay out of jail")
                                             print("You're free")
                                             print("")
+                                            break
 
 
                                     else:
@@ -968,6 +994,7 @@ while status == 1:
                                             happiness = happiness - 10
                                             status = 3
                                             print("")
+                                            break
 
                                         elif rand>40 and crime>=3:
                                             print("Your lawyers weren't able to convince the judge")
@@ -977,6 +1004,7 @@ while status == 1:
                                             happiness = happiness - 10
                                             status = 3
                                             print("")
+                                            break
 
                                     else:
                                         print("")
@@ -1115,6 +1143,7 @@ while status == 1:
                                             happiness = happiness - 10
                                             status = 3
                                             print("")
+                                            break
 
                                         elif rand > 40 and crime >= 3:
                                             print("Your lawyers weren't able to convince the judge")
@@ -1124,6 +1153,7 @@ while status == 1:
                                             happiness = happiness - 10
                                             status = 3
                                             print("")
+                                            break
 
                                     else:
                                         print("")
@@ -1200,6 +1230,7 @@ while status == 1:
                                         happiness = happiness -50
                                         crime = crime +1
                                         status = 3
+                                        break
 
                                 if click == "2":
                                     cl=1
@@ -1220,6 +1251,7 @@ while status == 1:
                                             happiness = happiness - 50
                                             crime = crime + 1
                                             status = 3
+                                            break
 
                                         elif rand >= 15 and rand <= 20:
                                             print("...")
@@ -1239,6 +1271,7 @@ while status == 1:
                                             happiness = happiness - 50
                                             crime = crime + 1
                                             status = 3
+                                            break
 
                                 if click == "3":
                                     cl = 1
@@ -1259,6 +1292,7 @@ while status == 1:
                                             crime = crime + 1
                                             status = 3
                                             print("")
+                                            break
 
                                         elif rand >= 15 and rand <= 20:
                                             print("...")
@@ -1280,6 +1314,7 @@ while status == 1:
                                             crime = crime + 1
                                             status = 3
                                             print("")
+                                            break
 
                                 if click == "4":
                                     if relationship == 0:
@@ -1304,6 +1339,7 @@ while status == 1:
                                                 crime = crime + 1
                                                 relationship = 0
                                                 status = 3
+                                                break
 
                                             elif rand >= 15 and rand <= 20:
                                                 print("...")
@@ -1316,7 +1352,7 @@ while status == 1:
                                             elif rand >= 20:
                                                 print("...")
                                                 time.delay(1)
-                                                print("Your mother understood your motives and called the police on you")
+                                                print("Your partner understood your motives and called the police on you")
                                                 print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
                                                 jailtime = jailtime + 25
                                                 time.delay(1)
@@ -1325,6 +1361,7 @@ while status == 1:
                                                 crime = crime + 1
                                                 relationship = 0
                                                 status = 3
+                                                break
 
                                 if click == "5":
                                     cl =1
@@ -1344,6 +1381,7 @@ while status == 1:
                                             crime = crime + 1
                                             status = 3
                                             print("")
+                                            break
 
                                         elif rand >= 15 and rand <= 20:
                                             print("...")
@@ -1365,6 +1403,7 @@ while status == 1:
                                             crime = crime + 1
                                             status = 3
                                             print("")
+                                            break
 
                                 else:
                                     print("Press anyone of the given keys")
@@ -1413,6 +1452,7 @@ while status == 1:
                                                 crime = crime + 1
                                                 status = 3
                                                 print("")
+                                                break
 
                                             elif rand>=5 and rand <100:
                                                 print("...")
@@ -1443,6 +1483,7 @@ while status == 1:
                                                     crime = crime + 1
                                                     status = 3
                                                     print("")
+                                                    break
 
                                                 elif rand >= 5 and rand <= 99:
                                                     print("...")
@@ -1473,6 +1514,7 @@ while status == 1:
                                                     crime = crime + 1
                                                     status = 3
                                                     print("")
+                                                    break
 
                                                 elif rand >= 5 and rand <= 99:
                                                     print("...")
@@ -1509,6 +1551,7 @@ while status == 1:
                                                         crime = crime + 1
                                                         relationship = 0
                                                         status = 3
+                                                        break
 
                                                     elif rand >= 5 and rand <= 99:
                                                         print("...")
@@ -1539,6 +1582,7 @@ while status == 1:
                                                     crime = crime + 1
                                                     status = 3
                                                     print("")
+                                                    break
 
                                                 elif rand >= 5 and rand <= 99:
                                                     print("...")
@@ -1547,6 +1591,7 @@ while status == 1:
                                                     happiness = happiness + 10
                                                     crime = crime + 1
                                                     print("")
+                                                    break
 
                                         else:
                                             print("Press anyone of the given keys")
@@ -1594,6 +1639,7 @@ while status == 1:
                                                 crime = crime + 1
                                                 status = 3
                                                 print("")
+                                                break
 
                                             elif rand>=40  and rand <100:
                                                 print("...")
@@ -1624,6 +1670,7 @@ while status == 1:
                                                     crime = crime + 1
                                                     status = 3
                                                     print("")
+                                                    break
 
                                                 elif rand >= 40 and rand <= 99:
                                                     print("...")
@@ -1654,6 +1701,7 @@ while status == 1:
                                                     crime = crime + 1
                                                     status = 3
                                                     print("")
+                                                    break
 
                                                 elif rand >= 40 and rand <= 99:
                                                     print("...")
@@ -1692,6 +1740,7 @@ while status == 1:
                                                         relationship = 0
                                                         status = 3
                                                         print("")
+                                                        break
 
                                                     elif rand >= 40 and rand <= 99:
                                                         print("...")
@@ -1723,6 +1772,7 @@ while status == 1:
                                                     crime = crime + 1
                                                     status = 3
                                                     print("")
+                                                    break
 
                                                 elif rand >= 40 and rand <= 99:
                                                     print("...")
@@ -1731,6 +1781,7 @@ while status == 1:
                                                     happiness = happiness + 10
                                                     crime = crime + 1
                                                     print("")
+                                                    break
 
                                         else:
                                             print("Press anyone of the given keys")
@@ -1778,6 +1829,7 @@ while status == 1:
                                                 crime = crime + 1
                                                 status = 3
                                                 print("")
+                                                break
 
                                             elif rand>=85 and rand <100:
                                                 print("...")
@@ -1808,6 +1860,7 @@ while status == 1:
                                                     crime = crime + 1
                                                     status = 3
                                                     print("")
+                                                    break
 
                                                 elif rand >= 85 and rand <= 99:
                                                     print("...")
@@ -1838,6 +1891,7 @@ while status == 1:
                                                     crime = crime + 1
                                                     status = 3
                                                     print("")
+                                                    break
 
                                                 elif rand >= 85 and rand <= 99:
                                                     print("...")
@@ -1876,6 +1930,7 @@ while status == 1:
                                                         relationship = 0
                                                         status = 3
                                                         print("")
+                                                        break
 
                                                     elif rand >= 85 and rand <= 99:
                                                         print("...")
@@ -1907,6 +1962,7 @@ while status == 1:
                                                     crime = crime + 1
                                                     status = 3
                                                     print("")
+                                                    break
 
                                                 elif rand >= 85 and rand <= 99:
                                                     print("...")
@@ -1959,6 +2015,7 @@ while status == 1:
                                                 status = 3
                                                 print("You have to serve in jail for 2 years")
                                                 print("")
+                                                break
 
                                             elif rand<=5 and rand<=30:
                                                 print("You weren't able to access into the wifi")
@@ -1996,6 +2053,7 @@ while status == 1:
                                                 print("You have to serve in jail for 4 years")
                                                 status = 3
                                                 print("")
+                                                break
 
                                         if click == "3":
                                             rand = random.randint(0, 99)
@@ -2058,6 +2116,7 @@ while status == 1:
                                                 print("You have to serve in jail for 4 years")
                                                 status = 3
                                                 print("")
+                                                break
 
                                         else:
                                             print("Press anyone of the given keys")
