@@ -165,7 +165,7 @@ if age<5:                                       #main process when the age is le
                 break
 
 while status == 1:
-    if (age >= 5 and age < 18) and status == 1:  # This process is needed when the age is between 4 and 19
+    while (age >= 5 and age < 18) and status == 1:  # This process is needed when the age is between 4 and 19
         age = age+1
         month = 0
         while month<11:
@@ -201,7 +201,6 @@ while status == 1:
                 partner = 100
             if partner < 20:
                 print("Your partner dumped you")
-                happiness = happiness - 40
             elif partner <= 0:
                 partner = 0
 
@@ -210,8 +209,8 @@ while status == 1:
             print("You're skill(s) : ", skill)
             print("Your happiness : ", happiness)
             print("Your intelligence : ", intelligence)
-            print("Your life : ", life)
             print("Your age : ", age)
+            print("Months : ", month)
             print("Money : ", money)
             print("Your relationship meter (the higher the better) : ", partner)
             print("")
@@ -2427,12 +2426,13 @@ while status == 1:
                         print("")
 
             if reg == "6":
-                if (month > 18):
+                if (month > 11):
                      break
 
-    if age >= 18:
-        print("GAME OVER")
-        print("Thanks for playing")
+        if age == 18:
+            print("GAME OVER")
+            print("Thanks for playing")
+            break
 
 while (age >= 5 and age < 18) and status == 3:  # This process is needed when the age is between 4 and 19
 
