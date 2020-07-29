@@ -2427,8 +2427,7 @@ while status == 1:
                         print("")
 
             if reg == "6":
-                age = age + 1
-                if (age > 18):
+                if (month > 18):
                      break
 
     if age >= 18:
