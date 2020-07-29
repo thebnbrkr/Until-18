@@ -3610,13 +3610,12 @@ if broke>1:
         elif age == 18:
             status == 0
 
-if age>=18:
-    break
-    print("GAME OVER")
+while age == 18:
     print("Thanks for playing")
+    print("Game over")
+    break
 
-
-if dead ==1:
+while dead ==1:
     print("You died")
     print("GAME OVER")
     print("Thanks for playing")
