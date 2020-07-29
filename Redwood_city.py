@@ -552,6 +552,7 @@ while status == 1:
                                                 jailtime = jailtime +1
                                                 status = 3
                                                 print("")
+                                                break
 
                                             else:
                                                 print("The lawyers have helped you to stay out of jail")
@@ -899,7 +900,7 @@ while status == 1:
                                             print("You were arrested by the police and your parents have hired a lawyer to defend you in court")
                                             rand = random.randint(1,10)
                                             print("")
-                                            break
+
 
                                             if rand<6 and crime == 0:
                                                 print("You're arrested for burlary and have to spent 10 months in jail !!!")
@@ -921,7 +922,7 @@ while status == 1:
                                                 print("The lawyers have helped you to stay out of jail")
                                                 print("You're free")
                                                 print("")
-                                                break
+
 
                                 else:
                                     rand = random.randint(0,20)
@@ -954,7 +955,7 @@ while status == 1:
                                             print("The lawyers have helped you to stay out of jail")
                                             print("You're free")
                                             print("")
-                                            break
+                                            
 
 
                                     else:
@@ -1044,6 +1045,7 @@ while status == 1:
                                             happiness = happiness - 10
                                             status = 3
                                             print("")
+                                            break
 
                                         elif rand>40 and crime>=3:
                                             print("Your lawyers weren't able to convince the judge")
@@ -1053,6 +1055,7 @@ while status == 1:
                                             happiness = happiness - 10
                                             status = 3
                                             print("")
+                                            break
 
                                     else:
                                         print("")
@@ -1094,6 +1097,7 @@ while status == 1:
                                             happiness = happiness - 10
                                             status = 3
                                             print("")
+                                            break
 
                                         elif rand > 40 and crime >= 3:
                                             print("Your lawyers weren't able to convince the judge")
@@ -1103,6 +1107,7 @@ while status == 1:
                                             happiness = happiness - 10
                                             status = 3
                                             print("")
+                                            break
 
                                     else:
                                         print("")
