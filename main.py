@@ -2433,7 +2433,6 @@ while status == 1:
             print("GAME OVER")
             print("Thanks for playing")
             break
-
 while (age >= 5 and age < 18) and status == 3:  # This process is needed when the age is between 4 and 19
 
     life = life - 2
@@ -2473,13 +2472,13 @@ if broke>1:
     print("Your partner broke up with you ")
     happiness = happiness - 40
     relationship = 0
-
+    jailtime = jailtime * 12
     print("######### JUVIENILE PRISON #########")
     i = 0
     print("")
     print("While you're in prison, you're skill will increase as you will engage in prison jobs")
     print("Age : ", age)
-    print("Duration of your sentence : ",jailtime)
+    print("Duration of your sentence (in months) : ",jailtime)
     print("Money : ",money)
     print("")
     print("press 1 to work out")
