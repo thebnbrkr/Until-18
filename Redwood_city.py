@@ -2542,6 +2542,7 @@ while status == 1:
             print("While you're in prison, you're skill will increase as you will engage in prison jobs")
             print("Age : ", age)
             print("Duration of your sentence (months) : ",jailtime)
+            print(" i : ", i)
             print("Money : ",money)
             print("")
             print("press 1 to work out")
@@ -2725,11 +2726,9 @@ while status == 1:
                 print("")
                 print("Do you want to escape ?")
                 click = input("Press 1 to continue")
-                if click !="1":
-                    print("You changed your mind and went back to your cell")
-
-                else:
-                    if jailtime<5:
+                if click =="1":
+                    j=0
+                    if j==0:
                         rand = random.randint(1,20)
                         if rand == 1:
                             print("2+3 = ")
@@ -3684,6 +3683,9 @@ while status == 1:
 
             else:
                 jailtime = jailtime - 1
+                i = i+1
+                if i%12==0:
+                    age = age + 1
                 if jailtime== 0:
                     status = 1
                 elif age == 18:
