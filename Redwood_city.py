@@ -213,7 +213,6 @@ while status == 1:
                     print("You're skill(s) : ", skill)
                     print("Your happiness : ", happiness)
                     print("Your intelligence : ", intelligence)
-                    print("Your life : ", life)
                     print("Your age : ", age)
                     print("Months : ", months )
                     print("Money : ", money)
@@ -2502,7 +2501,16 @@ while status == 1:
                         print("Thanks for playing")
                         break
 
-        while (age >= 5 and age < 18) and status == 3:  # This process is needed when the age is between 4 and 19
+                    else:
+                        print("")
+
+        while (age >= 5 and age < 18) and status == 3: # This process is needed when the age is between 4 and 19
+            a = 0
+            v = 0
+            v = v+1
+            if v==12:
+                age = age + 1
+                v == 0
 
             life = life - 2
             if life >= 100:
@@ -2537,12 +2545,12 @@ while status == 1:
                 partner = 0
 
             print("######### JUVIENILE PRISON #########")
-            i = 0
             print("")
             print("While you're in prison, you're skill will increase as you will engage in prison jobs")
             print("Age : ", age)
             print("Duration of your sentence (months) : ",jailtime)
-            print(" i : ", i)
+            print(" i : ", v)
+            print(" a :", a)
             print("Money : ",money)
             print("")
             print("press 1 to work out")
@@ -3682,10 +3690,11 @@ while status == 1:
                 intelligence = intelligence + 5
 
             else:
+                a = a+1
                 jailtime = jailtime - 1
-                i = i+1
-                if i%12==0:
+                if a%12 == 0:
                     age = age + 1
+
                 if jailtime== 0:
                     status = 1
                 elif age == 18:
