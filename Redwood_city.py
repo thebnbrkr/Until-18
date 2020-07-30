@@ -119,6 +119,7 @@ if age<5:                                       #main process when the age is le
                 if rand>3:
                     print("You died")
                     dead =1
+                    break
                 else:
                     print("You're cured")
                     happiness = happiness+10
@@ -2282,7 +2283,7 @@ while status == 1:
                                 post_pics = post_pics+1
                                 print("Total number of pictures posted", post_pics)
                                 happiness = happiness + 2
-                                abs = abs*1.75
+                                abs = abs*2
                                 follow = round(abs)
                                 print("Followers : ",follow)
                                 print("")
@@ -2292,7 +2293,7 @@ while status == 1:
                                 post_vids = post_vids+1
                                 print("Total number of pictures posted", post_vids)
                                 happiness = happiness + 2
-                                abs = abs*1.75
+                                abs = abs*2
                                 follow = round(abs)
                                 print("Followers : ",follow)
                                 print("")
@@ -2302,63 +2303,63 @@ while status == 1:
                                 print("")
 
                         if click == "5":
-                            print("You uploaded a video")
+                            print("You uploaded 4 videos")
                             vlog = vlog + 1
                             print("Total number of pictures posted", vlog)
                             happiness = happiness + 2
-                            abs = abs * 1.75
+                            abs = abs * 4
                             vlogf = round(abs)
                             print("Followers : ", vlogf)
                             print("Need atleast 5000 followers for monetization")
                             print("")
                             if vlogf>=5000 and vlogf<=10000:
                                 money = money + 1
-                                print("You made $1 in this stream")
+                                print("You made $1 in revenue")
                                 print("")
 
                             elif vlogf>= 10000 and vlogf<= 50000:
                                 money = money + 5
-                                print("You made $5 in this stream")
+                                print("You made $5 in revenue")
                                 print("")
 
                             elif vlogf>= 50000 and vlogf<= 100000:
                                 money = money + 10
-                                print("You made $10 in this stream")
+                                print("You made $10 in revenue")
                                 print("")
 
                             elif vlogf>= 100000 and vlogf<= 200000:
                                 money = money + 20
-                                print("You made $20 in this stream")
+                                print("You made $20 in revenue")
                                 print("")
 
                             elif vlogf>= 200000 and vlogf<= 300000:
                                 money = money + 30
-                                print("You made $30 in this stream")
+                                print("You made $30 in revenue")
                                 print("")
 
                             elif vlogf>= 300000 and vlogf<= 400000:
                                 money = money + 40
-                                print("You made $40 in this stream")
+                                print("You made $40 revenue")
                                 print("")
 
                             elif vlogf>= 400000 and vlogf<= 500000:
                                 money = money + 50
-                                print("You made $50 in this stream")
+                                print("You made $50 in revenue")
                                 print("")
 
                             elif vlogf >= 500000 and vlogf <= 600000:
                                 money = money + 60
-                                print("You made $60 in this stream")
+                                print("You made $60 in revenue")
                                 print("")
 
                             elif vlogf >= 600000 and vlogf <= 700000:
                                 money = money + 70
-                                print("You made $70 in this stream")
+                                print("You made $70 in revenue")
                                 print("")
 
                             elif vlogf >= 700000 and vlogf <= 800000:
                                 money = money + 80
-                                print("You made $80 in this stream")
+                                print("You made $80 in revenue")
                                 print("")
 
                             elif vlogf >= 800000 and vlogf <= 900000:
@@ -2368,31 +2369,31 @@ while status == 1:
 
                             elif vlogf >= 900000 and vlogf <= 1000000:
                                 money = money + 100
-                                print("You made $60 in this stream")
+                                print("You made $60 in revenue")
                                 print("")
 
                             elif vlogf >= 1000000 and vlogf <= 5000000:
                                 money = money + 500
-                                print("You made $500 in this stream")
+                                print("You made $500 in revenue")
                                 print("")
 
                             elif vlogf >= 5000000 and vlogf <= 10000000:
                                 money = money + 2000
-                                print("You made $500 in this stream")
+                                print("You made $500 in revenue")
                                 print("")
 
                             elif vlogf >= 10000000 and vlogf <= 50000000:
                                 money = money + 20000
-                                print("You made $20,000 in this stream")
+                                print("You made $20,000 in revenue")
                                 print("")
 
                             elif vlogf >= 50000000 and vlogf <= 100000000:
                                 money = money + 50000
-                                print("You made $50,000 in this stream")
+                                print("You made $50,000 in revenue")
                                 print("")
 
                             if vlogf>100000000:
-                                print("You made $500,000 in this video")
+                                print("You made $500,000 in revenue")
                                 money = money + 500000
                                 print("")
 
@@ -2402,7 +2403,7 @@ while status == 1:
                             stream = stream + 1
                             print("Total number of pictures posted", stream)
                             happiness = happiness + 2
-                            abs = abs * 1.75
+                            abs = abs * 4
                             streamf = round(abs)
                             print("Followers : ", streamf)
                             print("")
@@ -2549,8 +2550,6 @@ while status == 1:
             print("While you're in prison, you're skill will increase as you will engage in prison jobs")
             print("Age : ", age)
             print("Duration of your sentence (months) : ",jailtime)
-            print(" i : ", v)
-            print(" a :", a)
             print("Money : ",money)
             print("")
             print("press 1 to work out")
@@ -2592,7 +2591,7 @@ while status == 1:
                     if click =="1" and (rand>=20 and rand<=25):
                         print("You accidently killed you while fighting !!!!")
                         dead = 1
-
+                        break
 
                     if click == "2" and rand<15:
                         print("")
@@ -2646,7 +2645,7 @@ while status == 1:
                                 rand=random.randint(0,5)
                                 if rand==0:
                                     print("The other prisoner killed you")
-                                    dead == 1
+                                    dead = 1
                                     print("")
                                     break
 
@@ -2679,7 +2678,7 @@ while status == 1:
                                     print("You agreed to disagree")
                                     print("The other inmate wasn't satisfied with your response")
                                     print("The other inmate killed you")
-                                    dead == 1
+                                    dead = 1
                                     print("")
                                     break
 
@@ -2693,7 +2692,7 @@ while status == 1:
                                     print("You apologized to the other inmate")
                                     print("The other inmate wasn't satisfied with your response")
                                     print("The othe inmate killed you")
-                                    dead == 1
+                                    dead = 1
                                     print("")
                                     break
 
