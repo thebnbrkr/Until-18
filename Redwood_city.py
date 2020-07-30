@@ -52,7 +52,6 @@ if start ==num:
     clubskill=0                             #increases the talent, could potentially impact the future
     money = 0                               #counting the money in your bank account
     crime = 0                               #counting the total number of crimes
-    jailtime = 0                            #total nnumber of years spend in prison
     dead = 0                                #binary value; becomes 1 when you die
     relationship = 0                        #binary value; becomes one when you're in a relationship/married
     hacker = 0                              #binary value; becomes 1 when you learn hacking
@@ -69,6 +68,7 @@ if start ==num:
     vlogf = 1                               #vlog follower count
     streamf = 1                             #stream follower count
     abs = 1                                 #a variable that will be rounded as the number of follower
+    jailtime = 0                            #total number of years spend in prison
 
     Boys = ["Liam", "Noah", "William", "James", "Oliver", "Benjamin", "Elijah", "Lucas", "Mason", "Logan", "Anderson",
             "Blakely", "Bo", "Bodie", "Boden", "Brit", "Lotte", "Gioto", "Xander", "Loius", "Paolo", "Marcelo","Ben",
@@ -541,7 +541,7 @@ while status == 1:
                                             if rand<6 and crime == 0:
                                                 print("You're arrested for burlary and have to spent 1 year in jail !!!")
                                                 crime = crime+1
-                                                jailtime = 1
+                                                jailtime = 12
                                                 status = 3
                                                 print("")
                                                 break
@@ -549,7 +549,7 @@ while status == 1:
                                             elif rand<6 and crime <= 3:
                                                 print("You're arrested for burlary and have to spent 1 year in jail !!!")
                                                 crime = crime+1
-                                                jailtime = jailtime +1
+                                                jailtime = jailtime +12
                                                 status = 3
                                                 print("")
                                                 break
@@ -565,34 +565,35 @@ while status == 1:
                                         print("SOMEONE CALLED THE POLICE ON YOU !!!")
                                         print("You were arrested by the police and your parents have hired a lawyer to defend you in court")
                                         rand = random.randint(1, 10)
-                                        jailtime = 1
+                                        jailtime = 12
                                         status =3
                                         print("")
                                         break
 
-                                        if rand < 6 and crime == 4:
-                                            print("You're arrested for burlary and have to spent 1 year in jail !!!")
-                                            crime = crime + 1
-                                            jailtime = 1
-                                            status = 3
+                                    if rand < 6 and crime == 4:
+                                        print("You're arrested for burlary and have to spent 1 year in jail !!!")
+                                        crime = crime + 1
+                                        jailtime = 12
+                                        status = 3
+                                        break
 
-                                        elif rand<6 and crime > 4:
-                                            print("You're arrested for burlary and have to spent 1 year in jail !!!")
-                                            crime = crime+1
-                                            jailtime = jailtime*2
-                                            status = 3
-
-                                        else:
-                                            print("The lawyers have helped you to stay out of jail")
-                                            print("You're free")
+                                    elif rand<6 and crime > 4:
+                                        print("You're arrested for burlary and have to spent 1 year in jail !!!")
+                                        crime = crime+1
+                                        jailtime = jailtime*2
+                                        status = 3
+                                        break
 
                                     else:
-                                        print("You have robbed the house")
-                                        rand = random.randint(1, 9000)
-                                        print("You sold all the stolen items to a pawn shop and recieved $", rand)
-                                        money = money + rand
-                                        print("Money :", money)
-                                        print("")
+                                        print("The lawyers have helped you to stay out of jail")
+                                        print("You're free")
+
+                                    print("You have robbed the house")
+                                    rand = random.randint(1, 9000)
+                                    print("You sold all the stolen items to a pawn shop and recieved $", rand)
+                                    money = money + rand
+                                    print("Money :", money)
+                                    print("")
 
                             if choice == "2":
                                 print("You were walking down the streets and have found your target")
@@ -617,34 +618,34 @@ while status == 1:
                                             print("SOMEONE CALLED THE POLICE ON YOU !!!")
                                             print("You were arrested by the police and your parents have hired a lawyer to defend you in court")
                                             rand = random.randint(1, 10)
-                                            jailtime = 1
+                                            jailtime = 12
                                             status = 3
                                             happiness = happiness - 20
                                             print("")
                                             break
 
-                                            if rand < 6 and crime == 0:
-                                                print("You're arrested for larceny and have to spent 1 year in jail !!!")
-                                                crime = crime + 1
-                                                jailtime = 1
-                                                status = 3
-                                                happiness = happiness - 20
-                                                print("")
-                                                break
+                                        if rand < 6 and crime == 0:
+                                            print("You're arrested for larceny and have to spent 1 year in jail !!!")
+                                            crime = crime + 1
+                                            jailtime = 12
+                                            status = 3
+                                            happiness = happiness - 20
+                                            print("")
+                                            break
 
-                                            elif rand < 6 and crime <= 3:
-                                                print("You're arrested for larceny and have to spent 1 year in jail !!!")
-                                                crime = crime + 1
-                                                jailtime = jailtime + 1
-                                                status == 3
-                                                happiness = happiness -20
-                                                print("")
-                                                break
+                                        elif rand < 6 and crime <= 3:
+                                            print("You're arrested for larceny and have to spent 1 year in jail !!!")
+                                            crime = crime + 1
+                                            jailtime = jailtime + 12
+                                            status == 3
+                                            happiness = happiness -20
+                                            print("")
+                                            break
 
-                                            else:
-                                                print("The lawyers have helped you to stay out of jail")
-                                                print("You're free")
-                                                happiness = happiness + 10
+                                        else:
+                                            print("The lawyers have helped you to stay out of jail")
+                                            print("You're free")
+                                            happiness = happiness + 10
 
                                 else:
                                     rand = random.randint(0, 20)
@@ -652,7 +653,7 @@ while status == 1:
                                         print("SOMEONE CALLED THE POLICE ON YOU !!!")
                                         print("You were arrested by the police and your parents have hired a lawyer to defend you in court")
                                         rand = random.randint(1, 10)
-                                        jailtime = 1
+                                        jailtime = 12
                                         status = 3
                                         break
 
@@ -706,7 +707,7 @@ while status == 1:
                                             print("The lawyers have failed to prove your innocence")
                                             print("You have to spent 1 year in prison")
                                             crime = crime+1
-                                            jailtime = 1
+                                            jailtime = 12
                                             happiness = happiness -10
                                             status =3
                                             print("")
@@ -715,7 +716,7 @@ while status == 1:
                                         elif rand<=10:
                                             print("The lawyers have failed to prove your innocence")
                                             crime = crime + 1
-                                            jailtime = jailtime+2
+                                            jailtime = jailtime+12
                                             print("You have to spent ",jailtime," years in prison")
                                             happiness = happiness -10
                                             status =3
@@ -739,7 +740,7 @@ while status == 1:
                                             print("The lawyers have failed to prove your innocence")
                                             print("You have to spent 1 year in prison")
                                             crime = crime + 1
-                                            jailtime = 1
+                                            jailtime = 12
                                             happiness = happiness - 10
                                             status = 3
                                             print("")
@@ -748,7 +749,7 @@ while status == 1:
                                         elif rand <= 10:
                                             print("The lawyers have failed to prove your innocence")
                                             crime = crime + 1
-                                            jailtime = jailtime + 2
+                                            jailtime = jailtime + 24
                                             print("You have to spent ", jailtime, " years in prison")
                                             happiness = happiness - 10
                                             status = 3
@@ -773,7 +774,7 @@ while status == 1:
                                             print("The lawyers have failed to prove your innocence")
                                             print("You have to spent 1 year in prison")
                                             crime = crime + 1
-                                            jailtime = 1
+                                            jailtime = 12
                                             happiness = happiness - 10
                                             status = 3
                                             print("")
@@ -782,7 +783,7 @@ while status == 1:
                                         elif rand <= 10:
                                             print("The lawyers have failed to prove your innocence")
                                             crime = crime + 1
-                                            jailtime = jailtime + 2
+                                            jailtime = jailtime + 12
                                             print("You have to spent ", jailtime, " years in prison")
                                             happiness = happiness - 10
                                             status = 3
@@ -804,27 +805,27 @@ while status == 1:
                                         print("You've been arrested by the police and your parents have highered a lawyer")
                                         rand = random.randint(0, 100)
                                         print("")
+
+
+                                    if rand <= 10 and crime < 3:
+                                        print("The lawyers have failed to prove your innocence")
+                                        print("You have to spent 1 year in prison")
+                                        crime = crime + 1
+                                        jailtime = 12
+                                        happiness = happiness - 10
+                                        status = 3
+                                        print("")
                                         break
 
-                                        if rand <= 10 and crime < 3:
-                                            print("The lawyers have failed to prove your innocence")
-                                            print("You have to spent 1 year in prison")
-                                            crime = crime + 1
-                                            jailtime = 1
-                                            happiness = happiness - 10
-                                            status = 3
-                                            print("")
-                                            break
-
-                                        elif rand <= 10:
-                                            print("The lawyers have failed to prove your innocence")
-                                            crime = crime + 1
-                                            jailtime = jailtime + 2
-                                            print("You have to spent ", jailtime, " years in prison")
-                                            happiness = happiness - 10
-                                            status = 3
-                                            print("")
-                                            break
+                                    elif rand <= 10:
+                                        print("The lawyers have failed to prove your innocence")
+                                        crime = crime + 1
+                                        jailtime = jailtime + 12
+                                        print("You have to spent ", jailtime, " years in prison")
+                                        happiness = happiness - 10
+                                        status = 3
+                                        print("")
+                                        break
 
 
                                     else:
@@ -847,7 +848,7 @@ while status == 1:
                                             print("The lawyers have failed to prove your innocence")
                                             print("You have to spent 1 year in prison")
                                             crime = crime + 1
-                                            jailtime = 1
+                                            jailtime = 12
                                             happiness = happiness - 10
                                             status = 3
                                             print("")
@@ -856,7 +857,7 @@ while status == 1:
                                         elif rand <= 10:
                                             print("The lawyers have failed to prove your innocence")
                                             crime = crime + 1
-                                            jailtime = jailtime + 2
+                                            jailtime = jailtime + 12
                                             print("You have to spent ", jailtime, " years in prison")
                                             happiness = happiness - 10
                                             status = 3
@@ -903,9 +904,9 @@ while status == 1:
 
 
                                             if rand<6 and crime == 0:
-                                                print("You're arrested for burlary and have to spent 10 months in jail !!!")
+                                                print("You're arrested for burlary and have to spent 1 year months in jail !!!")
                                                 crime = crime+1
-                                                jailtime = 1
+                                                jailtime = 12
                                                 status = 3
                                                 print("")
                                                 break
@@ -913,7 +914,7 @@ while status == 1:
                                             elif rand<6 and crime <= 3:
                                                 print("You're arrested for burlary and have to spent 1 year in jail !!!")
                                                 crime = crime+1
-                                                jailtime = jailtime +1
+                                                jailtime = jailtime +12
                                                 status = 3
                                                 print("")
                                                 break
@@ -935,36 +936,33 @@ while status == 1:
                                         print("")
                                         break
 
-                                        if rand < 6 and crime == 4:
-                                            print("You're arrested for burlary and have to spent 1 year in jail !!!")
-                                            crime = crime + 1
-                                            jailtime = 1
-                                            status = 3
-                                            print("")
-                                            break
+                                    if rand < 6 and crime == 4:
+                                        print("You're arrested for burlary and have to spent 1 year in jail !!!")
+                                        crime = crime + 1
+                                        jailtime = 1
+                                        status = 3
+                                        print("")
+                                        break
 
-                                        elif rand<6 and crime > 4:
-                                            print("You're arrested for burlary and have to spent 1 year in jail !!!")
-                                            crime = crime+1
-                                            jailtime = jailtime*2
-                                            status = 3
-                                            print("")
-                                            break
-
-                                        else:
-                                            print("The lawyers have helped you to stay out of jail")
-                                            print("You're free")
-                                            print("")
-                                            
-
+                                    elif rand<6 and crime > 4:
+                                        print("You're arrested for burlary and have to spent 1 year in jail !!!")
+                                        crime = crime+1
+                                        jailtime = jailtime*2
+                                        status = 3
+                                        print("")
+                                        break
 
                                     else:
-                                        print("You have robbed the house")
-                                        rand = random.randint(1, 9000)
-                                        print("You sold all the stolen items to a pawn shop and recieved $", rand)
-                                        money = money + rand
-                                        print("Money :", money)
+                                        print("The lawyers have helped you to stay out of jail")
+                                        print("You're free")
                                         print("")
+
+                                    print("You have robbed the house")
+                                    rand = random.randint(1, 9000)
+                                    print("You sold all the stolen items to a pawn shop and recieved $", rand)
+                                    money = money + rand
+                                    print("Money :", money)
+                                    print("")
 
                             if choice == "5":
                                 print("You were walking down the streets......")
@@ -991,7 +989,7 @@ while status == 1:
                                             print("Your lawyers weren't able to convince the judge")
                                             print("You have been awarded with 3 years in juvie !!!!!")
                                             crime = crime + 1
-                                            jailtime = 3
+                                            jailtime = 36
                                             happiness = happiness - 10
                                             status = 3
                                             print("")
@@ -1001,7 +999,7 @@ while status == 1:
                                             print("Your lawyers weren't able to convince the judge")
                                             print("You have been awarded with 5 years in juvie !!!!!")
                                             crime = crime + 1
-                                            jailtime = 5
+                                            jailtime = 60
                                             happiness = happiness - 10
                                             status = 3
                                             print("")
@@ -1041,7 +1039,7 @@ while status == 1:
                                             print("Your lawyers weren't able to convince the judge")
                                             print("You have been awarded with 3 years in juvie !!!!!")
                                             crime = crime + 1
-                                            jailtime = 3
+                                            jailtime = 36
                                             happiness = happiness - 10
                                             status = 3
                                             print("")
@@ -1051,7 +1049,7 @@ while status == 1:
                                             print("Your lawyers weren't able to convince the judge")
                                             print("You have been awarded with 5 years in juvie !!!!!")
                                             crime = crime + 1
-                                            jailtime = 5
+                                            jailtime = 60
                                             happiness = happiness - 10
                                             status = 3
                                             print("")
@@ -1093,7 +1091,7 @@ while status == 1:
                                             print("Your lawyers weren't able to convince the judge")
                                             print("You have been awarded with 3 years in juvie !!!!!")
                                             crime = crime + 1
-                                            jailtime = 3
+                                            jailtime = 36
                                             happiness = happiness - 10
                                             status = 3
                                             print("")
@@ -1103,7 +1101,7 @@ while status == 1:
                                             print("Your lawyers weren't able to convince the judge")
                                             print("You have been awarded with 5 years in juvie !!!!!")
                                             crime = crime + 1
-                                            jailtime = 5
+                                            jailtime = 60
                                             happiness = happiness - 10
                                             status = 3
                                             print("")
@@ -1144,7 +1142,7 @@ while status == 1:
                                             print("Your lawyers weren't able to convince the judge")
                                             print("You have been awarded with 3 years in juvie !!!!!")
                                             crime = crime + 1
-                                            jailtime = 3
+                                            jailtime = 36
                                             happiness = happiness - 10
                                             status = 3
                                             print("")
@@ -1154,7 +1152,7 @@ while status == 1:
                                             print("Your lawyers weren't able to convince the judge")
                                             print("You have been awarded with 5 years in juvie !!!!!")
                                             crime = crime + 1
-                                            jailtime = 5
+                                            jailtime = 60
                                             happiness = happiness - 10
                                             status = 3
                                             print("")
@@ -1209,7 +1207,7 @@ while status == 1:
                                         time.delay(1)
                                         print("You killed your mother")
                                         print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
-                                        jailtime = jailtime + 25
+                                        jailtime = jailtime + 300
                                         time.delay(1)
                                         print("Yor parents refused to arrange a lawyer for you")
                                         print("Your sentenced to ",jailtime,"years in prison")
@@ -1229,7 +1227,7 @@ while status == 1:
                                         time.delay(1)
                                         print("Your mother understood your motives and called the police on you")
                                         print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
-                                        jailtime = jailtime + 25
+                                        jailtime = jailtime + 300
                                         time.delay(1)
                                         print("Yor parents refused to arrange a lawyer for you")
                                         happiness = happiness -50
@@ -1249,7 +1247,7 @@ while status == 1:
                                             time.delay(1)
                                             print("You killed your mother")
                                             print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
-                                            jailtime = jailtime + 25
+                                            jailtime = jailtime + 300
                                             time.delay(1)
                                             print("Yor parents refused to arrange a lawyer for you")
                                             print("Your sentenced to ", jailtime, "years in prison")
@@ -1270,7 +1268,7 @@ while status == 1:
                                             time.delay(1)
                                             print("Your mother understood your motives and called the police on you")
                                             print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
-                                            jailtime = jailtime + 25
+                                            jailtime = jailtime + 300
                                             time.delay(1)
                                             print("Yor parents refused to arrange a lawyer for you")
                                             happiness = happiness - 50
@@ -1289,7 +1287,7 @@ while status == 1:
                                             time.delay(1)
                                             print("You killed a relative")
                                             print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
-                                            jailtime = jailtime + 25
+                                            jailtime = jailtime + 300
                                             time.delay(1)
                                             print("Yor parents refused to arrange a lawyer for you")
                                             print("Your sentenced to ", jailtime, "years in prison")
@@ -1312,7 +1310,7 @@ while status == 1:
                                             time.delay(1)
                                             print("Your relative understood your motives and called the police on you")
                                             print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
-                                            jailtime = jailtime + 25
+                                            jailtime = jailtime + 300
                                             time.delay(1)
                                             print("Yor parents refused to arrange a lawyer for you")
                                             happiness = happiness - 50
@@ -1336,7 +1334,7 @@ while status == 1:
                                                 time.delay(1)
                                                 print("You killed your partner")
                                                 print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
-                                                jailtime = jailtime + 25
+                                                jailtime = jailtime + 300
                                                 time.delay(1)
                                                 print("Yor parents refused to arrange a lawyer for you")
                                                 print("Your sentenced to ", jailtime, "years in prison")
@@ -1359,7 +1357,7 @@ while status == 1:
                                                 time.delay(1)
                                                 print("Your partner understood your motives and called the police on you")
                                                 print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
-                                                jailtime = jailtime + 25
+                                                jailtime = jailtime + 300
                                                 time.delay(1)
                                                 print("Yor parents refused to arrange a lawyer for you")
                                                 happiness = happiness - 50
@@ -1378,7 +1376,7 @@ while status == 1:
                                             time.delay(1)
                                             print("You killed a random person")
                                             print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
-                                            jailtime = jailtime + 25
+                                            jailtime = jailtime + 300
                                             time.delay(1)
                                             print("Yor parents refused to arrange a lawyer for you")
                                             print("Your sentenced to ", jailtime, "years in prison")
@@ -1401,7 +1399,7 @@ while status == 1:
                                             time.delay(1)
                                             print("The random person understood your motives and called the police on you")
                                             print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
-                                            jailtime = jailtime + 25
+                                            jailtime = jailtime + 300
                                             time.delay(1)
                                             print("Yor parents refused to arrange a lawyer for you")
                                             happiness = happiness - 50
@@ -1448,7 +1446,7 @@ while status == 1:
                                                 print("The hitman killed your mother")
                                                 print("The hitman confessed that you were responsible for the murder !!!")
                                                 print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
-                                                jailtime = jailtime + 25
+                                                jailtime = jailtime + 300
                                                 print("")
                                                 time.delay(1)
                                                 print("Yor parents refused to arrange a lawyer for you")
@@ -1479,7 +1477,7 @@ while status == 1:
                                                     print("The hitman killed your mother")
                                                     print("The hitman confessed that you were responsible for the murder !!!")
                                                     print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
-                                                    jailtime = jailtime + 25
+                                                    jailtime = jailtime + 300
                                                     time.delay(1)
                                                     print("")
                                                     print("Yor parents refused to arrange a lawyer for you")
@@ -1510,7 +1508,7 @@ while status == 1:
                                                     print("The hitman killed a relative")
                                                     print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
                                                     print("The hitman confessed that you were responsible for the murder !!!")
-                                                    jailtime = jailtime + 25
+                                                    jailtime = jailtime + 300
                                                     print("")
                                                     time.delay(1)
                                                     print("Yor parents refused to arrange a lawyer for you")
@@ -1548,7 +1546,7 @@ while status == 1:
                                                         print("You killed your partner")
                                                         print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
                                                         print("The hitman confessed that you were responsible for the murder !!!")
-                                                        jailtime = jailtime + 25
+                                                        jailtime = jailtime + 300
                                                         time.delay(1)
                                                         print("Yor parents refused to arrange a lawyer for you")
                                                         print("Your sentenced to ", jailtime, "years in prison")
@@ -1578,7 +1576,7 @@ while status == 1:
                                                     print("You killed a random person")
                                                     print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
                                                     print("The hitman confessed that you were responsible for the murder !!!")
-                                                    jailtime = jailtime + 25
+                                                    jailtime = jailtime + 300
                                                     print("")
                                                     time.delay(1)
                                                     print("Yor parents refused to arrange a lawyer for you")
@@ -1635,7 +1633,7 @@ while status == 1:
                                                 print("The hitman killed your mother")
                                                 print("The hitman confessed that you were responsible for the murder !!!")
                                                 print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
-                                                jailtime = jailtime + 25
+                                                jailtime = jailtime + 300
                                                 print("")
                                                 time.delay(1)
                                                 print("Yor parents refused to arrange a lawyer for you")
@@ -1666,7 +1664,7 @@ while status == 1:
                                                     print("The hitman killed your mother")
                                                     print("The hitman confessed that you were responsible for the murder !!!")
                                                     print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
-                                                    jailtime = jailtime + 25
+                                                    jailtime = jailtime + 300
                                                     print("")
                                                     time.delay(1)
                                                     print("Yor parents refused to arrange a lawyer for you")
@@ -1697,7 +1695,7 @@ while status == 1:
                                                     print("The hitman killed a relative")
                                                     print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
                                                     print("The hitman confessed that you were responsible for the murder !!!")
-                                                    jailtime = jailtime + 25
+                                                    jailtime = jailtime + 300
                                                     print("")
                                                     time.delay(1)
                                                     print("Yor parents refused to arrange a lawyer for you")
@@ -1735,7 +1733,7 @@ while status == 1:
                                                         print("You killed your partner")
                                                         print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
                                                         print("The hitman confessed that you were responsible for the murder !!!")
-                                                        jailtime = jailtime + 25
+                                                        jailtime = jailtime + 300
                                                         print("")
                                                         time.delay(1)
                                                         print("Yor parents refused to arrange a lawyer for you")
@@ -1768,7 +1766,7 @@ while status == 1:
                                                     print("You killed a random person")
                                                     print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
                                                     print("The hitman confessed that you were responsible for the murder !!!")
-                                                    jailtime = jailtime + 25
+                                                    jailtime = jailtime + 300
                                                     print("")
                                                     time.delay(1)
                                                     print("Yor parents refused to arrange a lawyer for you")
@@ -1825,7 +1823,7 @@ while status == 1:
                                                 print("The hitman killed your mother")
                                                 print("The hitman confessed that you were responsible for the murder !!!")
                                                 print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
-                                                jailtime = jailtime + 25
+                                                jailtime = jailtime + 300
                                                 print("")
                                                 time.delay(1)
                                                 print("Yor parents refused to arrange a lawyer for you")
@@ -1856,7 +1854,7 @@ while status == 1:
                                                     print("The hitman killed your mother")
                                                     print("The hitman confessed that you were responsible for the murder !!!")
                                                     print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
-                                                    jailtime = jailtime + 25
+                                                    jailtime = jailtime + 300
                                                     print("")
                                                     time.delay(1)
                                                     print("Yor parents refused to arrange a lawyer for you")
@@ -1887,7 +1885,7 @@ while status == 1:
                                                     print("The hitman killed a relative")
                                                     print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
                                                     print("The hitman confessed that you were responsible for the murder !!!")
-                                                    jailtime = jailtime + 25
+                                                    jailtime = jailtime + 300
                                                     print("")
                                                     time.delay(1)
                                                     print("Yor parents refused to arrange a lawyer for you")
@@ -1925,7 +1923,7 @@ while status == 1:
                                                         print("You killed your partner")
                                                         print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
                                                         print("The hitman confessed that you were responsible for the murder !!!")
-                                                        jailtime = jailtime + 25
+                                                        jailtime = jailtime + 300
                                                         print("")
                                                         time.delay(1)
                                                         print("Yor parents refused to arrange a lawyer for you")
@@ -1958,7 +1956,7 @@ while status == 1:
                                                     print("You killed a random person")
                                                     print("THE POLICE HAVE ARRESTED YOU FOR MURDER")
                                                     print("The hitman confessed that you were responsible for the murder !!!")
-                                                    jailtime = jailtime + 25
+                                                    jailtime = jailtime + 300
                                                     print("")
                                                     time.delay(1)
                                                     print("Yor parents refused to arrange a lawyer for you")
@@ -2016,7 +2014,7 @@ while status == 1:
                                                 print("SOMEHOW THE POLICE UNDERSTOOD THAT YOU WERE COMMITTING CYBER CRIME !!!")
                                                 happiness = happiness -10
                                                 skill = skill + 3
-                                                jailtime = 2
+                                                jailtime = 24
                                                 status = 3
                                                 print("You have to serve in jail for 2 years")
                                                 print("")
@@ -2054,7 +2052,7 @@ while status == 1:
                                                 print("SOMEHOW THE POLICE UNDERSTOOD THAT YOU WERE COMMITTING CYBER CRIME !!!")
                                                 happiness = happiness -10
                                                 skill = skill + 3
-                                                jailtime = 4
+                                                jailtime = 48
                                                 print("You have to serve in jail for 4 years")
                                                 status = 3
                                                 print("")
@@ -2086,7 +2084,7 @@ while status == 1:
                                                 print("SOMEHOW THE POLICE UNDERSTOOD THAT YOU WERE COMMITTING CYBER CRIME !!!")
                                                 happiness = happiness - 10
                                                 skill = skill + 3
-                                                jailtime = 4
+                                                jailtime = 48
                                                 print("You have to serve in jail for 4 years")
                                                 status = 3
                                                 print("")
@@ -2117,7 +2115,7 @@ while status == 1:
                                                 print("SOMEHOW THE POLICE UNDERSTOOD THAT YOU WERE COMMITTING CYBER CRIME !!!")
                                                 happiness = happiness - 10
                                                 skill = skill + 3
-                                                jailtime = 4
+                                                jailtime = 48
                                                 print("You have to serve in jail for 4 years")
                                                 status = 3
                                                 print("")
@@ -2538,13 +2536,12 @@ while status == 1:
             elif partner <= 0:
                 partner = 0
 
-
             print("######### JUVIENILE PRISON #########")
             i = 0
             print("")
             print("While you're in prison, you're skill will increase as you will engage in prison jobs")
             print("Age : ", age)
-            print("Duration of your sentence : ",jailtime)
+            print("Duration of your sentence (months) : ",jailtime)
             print("Money : ",money)
             print("")
             print("press 1 to work out")
@@ -2572,14 +2569,14 @@ while status == 1:
                     if click =="1" and rand<15:
                         print("The guards have saw you fighting in prison")
                         print("Your sentence has been extended by 2 yeas !!!!")
-                        jailtime= jailtime+2
+                        jailtime= jailtime+24
                         happiness = happiness-20
                         print("")
 
                     if click =="1" and (rand>=15 and rand<=20):
                         print("You accidently killed the other prisoner while fighting !!!!")
                         print("Your sentence has been extended by 50 yeas !!!!")
-                        jailtime = jailtime + 50
+                        jailtime = jailtime + 600
                         happiness = happiness - 50
                         print("")
 
@@ -2634,20 +2631,21 @@ while status == 1:
                             print("Press 1 to fight")
                             print("Press 2 to agree to disagree")
                             print("Press 3 to apologize")
-                            a = int(input("Enter your choice : "))
+                            a = input("Enter your choice : ")
                             print("")
-                            if a ==1:
+                            if a =="1":
                                 rand=random.randint(0,5)
                                 if rand==0:
                                     print("The other prisoner killed you")
                                     dead == 1
                                     print("")
+                                    break
 
 
                                 elif rand==1:
                                     print("You killed the other prisoner")
                                     print("You are being charged with manslaughter and you have to spent 50 years in prison additionally !!!!")
-                                    jailtime=jailtime+50
+                                    jailtime=jailtime+600
                                     skill = skill+10
                                     happiness = happiness -50
                                     print("")
@@ -2656,7 +2654,7 @@ while status == 1:
                                 elif rand==2:
                                     print("A guard saw you fighting")
                                     print("You're charged for fighting in prison and have to spend 2 years in prisn additionally !!!!")
-                                    jailtime = jailtime+2
+                                    jailtime = jailtime+24
                                     happiness = happiness -10
                                     print("")
 
@@ -2666,20 +2664,21 @@ while status == 1:
                                     skill = skill + 10
                                     happiness = happiness+10
 
-                            elif a==2:
+                            elif a=="2":
                                 rand = random.randint(0, 10)
                                 if rand==1:
                                     print("You agreed to disagree")
                                     print("The other inmate wasn't satisfied with your response")
-                                    print("The othe inmate killed you")
+                                    print("The other inmate killed you")
                                     dead == 1
                                     print("")
+                                    break
 
                                 else:
                                     print("You agreed to disagree")
                                     print("")
 
-                            elif a == 3:
+                            elif a == "3":
                                 rand = random.randint(0, 10)
                                 if rand == 1:
                                     print("You apologized to the other inmate")
@@ -2687,6 +2686,7 @@ while status == 1:
                                     print("The othe inmate killed you")
                                     dead == 1
                                     print("")
+                                    break
 
                                 else:
                                     print("You apologized to the other inmate")
@@ -2700,7 +2700,7 @@ while status == 1:
                             print("You accidently killed the other prisoner in the fight")
                             happiness = happiness - 30
                             skill = skill + 10
-                            jailtime = jailtime + 50
+                            jailtime = jailtime + 600
                             print("Your sentence has been extended by 50 years")
                             print("")
 
@@ -2709,11 +2709,12 @@ while status == 1:
                             print("You Died")
                             dead = 1
                             print("")
+                            break
 
                         if rand == 10:
                             print(" A guard saw you fighting")
                             print(" Ypur sentence has been extended for 2 years for fighting in prison")
-                            jailtime = jailtime + 2
+                            jailtime = jailtime + 24
                             print("")
 
                     else:
@@ -2748,8 +2749,8 @@ while status == 1:
                             else:
                                 print("You tried to escape from prison")
                                 print("But a guard caught you !!!!")
-                                print("your sentence has been extended b3 years")
-                                jailtime=jailtime+3
+                                print("your sentence has been extended by 3 years")
+                                jailtime=jailtime+36
                                 happiness = happiness-20
                                 crime = crime +1
                                 print("")
@@ -2772,8 +2773,8 @@ while status == 1:
                             else:
                                 print("You tried to escape from prison")
                                 print("But a guard caught you !!!!")
-                                print("your sentence has been extended b3 years")
-                                jailtime=jailtime+3
+                                print("your sentence has been extended by 3 years")
+                                jailtime=jailtime+36
                                 happiness = happiness-20
                                 crime = crime +1
                                 print("")
@@ -2786,8 +2787,8 @@ while status == 1:
                             print("press 3 for 7")
                             print("press 4 for 8")
                             print("")
-                            a = int(input("Enter your choice"))
-                            if a==2:
+                            a = input("Enter your choice")
+                            if a=="2":
                                 print("You broke out of prison")
                                 status = 4
                                 crime = crime + 1
@@ -2796,8 +2797,8 @@ while status == 1:
                             else:
                                 print("You tried to escape from prison")
                                 print("But a guard caught you !!!!")
-                                print("your sentence has been extended b3 years")
-                                jailtime=jailtime+3
+                                print("your sentence has been extended by 3 years")
+                                jailtime=jailtime+36
                                 happiness = happiness-20
                                 crime = crime +1
                                 print("")
@@ -2811,8 +2812,8 @@ while status == 1:
                             print("press 3 for 7")
                             print("press 4 for 8")
                             print("")
-                            a = int(input("Enter your choice"))
-                            if a==3:
+                            a = input("Enter your choice")
+                            if a=="3":
                                 print("You broke out of prison")
                                 status = 4
                                 crime = crime + 1
@@ -2822,7 +2823,7 @@ while status == 1:
                                 print("You tried to escape from prison")
                                 print("But a guard caught you !!!!")
                                 print("your sentence has been extended b3 years")
-                                jailtime=jailtime+3
+                                jailtime=jailtime+36
                                 happiness = happiness-20
                                 crime = crime +1
                                 print("")
@@ -2836,8 +2837,8 @@ while status == 1:
                             print("press 3 for 7")
                             print("press 4 for 8")
                             print("")
-                            a = int(input("Enter your choice"))
-                            if a==4:
+                            a = input("Enter your choice")
+                            if a=="4":
                                 print("You broke out of prison")
                                 status = 4
                                 crime = crime + 1
@@ -2847,7 +2848,7 @@ while status == 1:
                                 print("You tried to escape from prison")
                                 print("But a guard caught you !!!!")
                                 print("your sentence has been extended b3 years")
-                                jailtime=jailtime+3
+                                jailtime=jailtime+36
                                 happiness = happiness-20
                                 crime = crime +1
                                 print("")
@@ -2860,8 +2861,8 @@ while status == 1:
                             print("press 3 for Unlisted Notion")
                             print("press 4 for Unlisted Nothing")
                             print("")
-                            a = int(input("Enter your choice"))
-                            if a == 1:
+                            a = input("Enter your choice")
+                            if a == "1":
                                 print("You broke out of prison")
                                 status = 4
                                 crime = crime + 1
@@ -2871,7 +2872,7 @@ while status == 1:
                                 print("You tried to escape from prison")
                                 print("But a guard caught you !!!!")
                                 print("your sentence has been extended b3 years")
-                                jailtime = jailtime + 3
+                                jailtime = jailtime + 36
                                 happiness = happiness - 20
                                 crime = crime + 1
                                 print("")
@@ -2885,8 +2886,8 @@ while status == 1:
                             print("press 3 for photographers")
                             print("press 4 for water")
                             print("")
-                            a = int(input("Enter your choice"))
-                            if a == 1:
+                            a = input("Enter your choice")
+                            if a == "1":
                                 print("You broke out of prison")
                                 status = 4
                                 crime = crime + 1
@@ -2896,7 +2897,7 @@ while status == 1:
                                 print("You tried to escape from prison")
                                 print("But a guard caught you !!!!")
                                 print("your sentence has been extended b3 years")
-                                jailtime = jailtime + 3
+                                jailtime = jailtime + 36
                                 happiness = happiness - 20
                                 crime = crime + 1
                                 print("")
@@ -2910,8 +2911,8 @@ while status == 1:
                             print("press 3 for Hyderabad")
                             print("press 4 for Bangaluru")
                             print("")
-                            a = int(input("Enter your choice"))
-                            if a == 1:
+                            a = input("Enter your choice")
+                            if a == "1":
                                 print("You broke out of prison")
                                 status = 4
                                 crime = crime + 1
@@ -2921,7 +2922,7 @@ while status == 1:
                                 print("You tried to escape from prison")
                                 print("But a guard caught you !!!!")
                                 print("your sentence has been extended b3 years")
-                                jailtime = jailtime + 3
+                                jailtime = jailtime + 36
                                 happiness = happiness - 20
                                 crime = crime + 1
                                 print("")
@@ -2935,8 +2936,8 @@ while status == 1:
                             print("press 3 for Seattle")
                             print("press 4 for Pheonix")
                             print("")
-                            a = int(input("Enter your choice"))
-                            if a == 1:
+                            a = input("Enter your choice")
+                            if a == "1":
                                 print("You broke out of prison")
                                 status = 4
                                 crime = crime + 1
@@ -2946,7 +2947,7 @@ while status == 1:
                                 print("You tried to escape from prison")
                                 print("But a guard caught you !!!!")
                                 print("your sentence has been extended by 3 years")
-                                jailtime = jailtime + 3
+                                jailtime = jailtime + 36
                                 happiness = happiness - 20
                                 crime = crime + 1
                                 print("")
@@ -2960,8 +2961,8 @@ while status == 1:
                             print("press 3 for 325")
                             print("press 4 for 576")
                             print("")
-                            a = int(input("Enter your choice"))
-                            if a == 2:
+                            a = input("Enter your choice")
+                            if a == "2":
                                 print("You broke out of prison")
                                 status = 4
                                 crime = crime + 1
@@ -2971,7 +2972,7 @@ while status == 1:
                                 print("You tried to escape from prison")
                                 print("But a guard caught you !!!!")
                                 print("your sentence has been extended b3 years")
-                                jailtime = jailtime + 3
+                                jailtime = jailtime + 36
                                 happiness = happiness - 20
                                 crime = crime + 1
                                 print("")
@@ -2985,8 +2986,8 @@ while status == 1:
                             print("press 3 for Bill Gates")
                             print("press 4 for Jeff Bezoa")
                             print("")
-                            a = int(input("Enter your choice"))
-                            if a == 4:
+                            a = input("Enter your choice")
+                            if a == "4":
                                 print("You broke out of prison")
                                 status = 4
                                 crime = crime + 1
@@ -2996,7 +2997,7 @@ while status == 1:
                                 print("You tried to escape from prison")
                                 print("But a guard caught you !!!!")
                                 print("your sentence has been extended b3 years")
-                                jailtime = jailtime + 3
+                                jailtime = jailtime + 36
                                 happiness = happiness - 20
                                 crime = crime + 1
                                 print("")
@@ -3010,8 +3011,8 @@ while status == 1:
                             print("press 3 for Melbourne")
                             print("press 4 for Canberra")
                             print("")
-                            a = int(input("Enter your choice"))
-                            if a == 4:
+                            a = input("Enter your choice")
+                            if a == "4":
                                 print("You broke out of prison")
                                 status = 4
                                 crime = crime + 1
@@ -3021,7 +3022,7 @@ while status == 1:
                                 print("You tried to escape from prison")
                                 print("But a guard caught you !!!!")
                                 print("your sentence has been extended by 3 years")
-                                jailtime = jailtime + 3
+                                jailtime = jailtime + 36
                                 happiness = happiness - 20
                                 crime = crime + 1
                                 print("")
@@ -3035,8 +3036,8 @@ while status == 1:
                             print("press 3 for Berlin")
                             print("press 4 for Munich")
                             print("")
-                            a = int(input("Enter your choice"))
-                            if a == 3:
+                            a = input("Enter your choice")
+                            if a == "3":
                                 print("You broke out of prison")
                                 status = 4
                                 crime = crime + 1
@@ -3046,7 +3047,7 @@ while status == 1:
                                 print("You tried to escape from prison")
                                 print("But a guard caught you !!!!")
                                 print("your sentence has been extended b3 years")
-                                jailtime = jailtime + 3
+                                jailtime = jailtime + 36
                                 happiness = happiness - 20
                                 crime = crime + 1
                                 print("")
@@ -3060,8 +3061,8 @@ while status == 1:
                             print("press 3 for Linus Torvalds")
                             print("press 4 for Steve Jobs ")
                             print("")
-                            a = int(input("Enter your choice"))
-                            if a == 3:
+                            a = input("Enter your choice")
+                            if a == "3":
                                 print("You broke out of prison")
                                 status = 4
                                 crime = crime + 1
@@ -3071,7 +3072,7 @@ while status == 1:
                                 print("You tried to escape from prison")
                                 print("But a guard caught you !!!!")
                                 print("your sentence has been extended b3 years")
-                                jailtime = jailtime + 3
+                                jailtime = jailtime + 36
                                 happiness = happiness - 20
                                 crime = crime + 1
                                 print("")
@@ -3084,8 +3085,8 @@ while status == 1:
                             print("press 3 for Joe Rogan")
                             print("press 4 for Abhijit Banerjee")
                             print("")
-                            a = int(input("Enter your choice"))
-                            if a == 2:
+                            a = input("Enter your choice")
+                            if a == "2":
                                 print("You broke out of prison")
                                 status = 4
                                 crime = crime + 1
@@ -3095,7 +3096,7 @@ while status == 1:
                                 print("You tried to escape from prison")
                                 print("But a guard caught you !!!!")
                                 print("your sentence has been extended by 3 years")
-                                jailtime = jailtime + 3
+                                jailtime = jailtime + 36
                                 happiness = happiness - 20
                                 crime = crime + 1
                                 print("")
@@ -3109,8 +3110,8 @@ while status == 1:
                             print("press 3 150")
                             print("press 4 15")
                             print("")
-                            a = int(input("Enter your choice"))
-                            if a == 3:
+                            a = input("Enter your choice")
+                            if a == "3":
                                 print("You broke out of prison")
                                 status = 4
                                 crime = crime + 1
@@ -3120,7 +3121,7 @@ while status == 1:
                                 print("You tried to escape from prison")
                                 print("But a guard caught you !!!!")
                                 print("your sentence has been extended b3 years")
-                                jailtime = jailtime + 3
+                                jailtime = jailtime + 36
                                 happiness = happiness - 20
                                 crime = crime + 1
                                 print("")
@@ -3133,8 +3134,8 @@ while status == 1:
                             print("press 3 for Larry Ellison")
                             print("press 4 for John McAfee")
                             print("")
-                            a = int(input("Enter your choice"))
-                            if a == 1:
+                            a = input("Enter your choice")
+                            if a == "1":
                                 print("You broke out of prison")
                                 status = 4
                                 crime = crime + 1
@@ -3144,7 +3145,7 @@ while status == 1:
                                 print("You tried to escape from prison")
                                 print("But a guard caught you !!!!")
                                 print("your sentence has been extended b3 years")
-                                jailtime = jailtime + 3
+                                jailtime = jailtime + 36
                                 happiness = happiness - 20
                                 crime = crime + 1
                                 print("")
@@ -3158,8 +3159,8 @@ while status == 1:
                             print("press 3 for The wolf of Wall Street")
                             print("press 4 for Forrest Gump")
                             print("")
-                            a = int(input("Enter your choice"))
-                            if a == 4:
+                            a = input("Enter your choice")
+                            if a == "4":
                                 print("You broke out of prison")
                                 status = 4
                                 crime = crime + 1
@@ -3169,7 +3170,7 @@ while status == 1:
                                 print("You tried to escape from prison")
                                 print("But a guard caught you !!!!")
                                 print("your sentence has been extended b3 years")
-                                jailtime = jailtime + 3
+                                jailtime = jailtime + 36
                                 happiness = happiness - 20
                                 crime = crime + 1
                                 print("")
@@ -3183,8 +3184,8 @@ while status == 1:
                             print("press 3 for Twitter")
                             print("press 4 for Youtube")
                             print("")
-                            a = int(input("Enter your choice"))
-                            if a == 4:
+                            a = input("Enter your choice")
+                            if a == "4":
                                 print("You broke out of prison")
                                 status = 4
                                 crime = crime + 1
@@ -3194,7 +3195,7 @@ while status == 1:
                                 print("You tried to escape from prison")
                                 print("But a guard caught you !!!!")
                                 print("your sentence has been extended b3 years")
-                                jailtime = jailtime + 3
+                                jailtime = jailtime + 36
                                 happiness = happiness - 20
                                 crime = crime + 1
                                 print("")
@@ -3210,8 +3211,8 @@ while status == 1:
                             print("press 3 for 7")
                             print("press 4 for 8")
                             print("")
-                            a = int(input("Enter your choice"))
-                            if a==4:
+                            a = input("Enter your choice")
+                            if a=="4":
                                 print("You broke out of prison")
                                 status = 4
                                 crime = crime + 1
@@ -3221,7 +3222,7 @@ while status == 1:
                                 print("You tried to escape from prison")
                                 print("But a guard caught you !!!!")
                                 print("your sentence has been extended b3 years")
-                                jailtime=jailtime+3
+                                jailtime=jailtime+36
                                 happiness = happiness-20
                                 crime = crime +1
                                 print("")
@@ -3235,8 +3236,8 @@ while status == 1:
                             print("press 3 for 25")
                             print("press 4 for 26")
                             print("")
-                            a = int(input("Enter your choice"))
-                            if a==3:
+                            a = input("Enter your choice")
+                            if a=="3":
                                 print("You broke out of prison")
                                 status = 4
                                 crime = crime + 1
@@ -3246,7 +3247,7 @@ while status == 1:
                                 print("You tried to escape from prison")
                                 print("But a guard caught you !!!!")
                                 print("your sentence has been extended b3 years")
-                                jailtime=jailtime+3
+                                jailtime=jailtime+36
                                 happiness = happiness-20
                                 crime = crime +1
                                 print("")
@@ -3260,8 +3261,8 @@ while status == 1:
                             print("press 3 for 7")
                             print("press 4 for 8")
                             print("")
-                            a = int(input("Enter your choice"))
-                            if a==4:
+                            a = input("Enter your choice")
+                            if a=="4":
                                 print("You broke out of prison")
                                 status = 4
                                 crime = crime + 1
@@ -3271,7 +3272,7 @@ while status == 1:
                                 print("You tried to escape from prison")
                                 print("But a guard caught you !!!!")
                                 print("your sentence has been extended b3 years")
-                                jailtime=jailtime+3
+                                jailtime=jailtime+36
                                 happiness = happiness-20
                                 crime = crime +1
                                 print("")
@@ -3285,8 +3286,8 @@ while status == 1:
                             print("press 3 for 10")
                             print("press 4 for 8")
                             print("")
-                            a = int(input("Enter your choice"))
-                            if a==3:
+                            a = input("Enter your choice")
+                            if a=="3":
                                 print("You broke out of prison")
                                 status = 4
                                 crime = crime + 1
@@ -3296,7 +3297,7 @@ while status == 1:
                                 print("You tried to escape from prison")
                                 print("But a guard caught you !!!!")
                                 print("your sentence has been extended b3 years")
-                                jailtime=jailtime+3
+                                jailtime=jailtime+36
                                 happiness = happiness-20
                                 crime = crime +1
                                 print("")
@@ -3310,8 +3311,8 @@ while status == 1:
                             print("press 3 for 7")
                             print("press 4 for 12")
                             print("")
-                            a = int(input("Enter your choice"))
-                            if a==4:
+                            a = input("Enter your choice")
+                            if a=="4":
                                 print("You broke out of prison")
                                 status = 4
                                 crime = crime + 1
@@ -3321,7 +3322,7 @@ while status == 1:
                                 print("You tried to escape from prison")
                                 print("But a guard caught you !!!!")
                                 print("your sentence has been extended b3 years")
-                                jailtime=jailtime+3
+                                jailtime=jailtime+36
                                 happiness = happiness-20
                                 crime = crime +1
                                 print("")
@@ -3335,8 +3336,8 @@ while status == 1:
                             print("press 3 for Netflix")
                             print("press 4 for Texaco")
                             print("")
-                            a = int(input("Enter your choice"))
-                            if a == 1:
+                            a = input("Enter your choice")
+                            if a == "1":
                                 print("You broke out of prison")
                                 status = 4
                                 crime = crime + 1
@@ -3346,7 +3347,7 @@ while status == 1:
                                 print("You tried to escape from prison")
                                 print("But a guard caught you !!!!")
                                 print("your sentence has been extended b3 years")
-                                jailtime = jailtime + 3
+                                jailtime = jailtime + 36
                                 happiness = happiness - 20
                                 crime = crime + 1
                                 print("")
@@ -3360,8 +3361,8 @@ while status == 1:
                             print("press 3 for Weibo")
                             print("press 4 for JD.com")
                             print("")
-                            a = int(input("Enter your choice"))
-                            if a == 1:
+                            a = input("Enter your choice")
+                            if a == "1":
                                 print("You broke out of prison")
                                 status = 4
                                 crime = crime + 1
@@ -3371,7 +3372,7 @@ while status == 1:
                                 print("You tried to escape from prison")
                                 print("But a guard caught you !!!!")
                                 print("your sentence has been extended b3 years")
-                                jailtime = jailtime + 3
+                                jailtime = jailtime + 36
                                 happiness = happiness - 20
                                 crime = crime + 1
                                 print("")
@@ -3385,8 +3386,8 @@ while status == 1:
                             print("press 3 for Jack Doorsey")
                             print("press 4 for Tim Sweeny")
                             print("")
-                            a = int(input("Enter your choice"))
-                            if a == 2:
+                            a = input("Enter your choice")
+                            if a == "2":
                                 print("You broke out of prison")
                                 status = 4
                                 crime = crime + 1
@@ -3396,7 +3397,7 @@ while status == 1:
                                 print("You tried to escape from prison")
                                 print("But a guard caught you !!!!")
                                 print("your sentence has been extended b3 years")
-                                jailtime = jailtime + 3
+                                jailtime = jailtime + 36
                                 happiness = happiness - 20
                                 crime = crime + 1
                                 print("")
@@ -3410,8 +3411,8 @@ while status == 1:
                             print("press 3 for Los Angeles")
                             print("press 4 for Sacramento")
                             print("")
-                            a = int(input("Enter your choice"))
-                            if a == 4:
+                            a = input("Enter your choice")
+                            if a == "4":
                                 print("You broke out of prison")
                                 status = 4
                                 crime = crime + 1
@@ -3421,7 +3422,7 @@ while status == 1:
                                 print("You tried to escape from prison")
                                 print("But a guard caught you !!!!")
                                 print("your sentence has been extended b3 years")
-                                jailtime = jailtime + 3
+                                jailtime = jailtime + 36
                                 happiness = happiness - 20
                                 crime = crime + 1
                                 print("")
@@ -3435,8 +3436,8 @@ while status == 1:
                             print("press 3 for 2008")
                             print("press 4 for 1920")
                             print("")
-                            a = int(input("Enter your choice"))
-                            if a == 2:
+                            a = input("Enter your choice")
+                            if a == "2":
                                 print("You broke out of prison")
                                 status = 4
                                 crime = crime + 1
@@ -3446,7 +3447,7 @@ while status == 1:
                                 print("You tried to escape from prison")
                                 print("But a guard caught you !!!!")
                                 print("your sentence has been extended b3 years")
-                                jailtime = jailtime + 3
+                                jailtime = jailtime + 36
                                 happiness = happiness - 20
                                 crime = crime + 1
                                 print("")
@@ -3460,8 +3461,8 @@ while status == 1:
                             print("press 3 for 1889")
                             print("press 4 for 1776")
                             print("")
-                            a = int(input("Enter your choice"))
-                            if a == 4:
+                            a = input("Enter your choice")
+                            if a == "4":
                                 print("You broke out of prison")
                                 status = 4
                                 crime = crime + 1
@@ -3471,7 +3472,7 @@ while status == 1:
                                 print("You tried to escape from prison")
                                 print("But a guard caught you !!!!")
                                 print("your sentence has been extended b3 years")
-                                jailtime = jailtime + 3
+                                jailtime = jailtime + 36
                                 happiness = happiness - 20
                                 crime = crime + 1
                                 print("")
@@ -3485,8 +3486,8 @@ while status == 1:
                             print("press 3 for 1945")
                             print("press 4 for 1947")
                             print("")
-                            a = int(input("Enter your choice"))
-                            if a == 4:
+                            a = input("Enter your choice")
+                            if a == "4":
                                 print("You broke out of prison")
                                 status = 4
                                 crime = crime + 1
@@ -3496,7 +3497,7 @@ while status == 1:
                                 print("You tried to escape from prison")
                                 print("But a guard caught you !!!!")
                                 print("your sentence has been extended b3 years")
-                                jailtime = jailtime + 3
+                                jailtime = jailtime + 36
                                 happiness = happiness - 20
                                 crime = crime + 1
                                 print("")
@@ -3510,8 +3511,8 @@ while status == 1:
                             print("press 3 for Reed Hastings")
                             print("press 4 for Divya Narendra")
                             print("")
-                            a = int(input("Enter your choice"))
-                            if a == 3:
+                            a = input("Enter your choice")
+                            if a == "3":
                                 print("You broke out of prison")
                                 status = 4
                                 crime = crime + 1
@@ -3521,7 +3522,7 @@ while status == 1:
                                 print("You tried to escape from prison")
                                 print("But a guard caught you !!!!")
                                 print("your sentence has been extended b3 years")
-                                jailtime = jailtime + 3
+                                jailtime = jailtime + 36
                                 happiness = happiness - 20
                                 crime = crime + 1
                                 print("")
@@ -3535,8 +3536,8 @@ while status == 1:
                             print("press 3 for Masayoshi Son")
                             print("press 4 for Yukihiro Matsumoto")
                             print("")
-                            a = int(input("Enter your choice"))
-                            if a == 4:
+                            a = input("Enter your choice")
+                            if a == "4":
                                 print("You broke out of prison")
                                 status = 4
                                 crime = crime + 1
@@ -3545,8 +3546,8 @@ while status == 1:
                             else:
                                 print("You tried to escape from prison")
                                 print("But a guard caught you !!!!")
-                                print("your sentence has been extended b3 years")
-                                jailtime = jailtime + 3
+                                print("your sentence has been extended by 3 years")
+                                jailtime = jailtime + 36
                                 happiness = happiness - 20
                                 crime = crime + 1
                                 print("")
@@ -3560,8 +3561,8 @@ while status == 1:
                             print("press 3 for UC Berkley")
                             print("press 4 for MIT")
                             print("")
-                            a = int(input("Enter your choice"))
-                            if a == 2:
+                            a = input("Enter your choice")
+                            if a == "2":
                                 print("You broke out of prison")
                                 status = 4
                                 crime = crime + 1
@@ -3571,7 +3572,7 @@ while status == 1:
                                 print("You tried to escape from prison")
                                 print("But a guard caught you !!!!")
                                 print("your sentence has been extended b3 years")
-                                jailtime = jailtime + 3
+                                jailtime = jailtime + 36
                                 happiness = happiness - 20
                                 crime = crime + 1
                                 print("")
@@ -3585,8 +3586,8 @@ while status == 1:
                             print("press 3 Terry Davis")
                             print("press 4 Sheryl Sandberg")
                             print("")
-                            a = int(input("Enter your choice"))
-                            if a == 3:
+                            a = input("Enter your choice")
+                            if a == "3":
                                 print("You broke out of prison")
                                 status = 4
                                 crime = crime + 1
@@ -3596,7 +3597,7 @@ while status == 1:
                                 print("You tried to escape from prison")
                                 print("But a guard caught you !!!!")
                                 print("your sentence has been extended b3 years")
-                                jailtime = jailtime + 3
+                                jailtime = jailtime + 36
                                 happiness = happiness - 20
                                 crime = crime + 1
                                 print("")
@@ -3610,8 +3611,8 @@ while status == 1:
                             print("press 3 for Ben Goertzel")
                             print("press 4 for Ken Thompson")
                             print("")
-                            a = int(input("Enter your choice"))
-                            if a == 1:
+                            a = input("Enter your choice")
+                            if a == "1":
                                 print("You broke out of prison")
                                 status = 4
                                 crime = crime + 1
@@ -3621,7 +3622,7 @@ while status == 1:
                                 print("You tried to escape from prison")
                                 print("But a guard caught you !!!!")
                                 print("your sentence has been extended b3 years")
-                                jailtime = jailtime + 3
+                                jailtime = jailtime + 36
                                 happiness = happiness - 20
                                 crime = crime + 1
                                 print("")
@@ -3635,8 +3636,8 @@ while status == 1:
                             print("press 3 for Martin Odersky")
                             print("press 4 for Cleve Moler")
                             print("")
-                            a = int(input("Enter your choice"))
-                            if a == 4:
+                            a = input("Enter your choice")
+                            if a == "4":
                                 print("You broke out of prison")
                                 status = 4
                                 crime = crime + 1
@@ -3660,8 +3661,8 @@ while status == 1:
                             print("press 3 for dailymotion")
                             print("press 4 for dlive")
                             print("")
-                            a = int(input("Enter your choice"))
-                            if a == 1:
+                            a = input("Enter your choice")
+                            if a == "1":
                                 print("You broke out of prison")
                                 status = 4
                                 crime = crime + 1
@@ -3670,8 +3671,8 @@ while status == 1:
                             else:
                                 print("You tried to escape from prison")
                                 print("But a guard caught you !!!!")
-                                print("your sentence has been extended b3 years")
-                                jailtime = jailtime + 3
+                                print("your sentence has been extended by 3 years")
+                                jailtime = jailtime + 36
                                 happiness = happiness - 20
                                 crime = crime + 1
                                 print("")
@@ -3682,18 +3683,13 @@ while status == 1:
                 intelligence = intelligence + 5
 
             else:
-                age = age +1
-                i = i+1
-                if (i<jailtime):
+                jailtime = jailtime - 1
+                if jailtime== 0:
                     status = 1
                 elif age == 18:
                     status == 0
+                    break
 
-            while eighteen == 0:
-                print("Thanks for playing")
-                print("Game over")
-                eighteen = 1
-                break
 
         while dead ==1:
             while eighteen == 0:
