@@ -1,6 +1,6 @@
 # Sh*tlife
 
-The is a game made by a bitlife fan (Sort of like a fan-fiction).
+The is a game made by a Bitlife fan (Sort of like a fan-fiction). Just to be clear, I don't hate bitlife. The reason this game is called Sh*tlife is because this game is much sh*ttier when compared to Bitlife.
 
 ## Getting Started
 
