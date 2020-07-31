@@ -69,5 +69,4 @@ Version 0.5 (Beta)
 
 ## Authors
 
-thebnbrkr
-Cheeetoz
+thebnbrkr, Cheeetoz
