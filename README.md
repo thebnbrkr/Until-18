@@ -8,7 +8,7 @@ Copy-paste the .py file and you're good to go
 
 ### Installing
 
-Run the .py file.
+Run the .py file or download the .exe file if you're on windows.
 
 ## Running the tests
 
