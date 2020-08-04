@@ -4,7 +4,7 @@ The is a game made by a Bitlife fan (Sort of like a fan-fiction). This is basica
 
 ## Getting Started
 
-Copy-paste the .py file and you're good to go
+Copy-paste the .py file and you're good to go (assuming that you have python installed on your device).
 
 ### Installing
 
