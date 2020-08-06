@@ -18,10 +18,6 @@ Please do play the game and report an issue if you find any.
 
 Python
 
-## Contributing
-
-thebnbrkr, Cheeetoz
-
 ## Versioning
 
 Version 0.5 (Beta)
