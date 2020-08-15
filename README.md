@@ -16,7 +16,7 @@ Please do play the game and report an issue if you find any.
 
 ## Built With
 
-Python
+Python.
 
 ## Versioning
 
