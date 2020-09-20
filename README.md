@@ -1,6 +1,6 @@
 # Until 18
 
-The is a game made by a Bitlife fan (Sort of like a fan-fiction). This is basically a life simulator until the age of 18.
+The is a game made by a Bitlife fan (Sort of like a fan-fiction). This is basically a life simulator until the age of 18. There are some features that are absent in bitlife. 
 
 ## Getting Started
 
