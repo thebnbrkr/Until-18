@@ -12,7 +12,7 @@ Run the .py file or download the .exe file if you're on windows.
 
 ## Running the tests
 
-Please do play the game and report an issue if you find any. 
+Please do play the game and report issues if you find any. 
 
 ## Built With
 
